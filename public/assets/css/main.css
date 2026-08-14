@@ -11,8 +11,8 @@ Version: 1.0.0
   --body: #fff;
   --black: #000;
   --white: #fff;
-  --theme: #00813D;
-  --theme2: #D12525;
+  --theme: #88a137;
+  --theme2: #404b57;
   --theme3: #FFB936;
   --header: #212121;
   --base: #00813D;
@@ -121,7 +121,7 @@ Version: 1.0.0
   background-color: var(--white);
 }
 .theme-btn.bg-red-2 {
-  background-color: var(--theme2);
+  background-color: var(--theme);
   color: var(--white);
   border-radius: 7px;
 }
@@ -129,7 +129,7 @@ Version: 1.0.0
   color: var(--white);
 }
 .theme-btn.bg-red-2:hover::before {
-  background-color: var(--theme);
+  background-color: var(--theme2);
 }
 .theme-btn.style-box-shadow {
   border-radius: 8px;
@@ -10194,7 +10194,7 @@ p.sticky-label {
 }
 
 .footer-widgets-wrapper {
-  padding: 90px 0 120px;
+  padding: 40px 0 40px;
   position: relative;
   z-index: 9;
 }
@@ -10278,7 +10278,7 @@ p.sticky-label {
   text-transform: capitalize;
 }
 .footer-widgets-wrapper .single-footer-widget .list-items li:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .footer-widgets-wrapper .single-footer-widget .list-items li a {
   font-size: 18px;
@@ -10307,6 +10307,24 @@ p.sticky-label {
   opacity: 1;
   visibility: visible;
 }
+
+
+.footer-widgets-wrapper .single-footer-widget .list-item li {
+  text-transform: capitalize;
+}
+.footer-widgets-wrapper .single-footer-widget .list-item li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-widgets-wrapper .single-footer-widget .list-item li a {
+  font-size: 18px;
+  color: var(--text);
+  position: relative;
+}
+
+.footer-widgets-wrapper .single-footer-widget .list-item li a:hover {
+  color: var(--theme);
+}
+
 .footer-widgets-wrapper .single-footer-widget .footer-address-text h6 {
   font-weight: 400;
   color: var(--text);
@@ -10399,11 +10417,18 @@ p.sticky-label {
 }
 .footer-widgets-wrapper.style-2 .single-footer-widget .list-area ul li a:hover {
   padding-left: 20px;
-  color: var(--theme2);
+  color: var(--theme);
 }
 .footer-widgets-wrapper.style-2 .single-footer-widget .list-area ul li a:hover::before {
   opacity: 1;
   visibility: visible;
+}
+
+
+
+.footer-widgets-wrapper.style-2 .single-footer-widget-second .list-area ul li a:hover{
+  color: var(--theme);
+   padding-left: 0px;
 }
 .footer-widgets-wrapper.style-2 .single-footer-widget .footer-content .link {
   font-weight: 700;
@@ -10428,7 +10453,7 @@ p.sticky-label {
 }
 
 .footer-bottom {
-  padding: 35px 0;
+  padding: 10px 0;
   background-color: var(--theme);
 }
 @media (max-width: 767px) {
@@ -10531,3 +10556,17 @@ p.sticky-label {
 .footer-bottom.style-2 .footer-bottom-wrapper ul li a:hover .text-effect .effect-1 {
   top: -100%;
 }/*# sourceMappingURL=main.css.map */
+
+
+.contact-info-items  .icon img{
+  width: 35px;
+}
+
+
+
+
+
+
+
+
+

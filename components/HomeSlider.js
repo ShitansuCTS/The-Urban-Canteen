@@ -96,15 +96,15 @@ const HomeSlider = () => {
                 <div className="row justify-content-between">
                   <div className="col-xl-5 col-lg-7">
                     <div className="hero-content">
-                      <p data-animation="fadeInUp">crispy, every bite taste</p>
+                      <p data-animation="fadeInUp">THE URBAN CANTEEN</p>
                       <h1
                         data-animation="fadeInUp"
                         data-duration={duration}
                         data-delay="0.5s"
                       >
-                        delicious
-                        <span>fried</span>
-                        chiken
+                        Good food. 
+                        <span>Good music.</span>
+                        Good people.
                       </h1>
                       <div className="hero-button">
                         <Link

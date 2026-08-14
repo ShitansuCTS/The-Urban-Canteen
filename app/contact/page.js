@@ -6,20 +6,20 @@ const page = () => {
     {
       icon: "location.svg",
       title: "address line",
-      content: "Bowery St, New York, 37 USA\nNY 10013,USA",
+      content: "Ground Floor, Infocity Ave, Chandaka Industrial Estate, I.E, Chandrasekharpur, Bhubaneswar, Odisha 751021",
       delay: ".3s",
     },
     {
       icon: "phone.svg",
       title: "Phone Number",
-      content: "+1255 - 568 - 6523 4374-221\n+1255 - 568 - 6523",
+      content: "099381 61712",
       delay: ".5s",
       active: true,
     },
     {
       icon: "email.svg",
       title: "Mail Adress",
-      content: "email@example.com\ninfo@yourdomain.com",
+      content: "email@example.com \ninfo@yourdomain.com",
       delay: ".7s",
     },
   ];
@@ -27,45 +27,19 @@ const page = () => {
   return (
     <FoodKingLayout>
       <PageBanner pageName={"Contact us"} />
-      {/*<< Contact Info Section Start >>*/}
-      <section className="contact-info-section fix section-padding section-bg">
-        <div className="container">
-          <div className="row g-4">
-            {contactInfo.map((item, index) => (
-              <div
-                key={index}
-                className={`col-lg-4 col-md-6 wow fadeInUp`}
-                data-wow-delay={item.delay}
-              >
-                <div
-                  className={`contact-info-items ${
-                    item.active ? "active" : ""
-                  } text-center`}
-                >
-                  <div className="icon">
-                    <img src={`assets/img/icon/${item.icon}`} alt="icon-img" />
-                  </div>
-                  <div className="content">
-                    <h3>{item.title}</h3>
-                    <p>{item.content}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
       {/*<< Contact Section Start >>*/}
-      <section className="contact-section section-padding pt-0 section-bg">
+      <section className="contact-section section-padding section-bg">
         <div className="container">
           <div className="contact-area">
+             <h3 className="wow fadeInUp" data-wow-delay=".3s">
+                    {" "}
+                    Dine With Us - <span style={{ color: "var(--theme)" }}>Join Now</span>
+                  </h3>
             <div className="row justify-content-between">
               <div className="col-xl-6 col-lg-6">
                 <div className="map-content-area">
-                  <h3 className="wow fadeInUp" data-wow-delay=".3s">
-                    {" "}
-                    Get in touch
-                  </h3>
+                 
                   <p className="wow fadeInUp" data-wow-delay=".5s">
                     Lorem ipsum dolor sit amet consectetur adipiscing elit
                     mattis <br />
@@ -163,7 +137,35 @@ const page = () => {
           </div>
         </div>
       </section>
-      <Cta />
+       {/*<< Contact Info Section Start >>*/}
+      <section className="contact-info-section fix section-padding section-bg pt-0">
+        <div className="container">
+          <div className="row g-4">
+            {contactInfo.map((item, index) => (
+              <div
+                key={index}
+                className={`col-lg-4 col-md-6 wow fadeInUp`}
+                data-wow-delay={item.delay}
+              >
+                <div
+                  className={`contact-info-items ${
+                    item.active ? "active" : ""
+                  } text-center`}
+                >
+                  <div className="icon">
+                    <img src={`assets/img/icon/${item.icon}`} alt="icon-img" />
+                  </div>
+                  <div className="content">
+                    <h3>{item.title}</h3>
+                    <p>{item.content}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* <Cta /> */}
     </FoodKingLayout>
   );
 };
