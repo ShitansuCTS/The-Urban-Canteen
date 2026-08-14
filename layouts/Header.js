@@ -2,17 +2,8 @@
 import Link from "next/link";
 import { Fragment, useState } from "react";
 
-const Header = ({ header }) => {
-  switch (header) {
-    case 1:
-      return <Header1 />;
-    
 
-    default:
-      return <Header1 />;
-  }
-};
-export default Header;
+
 
 const Menus = () => {
   return (
@@ -100,7 +91,7 @@ const Menus = () => {
   );
 };
 
-const Header1 = () => {
+const Header = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <Fragment>
@@ -377,3 +368,6 @@ const MobileMenu = () => {
     </div>
   );
 };
+
+
+export default Header;
