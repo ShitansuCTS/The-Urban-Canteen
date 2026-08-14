@@ -6,8 +6,7 @@ const Header = ({ header }) => {
   switch (header) {
     case 1:
       return <Header1 />;
-    case 2:
-      return <Header2 />;
+    
 
     default:
       return <Header1 />;
