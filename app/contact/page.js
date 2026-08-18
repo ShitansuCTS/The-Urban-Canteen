@@ -2,27 +2,27 @@ import Cta from "@/components/Cta";
 import PageBanner from "@/components/PageBanner";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
 const page = () => {
-  const contactInfo = [
-    {
-      icon: "location.svg",
-      title: "address line",
-      content: "Ground Floor, Infocity Ave, Chandaka Industrial Estate, I.E, Chandrasekharpur, Bhubaneswar, Odisha 751021",
-      delay: ".3s",
-    },
-    {
-      icon: "phone.svg",
-      title: "Phone Number",
-      content: "099381 61712",
-      delay: ".5s",
-      active: true,
-    },
-    {
-      icon: "email.svg",
-      title: "Mail Adress",
-      content: "email@example.com \ninfo@yourdomain.com",
-      delay: ".7s",
-    },
-  ];
+  // const contactInfo = [
+  //   {
+  //     icon: "location.svg",
+  //     title: "address line",
+  //     content: "Ground Floor, Infocity Ave, Chandaka Industrial Estate, I.E, Chandrasekharpur, Bhubaneswar, Odisha 751021",
+  //     delay: ".3s",
+  //   },
+  //   {
+  //     icon: "phone.svg",
+  //     title: "Phone Number",
+  //     content: "099381 61712",
+  //     delay: ".5s",
+  //     active: true,
+  //   },
+  //   {
+  //     icon: "email.svg",
+  //     title: "Mail Adress",
+  //     content: "email@example.com \ninfo@yourdomain.com",
+  //     delay: ".7s",
+  //   },
+  // ];
 
   return (
     <FoodKingLayout>
@@ -138,7 +138,7 @@ const page = () => {
         </div>
       </section>
        {/*<< Contact Info Section Start >>*/}
-      <section className="contact-info-section fix section-padding section-bg pt-0">
+      {/* <section className="contact-info-section fix section-padding section-bg pt-0">
         <div className="container">
           <div className="row g-4">
             {contactInfo.map((item, index) => (
@@ -164,7 +164,7 @@ const page = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <Cta /> */}
     </FoodKingLayout>
   );

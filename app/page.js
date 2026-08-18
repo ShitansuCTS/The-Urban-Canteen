@@ -1,6 +1,9 @@
 import BrandSlider from "@/components/BrandSlider";
 import FoodSlider from "@/components/FoodSlider";
-import HomeSlider from "@/components/HomeSlider";
+// import HomeSlider from "@/components/HomeSlider";
+import VideoSection from "@/components/VideoSection";
+import GallerySlider from "@/components/GallerySlider";
+import HomeBanner from "@/components/HomeBanner";
 import Marque from "@/components/Marque";
 import ReservationForm from "@/components/ReservationForm";
 import TestimonialSlider from "@/components/TestimonialSlider";
@@ -11,9 +14,70 @@ const page = () => {
   return (
     <FoodKingLayout>
       {/* Hero Section Start */}
-      <HomeSlider />
-      {/* Food Catagory Section Start */}
-      <FoodSlider />
+      {/* <HomeSlider /> */}
+     <HomeBanner />
+
+{/* About Section Start */}
+      <section className="about-section section-padding pt-0">
+        <div className="leaves-shape">
+          <img src="assets/img/shape/leaves.png" alt="shape-img" />
+        </div>
+        <div className="container">
+          <div className="about-wrapper-2">
+            <div className="row align-items-center">
+              <div className="col-xl-5 col-lg-5">
+                <div className="pizza-image">
+                  <img src="assets/img/food/meal.webp" alt="meal-img" />
+                  <div className="quate-content">
+                     <h3>
+    MADE WITH LOVE,
+    <br />
+    SERVED WITH PASSION
+  </h3>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-7 col-lg-7 mt-5 mt-lg-0">
+                <div className="about-content">
+                  {/* ... (content remains the same) ... */}
+                  <div className="home-about-content">
+
+              <span className="home-about-subtitle">
+                Taste The Tradition
+              </span>
+
+              <h2>
+                AUTHENTIC INDIAN <span>CUISINE</span>
+              </h2>
+
+              <div className="home-about-divider">
+                <span>✦</span>
+              </div>
+
+              <p>
+                Experience the rich and authentic flavours of India, freshly prepared
+  with aromatic spices, traditional recipes and the finest ingredients.
+  From delicious curries and crispy naan to flavourful rice and
+  mouth-watering starters, every dish is crafted to make your dining
+  experience truly special.
+              </p>
+
+              <a href="/menu" className="home-about-btn">
+                <span className="home-about-btn-icon">
+                  <i className="bi bi-leaf-fill"></i>
+                </span>
+
+                <span>About Us</span>
+              </a>
+
+            </div>
+          </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </section>
       {/* Food Banner Section Start */}
       <section className="food-banner-section section-padding fix section-bg pt-0">
         <div className="chili-shape">
@@ -28,7 +92,7 @@ const page = () => {
               <div
                 className="single-offer-items bg-cover"
                 style={{
-                  backgroundImage: 'url("assets/img/banner/offer-bg.png")',
+                  backgroundImage: 'url("assets/img/banner/offer-bg.webp")',
                 }}
               >
                 <div className="offer-content">
@@ -38,17 +102,12 @@ const page = () => {
                     DELICIOUS
                   </h3>
                 </div>
-                <div className="offer-image">
-                  <img
-                    src="assets/img/offer/50percent-off.png"
-                    alt="offer-img"
-                  />
-                </div>
+                
                 <div className="burger-text">
-                  <img src="assets/img/shape/burger-text.png" alt="shape-img" />
+                  <img src="assets/img/shape/pizza-text-2.png" alt="shape-img" />
                 </div>
                 <div className="main-food">
-                  <img src="assets/img/food/main-food.png" alt="food-img" />
+                  <img src="assets/img/food/food-01-removebg.png" alt="food-img" />
                 </div>
               </div>
             </div>
@@ -59,26 +118,36 @@ const page = () => {
               <div
                 className="pizza-banner-items bg-cover"
                 style={{
-                  backgroundImage: "url(assets/img/banner/pizza-bg.png)",
+                  backgroundImage: "url(assets/img/banner/corn-bg.webp)",
                 }}
               >
                 <div className="pizza-text">
-                  <img src="assets/img/shape/pizza-text.png" alt="shape-img" />
+                  <img src="assets/img/shape/corn-content.png" alt="shape-img" />
                 </div>
-                <div className="pizza-text-2">
-                  <img
-                    src="assets/img/shape/pizza-text-2.png"
-                    alt="shape-img"
-                  />
-                </div>
+               
                 <div className="pizza-image">
-                  <img src="assets/img/food/pizza-2.png" alt="pizza-img" />
+                  <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="auto"
+      className="video-section"
+    >
+      <source
+        src="/assets/videos/corn.mp4"
+        type="video/mp4"
+      />
+    </video>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      {/* Food Catagory Section Start */}
+      <FoodSlider />
+      
       {/* Brand Section Start */}
       <section className="brand-shape section-padding fix section-bg pt-0">
         <div className="container">
@@ -93,23 +162,23 @@ const page = () => {
         </div>
       </section>
       {/* Grilled Banner Section Start */}
-      <section
+      {/* <section
         className="grilled-banner fix section-padding bg-cover"
         style={{ backgroundImage: 'url("assets/img/banner/main-bg.jpg")' }}
-      >
-        <div className="patato-shape">
-          <img src="assets/img/shape/patato-shape.png" alt="shape-img" />
-        </div>
-        <div className="offer-shape float-bob-y">
+      > */}
+        {/* <div className="patato-shape">
+          <img src="assets/img/shape/small-cake.png" alt="shape-img" />
+        </div> */}
+        {/* <div className="offer-shape float-bob-y">
           <img src="assets/img/offer/50percent-off-2.png" alt="shape-img" />
-        </div>
-        <div className="text-shape">
+        </div> */}
+        {/* <div className="text-shape">
           <img src="assets/img/shape/pizza-text-2.png" alt="shape-img" />
-        </div>
-        <div className="spicy-shape">
+        </div> */}
+        {/* <div className="spicy-shape">
           <img src="assets/img/shape/spicy.png" alt="shape-img" />
-        </div>
-        <div className="tomato-shape">
+        </div> */}
+        {/* <div className="tomato-shape">
           <img src="assets/img/shape/tomato-shape-2.png" alt="shape-img" />
         </div>
         <div className="container">
@@ -117,16 +186,12 @@ const page = () => {
             <div className="row align-items-center">
               <div className="col-xl-6 col-lg-6">
                 <div className="grilled-content">
-                  <h4 className="wow fadeInUp">save 20%</h4>
+                  <h4 className="wow fadeInUp"><span>A Slice of Happiness</span></h4>
                   <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                    tODAY'S <span>ASTACKIN</span> DAY
+                    INDULGE IN <span>EVERY BITE</span>
                   </h2>
-                  <h3 className="wow fadeInUp" data-wow-delay=".5s">
-                    <Link href="/shop">
-                      grilled <span className="text-1">chiken</span>
-                    </Link>
-                    <span className="text-2">$59,00</span>
-                  </h3>
+                  <p style={{ color: '#fff' }}>Rich chocolate, creamy layers, and irresistible Oreo goodness crafted for every sweet craving.</p>
+                  
                   <div
                     className="grilled-button wow fadeInUp"
                     data-wow-delay=".7s"
@@ -136,7 +201,7 @@ const page = () => {
                         <span className="button-icon">
                           <i className="flaticon-delivery" />
                         </span>
-                        <span className="button-text">order now</span>
+                        <span className="button-text">TASTE THE MAGIC</span>
                       </span>
                     </Link>
                   </div>
@@ -146,16 +211,16 @@ const page = () => {
                 className="col-xl-6 col-lg-6 mt-5 mt-lg-0 wow fadeInUp"
                 data-wow-delay=".4s"
               >
-                <div className="grilled-image">
-                  <img src="assets/img/food/grilled.png" alt="grilled-img" />
+                <div className="video-section-image">
+                  <VideoSection / >
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Food Catagory Section Start */}
-      <section className="food-category-section fix section-padding section-bg">
+      {/* <section className="food-category-section fix section-padding section-bg">
         <div className="container">
           <div className="section-title text-center">
             <span className="wow fadeInUp">crispy, every bite taste</span>
@@ -489,7 +554,7 @@ const page = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Food Comboo Section Start */}
       <section
         className="food-comboo-section fix bg-cover section-padding"
@@ -508,8 +573,8 @@ const page = () => {
                       crispy, every bite taste
                     </span>
                     <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                      trending Food combo offer less <span>20%</span>
-                    </h2>
+                    INDULGE IN <span>EVERY BITE</span>
+                  </h2>
                   </div>
                   <p className="wow fadeInUp" data-wow-delay=".5s">
                     A team of dreamers and doers building unique interactive
@@ -587,38 +652,42 @@ const page = () => {
                     role="tabpanel"
                     aria-labelledby="nav-home-tab"
                   >
-                    <div
-                      className="comboo-image bg-cover"
-                      style={{
-                        backgroundImage:
-                          'url("assets/img/banner/comboo-bg.jpg")',
-                      }}
-                    >
-                      <div className="pizza-text">
-                        <img
-                          src="assets/img/shape/combo-pizza-text.png"
-                          alt="shape-img"
-                        />
-                      </div>
-                      <div className="pizza-image">
-                        <img
-                          src="assets/img/food/big-pizza.png"
-                          alt="food-img"
-                        />
-                      </div>
-                      <div className="offer-shape">
-                        <img
-                          src="assets/img/offer/50percent-off-2.png"
-                          alt="shape-img"
-                        />
-                      </div>
-                      <div className="vegetable-shape">
-                        <img
-                          src="assets/img/shape/vegetable.png"
-                          alt="shape-img"
-                        />
-                      </div>
-                    </div>
+                    <div className="comboo-image">
+  {/* Background Video */}
+  <video
+    className="combo-bg-video"
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src="assets/videos/ice-cream.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  {/* <div className="pizza-text">
+    <img
+      src="assets/img/shape/combo-pizza-text.png"
+      alt="shape-img"
+    />
+  </div> */}
+
+  
+{/* 
+  <div className="offer-shape">
+    <img
+      src="assets/img/offer/50percent-off-2.png"
+      alt="shape-img"
+    />
+  </div> */}
+
+  {/* <div className="vegetable-shape">
+    <img
+      src="assets/img/shape/vegetable.png"
+      alt="shape-img"
+    />
+  </div> */}
+</div>
                   </div>
                   <div
                     className="tab-pane fade"
@@ -707,7 +776,7 @@ const page = () => {
       {/* Marque Section Start */}
       <Marque />
       {/* Choose Us Section Start */}
-      <section className="choose-us fix section-padding pt-0 section-bg">
+      <section className="choose-us fix section-padding pt-0 section-bg" style={{ paddingBottom: "50px" }}>
         <div className="container">
           <div
             className="food-icon-wrapper bg-cover"
@@ -789,7 +858,7 @@ const page = () => {
         </div>
       </section>
       {/* About Section Start */}
-      <section className="about-section fix section-padding pt-0 section-bg">
+      {/* <section className="about-section fix section-padding pt-0 section-bg">
         <div className="container">
           <div className="about-wrapper">
             <div className="row align-items-center">
@@ -888,9 +957,9 @@ const page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Food Banner Section Start */}
-      <section className="food-banner-section fix section-padding section-bg pt-0">
+      {/* <section className="food-banner-section fix section-padding section-bg pt-0">
         <div className="container">
           <div className="row justify-content-center">
             <div
@@ -976,9 +1045,9 @@ const page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* KFC Banner Section Start */}
-      <section
+      {/* <section
         className="kfc-banner fix bg-cover section-padding"
         style={{ backgroundImage: 'url("assets/img/bg-image/bg.jpg")' }}
       >
@@ -1056,9 +1125,14 @@ const page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Testimonial Section Start */}
-      <TestimonialSlider />
+      {/* <TestimonialSlider /> */}
+      
+
+      {/* Gallery Section Start */}
+      <GallerySlider />
+
       {/* Main Cta Banner Section Start */}
       <section className="main-cta-banner section-padding pt-0">
         <div className="container">
@@ -1093,7 +1167,7 @@ const page = () => {
               <img src="assets/img/shape/arrow-shape.png" alt="shape-img" />
             </div>
             <div className="delivery-man">
-              <img src="assets/img/delivery-man.png" alt="img" />
+              <img src="assets/img/animated.png" alt="img" style={{ width: '100%', height: '100%' }} />
             </div>
             <div className="frame-shape">
               <img src="assets/img/shape/frame.png" alt="shape-img" />
@@ -1104,13 +1178,19 @@ const page = () => {
       {/* Booking Section Start */}
       <section
         className="booking-section fix section-padding bg-cover"
-        style={{ backgroundImage: 'url("assets/img/banner/main-bg.jpg")' }}
+        style={{ backgroundImage: 'url("assets/img/banner/form-bg.webp")' }}
       >
         <div className="container">
           <div className="booking-wrapper style-responsive section-padding pb-0">
             <div className="row justify-content-between align-items-center">
+              <div
+                className="col-lg-5 mt-5 mt-lg-0 wow fadeInUp"
+                data-wow-delay=".4s"
+              >
+                <ReservationForm />
+              </div>
               <div className="col-lg-6">
-                <div className="booking-content">
+                {/* <div className="booking-content">
                   <div className="section-title">
                     <span className="wow fadeInUp">
                       crispy, every bite taste
@@ -1133,18 +1213,13 @@ const page = () => {
                     <div className="content">
                       <h5>24/7 Support center</h5>
                       <h3>
-                        <a href="tel:+1718-904-4450">+1718-904-4450</a>
+                        <a href="tel:+91 99381 61712">+91 99381 61712</a>
                       </h3>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
-              <div
-                className="col-lg-5 mt-5 mt-lg-0 wow fadeInUp"
-                data-wow-delay=".4s"
-              >
-                <ReservationForm />
-              </div>
+              
             </div>
           </div>
         </div>

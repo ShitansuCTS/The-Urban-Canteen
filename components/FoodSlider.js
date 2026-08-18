@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const FoodSlider = () => {
   return (
-    <section className="food-category-section fix section-padding section-bg">
+    <section className="food-category-section fix section-padding dark-bg">
       <div className="tomato-shape">
         <img src="assets/img/shape/tomato-shape.png" alt="shape-img" />
       </div>
@@ -52,7 +52,7 @@ const FoodSlider = () => {
                 <h5>5 products</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
-                    <img src="assets/img/food/pizza.png" alt="product-img" />
+                    <img src="assets/img/food/02.webp" alt="product-img" />
                     <div className="decor-leaf">
                       <img
                         src="assets/img/shape/decor-leaf.svg"
@@ -65,12 +65,7 @@ const FoodSlider = () => {
                         alt="shape-img"
                       />
                     </div>
-                    <div className="burger-shape">
-                      <img
-                        src="assets/img/shape/burger-shape.png"
-                        alt="shape-img"
-                      />
-                    </div>
+                    
                   </Link>
                 </div>
                 <div className="catagory-product-content text-center">
@@ -98,7 +93,7 @@ const FoodSlider = () => {
                 <h5>5 products</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
-                    <img src="assets/img/food/pasta.png" alt="product-img" />
+                    <img src="assets/img/food/08.webp" alt="product-img" />
                     <div className="decor-leaf">
                       <img
                         src="assets/img/shape/decor-leaf.svg"
@@ -111,12 +106,7 @@ const FoodSlider = () => {
                         alt="shape-img"
                       />
                     </div>
-                    <div className="burger-shape">
-                      <img
-                        src="assets/img/shape/burger-shape.png"
-                        alt="shape-img"
-                      />
-                    </div>
+                    
                   </Link>
                 </div>
                 <div className="catagory-product-content text-center">
@@ -144,7 +134,7 @@ const FoodSlider = () => {
                 <h5>5 products</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
-                    <img src="assets/img/food/burger.png" alt="product-img" />
+                    <img src="assets/img/food/05.webp" alt="product-img" />
                     <div className="decor-leaf">
                       <img
                         src="assets/img/shape/decor-leaf.svg"
@@ -157,12 +147,7 @@ const FoodSlider = () => {
                         alt="shape-img"
                       />
                     </div>
-                    <div className="burger-shape">
-                      <img
-                        src="assets/img/shape/burger-shape.png"
-                        alt="shape-img"
-                      />
-                    </div>
+                    
                   </Link>
                 </div>
                 <div className="catagory-product-content text-center">
@@ -191,7 +176,7 @@ const FoodSlider = () => {
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
                     <img
-                      src="assets/img/food/french-fry.png"
+                      src="assets/img/food/07.webp"
                       alt="product-img"
                     />
                     <div className="decor-leaf">
@@ -206,12 +191,7 @@ const FoodSlider = () => {
                         alt="shape-img"
                       />
                     </div>
-                    <div className="burger-shape">
-                      <img
-                        src="assets/img/shape/burger-shape.png"
-                        alt="shape-img"
-                      />
-                    </div>
+                    
                   </Link>
                 </div>
                 <div className="catagory-product-content text-center">
@@ -239,7 +219,7 @@ const FoodSlider = () => {
                 <h5>5 products</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
-                    <img src="assets/img/food/pizza.png" alt="product-img" />
+                    <img src="assets/img/food/03.webp" alt="product-img" />
                     <div className="decor-leaf">
                       <img
                         src="assets/img/shape/decor-leaf.svg"
@@ -252,12 +232,7 @@ const FoodSlider = () => {
                         alt="shape-img"
                       />
                     </div>
-                    <div className="burger-shape">
-                      <img
-                        src="assets/img/shape/burger-shape.png"
-                        alt="shape-img"
-                      />
-                    </div>
+                    
                   </Link>
                 </div>
                 <div className="catagory-product-content text-center">
@@ -285,7 +260,7 @@ const FoodSlider = () => {
                 <h5>5 products</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
-                    <img src="assets/img/food/pasta.png" alt="product-img" />
+                    <img src="assets/img/food/04.webp" alt="product-img" />
                     <div className="decor-leaf">
                       <img
                         src="assets/img/shape/decor-leaf.svg"
@@ -298,12 +273,7 @@ const FoodSlider = () => {
                         alt="shape-img"
                       />
                     </div>
-                    <div className="burger-shape">
-                      <img
-                        src="assets/img/shape/burger-shape.png"
-                        alt="shape-img"
-                      />
-                    </div>
+                    
                   </Link>
                 </div>
                 <div className="catagory-product-content text-center">
@@ -331,7 +301,7 @@ const FoodSlider = () => {
                 <h5>5 products</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
-                    <img src="assets/img/food/burger.png" alt="product-img" />
+                    <img src="assets/img/food/06.webp" alt="product-img" />
                     <div className="decor-leaf">
                       <img
                         src="assets/img/shape/decor-leaf.svg"
@@ -344,12 +314,7 @@ const FoodSlider = () => {
                         alt="shape-img"
                       />
                     </div>
-                    <div className="burger-shape">
-                      <img
-                        src="assets/img/shape/burger-shape.png"
-                        alt="shape-img"
-                      />
-                    </div>
+                    
                   </Link>
                 </div>
                 <div className="catagory-product-content text-center">
@@ -378,7 +343,7 @@ const FoodSlider = () => {
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
                     <img
-                      src="assets/img/food/french-fry.png"
+                      src="assets/img/food/01.webp"
                       alt="product-img"
                     />
                     <div className="decor-leaf">
@@ -393,12 +358,7 @@ const FoodSlider = () => {
                         alt="shape-img"
                       />
                     </div>
-                    <div className="burger-shape">
-                      <img
-                        src="assets/img/shape/burger-shape.png"
-                        alt="shape-img"
-                      />
-                    </div>
+                    
                   </Link>
                 </div>
                 <div className="catagory-product-content text-center">

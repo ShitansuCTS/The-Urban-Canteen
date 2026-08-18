@@ -150,10 +150,10 @@ const Footer = () => {
   return (
     <footer className="footer-section section-bg-3 fix">
       <div className="footer-shape">
-        <img src="assets/img/shape/footer-shape.png" alt="shape-img" />
+        <img src="assets/img/shape/cup.png" alt="shape-img" style={{width: "40%"}}/>
       </div>
       <div className="footer-shape-2">
-        <img src="assets/img/shape/footer-shape-2.png" alt="shape-img" />
+        <img src="assets/img/shape/img-1.png" alt="shape-img"/>
       </div>
       <div className="container">
         <div className="footer-widgets-wrapper style-2">
@@ -201,9 +201,9 @@ const Footer = () => {
                 </div>
                 <div className="list-area d-flex align-items-center">
                   <ul>
-                    <li>
+                    {/* <li>
                       <Link href="/">Home</Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/about">About</Link>
                     </li>
@@ -268,16 +268,15 @@ const Footer = () => {
                   </div>
                 </div>
                 <div className="footer-content">
-                  <p>
+                  <p><i className="fas fa-map-marker-alt" style={{ marginRight: "10px" }} />
                     Ground Floor, Infocity Ave, Chandaka Industrial Estate, I.E, Chandrasekharpur, <br />Bhubaneswar, Odisha 751021
                   </p>
-                  <a href="mailto:info@example.com" className="link">
+                  <p><a href="mailto:info@example.com" className="link"><i className="fal fa-envelope" style={{marginRight: "10px"}}/>
                     info@example.com
-                  </a>
-                  <a href="tel:+91 99381 61712" className="number">
+                  </a></p>
+                  <p><a href="tel:+91 99381 61712" className="number"><i className="fal fa-phone" style={{marginRight: "10px"}}/>
                     +91 99381 61712
-                  </a>
-                  
+                  </a></p>
                 </div>
               </div>
             </div>
@@ -296,9 +295,9 @@ const Footer = () => {
           <div className="footer-bottom-wrapper d-flex align-items-center justify-content-between">
             <p className="wow fadeInLeft" data-wow-delay=".3s">
               © Copyright <span className="theme-color-3">2024</span>{" "}
-              <Link href="/">Foodking </Link>. All Rights Reserved.
+              <Link href="/">The Urban Canteen </Link>. All Rights Reserved By <span className="theme-color-3"><Link href="https://crushaderstech.com/">Crushaders Tech</Link></span>
             </p>
-            <ul className="wow fadeInRight" data-wow-delay=".5s">
+            {/* <ul className="wow fadeInRight" data-wow-delay=".5s">
               <li>
                 <Link href="/contact">
                   <span className="text-effect">
@@ -315,7 +314,7 @@ const Footer = () => {
                   </span>
                 </Link>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>
