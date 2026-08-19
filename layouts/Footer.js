@@ -294,7 +294,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-bottom-wrapper d-flex align-items-center justify-content-between">
             <p className="wow fadeInLeft" data-wow-delay=".3s">
-              © Copyright <span className="theme-color-3">2024</span>{" "}
+              © Copyright <span className="theme-color-3">2026</span>{" "}
               <Link href="/">The Urban Canteen </Link>. All Rights Reserved By <span className="theme-color-3"><Link href="https://crushaderstech.com/">Crushaders Tech</Link></span>
             </p>
             {/* <ul className="wow fadeInRight" data-wow-delay=".5s">

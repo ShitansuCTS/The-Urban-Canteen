@@ -10444,11 +10444,15 @@ p.sticky-label {
   height: 6px;
   content: "";
   border-radius: 50%;
-  background-color: var(--theme2);
+  background-color: var(--theme);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+.footer-widgets-wrapper.style-2 .single-footer-widget-second .list-area ul li a::before {
+  position: unset;
+ 
 }
 .footer-widgets-wrapper.style-2 .single-footer-widget .list-area ul li a:hover {
   padding-left: 20px;
