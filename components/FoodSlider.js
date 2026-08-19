@@ -49,7 +49,7 @@ const FoodSlider = () => {
                     'url("assets/img/shape/catagory-card-shape.jpg")',
                 }}
               >
-                <h5>5 products</h5>
+                <h5>Combo</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
                     <img src="assets/img/food/02.webp" alt="product-img" />
@@ -65,20 +65,22 @@ const FoodSlider = () => {
                         alt="shape-img"
                       />
                     </div>
-                    
+                    {/* <div className="burger-shape">
+                      <img src="assets/img/shape/burger-shape.png" alt="shape-img" />
+                    </div> */}
                   </Link>
                 </div>
                 <div className="catagory-product-content text-center">
                   <div className="catagory-product-icon">
                     <img
-                      src="assets/img/shape/food-shape.svg"
+                      src="assets/img/shape/tasty-shape.webp"
                       alt="shape-text"
                     />
                   </div>
                   <h3>
-                    <Link href="/shop-single">pro pizza</Link>
+                    <Link href="/shop-single">Deliciously Fresh</Link>
                   </h3>
-                  <p>5 products</p>
+                  <p>Combo</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -90,7 +92,7 @@ const FoodSlider = () => {
                     'url("assets/img/shape/catagory-card-shape.jpg")',
                 }}
               >
-                <h5>5 products</h5>
+                <h5>Combo</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
                     <img src="assets/img/food/08.webp" alt="product-img" />
@@ -112,14 +114,14 @@ const FoodSlider = () => {
                 <div className="catagory-product-content text-center">
                   <div className="catagory-product-icon">
                     <img
-                      src="assets/img/shape/food-shape.svg"
+                      src="assets/img/shape/tasty-shape.webp"
                       alt="shape-text"
                     />
                   </div>
                   <h3>
-                    <Link href="/shop-single">pro pizza</Link>
+                    <Link href="/shop-single">Deliciously Fresh</Link>
                   </h3>
-                  <p>5 products</p>
+                  <p>Combo</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -131,7 +133,7 @@ const FoodSlider = () => {
                     'url("assets/img/shape/catagory-card-shape.jpg")',
                 }}
               >
-                <h5>5 products</h5>
+                <h5>Combo</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
                     <img src="assets/img/food/05.webp" alt="product-img" />
@@ -153,14 +155,14 @@ const FoodSlider = () => {
                 <div className="catagory-product-content text-center">
                   <div className="catagory-product-icon">
                     <img
-                      src="assets/img/shape/food-shape.svg"
+                      src="assets/img/shape/tasty-shape.webp"
                       alt="shape-text"
                     />
                   </div>
                   <h3>
-                    <Link href="/shop-single">pro pizza</Link>
+                    <Link href="/shop-single">Deliciously Fresh</Link>
                   </h3>
-                  <p>5 products</p>
+                  <p>Combo</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -172,7 +174,7 @@ const FoodSlider = () => {
                     'url("assets/img/shape/catagory-card-shape.jpg")',
                 }}
               >
-                <h5>5 products</h5>
+                <h5>Combo</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
                     <img
@@ -197,14 +199,14 @@ const FoodSlider = () => {
                 <div className="catagory-product-content text-center">
                   <div className="catagory-product-icon">
                     <img
-                      src="assets/img/shape/food-shape.svg"
+                      src="assets/img/shape/tasty-shape.webp"
                       alt="shape-text"
                     />
                   </div>
                   <h3>
-                    <Link href="/shop-single">pro pizza</Link>
+                    <Link href="/shop-single">Deliciously Fresh</Link>
                   </h3>
-                  <p>5 products</p>
+                  <p>Combo</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -216,7 +218,7 @@ const FoodSlider = () => {
                     'url("assets/img/shape/catagory-card-shape.jpg")',
                 }}
               >
-                <h5>5 products</h5>
+                <h5>Combo</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
                     <img src="assets/img/food/03.webp" alt="product-img" />
@@ -238,14 +240,14 @@ const FoodSlider = () => {
                 <div className="catagory-product-content text-center">
                   <div className="catagory-product-icon">
                     <img
-                      src="assets/img/shape/food-shape.svg"
+                      src="assets/img/shape/tasty-shape.webp"
                       alt="shape-text"
                     />
                   </div>
                   <h3>
-                    <Link href="/shop-single">pro pizza</Link>
+                    <Link href="/shop-single">Deliciously Fresh</Link>
                   </h3>
-                  <p>5 products</p>
+                  <p>Combo</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -257,7 +259,7 @@ const FoodSlider = () => {
                     'url("assets/img/shape/catagory-card-shape.jpg")',
                 }}
               >
-                <h5>5 products</h5>
+                <h5>Combo</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
                     <img src="assets/img/food/04.webp" alt="product-img" />
@@ -279,14 +281,14 @@ const FoodSlider = () => {
                 <div className="catagory-product-content text-center">
                   <div className="catagory-product-icon">
                     <img
-                      src="assets/img/shape/food-shape.svg"
+                      src="assets/img/shape/tasty-shape.webp"
                       alt="shape-text"
                     />
                   </div>
                   <h3>
-                    <Link href="/shop-single">pro pizza</Link>
+                    <Link href="/shop-single">Deliciously Fresh</Link>
                   </h3>
-                  <p>5 products</p>
+                  <p>Combo</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -298,7 +300,7 @@ const FoodSlider = () => {
                     'url("assets/img/shape/catagory-card-shape.jpg")',
                 }}
               >
-                <h5>5 products</h5>
+                <h5>Combo</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
                     <img src="assets/img/food/06.webp" alt="product-img" />
@@ -320,14 +322,14 @@ const FoodSlider = () => {
                 <div className="catagory-product-content text-center">
                   <div className="catagory-product-icon">
                     <img
-                      src="assets/img/shape/food-shape.svg"
+                      src="assets/img/shape/tasty-shape.webp"
                       alt="shape-text"
                     />
                   </div>
                   <h3>
-                    <Link href="/shop-single">pro pizza</Link>
+                    <Link href="/shop-single">Deliciously Fresh</Link>
                   </h3>
-                  <p>5 products</p>
+                  <p>Combo</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -339,7 +341,7 @@ const FoodSlider = () => {
                     'url("assets/img/shape/catagory-card-shape.jpg")',
                 }}
               >
-                <h5>5 products</h5>
+                <h5>Combo</h5>
                 <div className="catagory-product-image text-center">
                   <Link href="/shop">
                     <img
@@ -364,14 +366,14 @@ const FoodSlider = () => {
                 <div className="catagory-product-content text-center">
                   <div className="catagory-product-icon">
                     <img
-                      src="assets/img/shape/food-shape.svg"
+                      src="assets/img/shape/tasty-shape.webp"
                       alt="shape-text"
                     />
                   </div>
                   <h3>
-                    <Link href="/shop-single">pro pizza</Link>
+                    <Link href="/shop-single">Deliciously Fresh</Link>
                   </h3>
-                  <p>5 products</p>
+                  <p>Combo</p>
                 </div>
               </div>
             </SwiperSlide>
