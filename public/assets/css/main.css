@@ -12211,3 +12211,7 @@ p.sticky-label {
     height: 250px;
   }
 }
+
+.offcanvas-gallery-items img{
+  width: 100%;
+}

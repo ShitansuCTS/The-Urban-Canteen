@@ -176,7 +176,7 @@ const Sidebar = ({ toggle, setToggle }) => {
               <div className="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                 <div className="offcanvas__logo">
                   <Link href="/">
-                    <img src="assets/img/logo/logo.svg" alt="logo-img" />
+                    <img src="/assets/img/logo/URBAN-LOGO.png" alt="logo-img" />
                   </Link>
                 </div>
                 <div className="offcanvas__close">
@@ -193,42 +193,42 @@ const Sidebar = ({ toggle, setToggle }) => {
               <div className="offcanvas-gallery-area d-none d-lg-block">
                 <div className="offcanvas-gallery-items">
                   <a
-                    href="assets/img/header/01.jpg"
+                    href="/assets/img/gallery/01.webp"
                     className="offcanvas-image img-popup"
                   >
-                    <img src="assets/img/header/01.jpg" alt="gallery-img" />
+                    <img src="/assets/img/gallery/01.webp" alt="gallery-img" />
                   </a>
                   <a
-                    href="assets/img/header/02.jpg"
+                    href="/assets/img/gallery/11.webp"
                     className="offcanvas-image img-popup"
                   >
-                    <img src="assets/img/header/02.jpg" alt="gallery-img" />
+                    <img src="/assets/img/gallery/11.webp" alt="gallery-img" />
                   </a>
                   <a
-                    href="assets/img/header/03.jpg"
+                    href="/assets/img/gallery/18.webp"
                     className="offcanvas-image img-popup"
                   >
-                    <img src="assets/img/header/03.jpg" alt="gallery-img" />
+                    <img src="/assets/img/gallery/18.webp" alt="gallery-img" />
                   </a>
                 </div>
                 <div className="offcanvas-gallery-items">
                   <a
-                    href="assets/img/header/04.jpg"
+                    href="/assets/img/gallery/16.webp"
                     className="offcanvas-image img-popup"
                   >
-                    <img src="assets/img/header/04.jpg" alt="gallery-img" />
+                    <img src="/assets/img/gallery/16.webp" alt="gallery-img" />
                   </a>
                   <a
-                    href="assets/img/header/05.jpg"
+                    href="/assets/img/gallery/03.webp"
                     className="offcanvas-image img-popup"
                   >
-                    <img src="assets/img/header/05.jpg" alt="gallery-img" />
+                    <img src="/assets/img/gallery/03.webp" alt="gallery-img" />
                   </a>
                   <a
-                    href="assets/img/header/06.jpg"
+                    href="/assets/img/gallery/06.webp"
                     className="offcanvas-image img-popup"
                   >
-                    <img src="assets/img/header/06.jpg" alt="gallery-img" />
+                    <img src="/assets/img/gallery/06.webp" alt="gallery-img" />
                   </a>
                 </div>
               </div>
@@ -242,7 +242,8 @@ const Sidebar = ({ toggle, setToggle }) => {
                     </div>
                     <div className="offcanvas__contact-text">
                       <a target="_blank" href="#">
-                        Main Street, Melbourne, Australia
+                        Ground Floor, Infocity Ave, Chandaka Industrial Estate, I.E, Chandrasekharpur,
+Bhubaneswar, Odisha 751021
                       </a>
                     </div>
                   </li>
@@ -258,32 +259,23 @@ const Sidebar = ({ toggle, setToggle }) => {
                       </a>
                     </div>
                   </li>
-                  <li className="d-flex align-items-center">
-                    <div className="offcanvas__contact-icon mr-15">
-                      <i className="fal fa-clock" />
-                    </div>
-                    <div className="offcanvas__contact-text">
-                      <a target="_blank" href="#">
-                        Mod-friday, 09am -05pm
-                      </a>
-                    </div>
-                  </li>
+                 
                   <li className="d-flex align-items-center">
                     <div className="offcanvas__contact-icon mr-15">
                       <i className="far fa-phone" />
                     </div>
                     <div className="offcanvas__contact-text">
-                      <a href="tel:+11002345909">+11002345909</a>
+                      <a href="tel:+91 99381 61712">+91 99381 61712</a>
                     </div>
                   </li>
                 </ul>
                 <div className="header-button mt-4">
-                  <Link href="shop-single" className="theme-btn">
+                  <Link href="menu" className="theme-btn">
                     <span className="button-content-wrapper d-flex align-items-center justify-content-center">
                       <span className="button-icon">
-                        <i className="flaticon-delivery" />
+                        <i className="bi bi-leaf-fill" />
                       </span>
-                      <span className="button-text">Contact Us</span>
+                      <span className="button-text">View Menu</span>
                     </span>
                   </Link>
                 </div>
