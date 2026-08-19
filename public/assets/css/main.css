@@ -11730,70 +11730,78 @@ p.sticky-label {
 }
 }
 
-/* =========================================
-   Gallery Image
-========================================= */
+/* =========================================================
+   GALLERY IMAGE BOX
+========================================================= */
 
-.gallery-image-wrapper {
+.gallery-image-box {
   position: relative;
+
   width: 100%;
   height: 320px;
+
   overflow: hidden;
+
   background: #eeeeee;
 }
 
-/* Actual Next Image */
+/* =========================================================
+   GALLERY IMAGE
+========================================================= */
 
-.gallery-next-image {
+.gallery-section-image {
   object-fit: cover;
-  transition: opacity 0.4s ease;
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.7s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* While image is loading */
-
-.image-loading {
+.gallery-image-loading {
   opacity: 0;
 }
 
-/* After image loaded */
-
-.image-loaded {
+.gallery-image-loaded {
   opacity: 1;
 }
 
-/* =========================================
-   Skeleton
-========================================= */
+/* =========================================================
+   SKELETON
+========================================================= */
 
-.gallery-image-skeleton {
+.gallery-skeleton {
   position: absolute;
+
   inset: 0;
-  z-index: 2;
+
+  z-index: 5;
+
   overflow: hidden;
-  background: #e9e9e9;
+
+  background: #e8e8e8;
 }
 
-/* Shimmer */
-
-.gallery-image-skeleton::after {
-  content: "";
+.gallery-skeleton span {
   position: absolute;
+
   top: 0;
   left: -100%;
+
   width: 100%;
   height: 100%;
 
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.55) 50%,
     transparent 100%
   );
 
-  animation: gallerySkeletonShimmer 1.4s infinite;
+  animation: galleryShimmer 1.4s infinite;
 }
 
-@keyframes gallerySkeletonShimmer {
+@keyframes galleryShimmer {
   0% {
     left: -100%;
   }
@@ -11803,52 +11811,403 @@ p.sticky-label {
   }
 }
 
-/* =========================================
-   Gallery Plus Icon
-========================================= */
+/* =========================================================
+   HOVER OVERLAY
+========================================================= */
 
-.gallery-image-wrapper .icon {
+.gallery-hover-overlay {
   position: absolute;
-  z-index: 5;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+  inset: 0;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0);
 
   opacity: 0;
   visibility: hidden;
 
-  transition: all 0.3s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    background 0.4s ease;
 }
 
-.gallery-image-wrapper:hover .icon {
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.gallery-image-box:hover .gallery-image {
+  transform: scale(1.08);
+}
+
+.gallery-image-box:hover
+.gallery-hover-overlay {
   opacity: 1;
+
   visibility: visible;
+
+  background: rgba(0, 0, 0, 0.55);
 }
 
-/* =========================================
-   Responsive
-========================================= */
+/* =========================================================
+   PLUS BUTTON
+========================================================= */
+
+.gallery-plus {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: var(--theme);
+
+  cursor: pointer;
+
+  transform:
+    scale(0.5)
+    rotate(-45deg);
+
+  opacity: 0;
+
+  transition:
+    transform 0.45s
+      cubic-bezier(
+        0.175,
+        0.885,
+        0.32,
+        1.275
+      ),
+    opacity 0.35s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.gallery-plus i {
+  font-size: 20px;
+}
+
+/* =========================================================
+   PLUS APPEAR
+========================================================= */
+
+.gallery-image-box:hover
+.gallery-plus {
+  transform:
+    scale(1)
+    rotate(0deg);
+
+  opacity: 1;
+}
+
+/* =========================================================
+   PLUS HOVER
+========================================================= */
+
+.gallery-plus:hover {
+  background: var(--theme);
+
+  color: #ffffff;
+
+  transform:
+    scale(1.1)
+    rotate(90deg);
+}
+
+/* =========================================================
+   GALLERY ENTRY ANIMATION
+========================================================= */
+
+.gallery-animation-item {
+  opacity: 0;
+
+  transform: translateY(35px);
+
+  animation:
+    galleryReveal 0.7s ease forwards;
+
+  animation-delay: var(--animation-delay);
+}
+
+@keyframes galleryReveal {
+  0% {
+    opacity: 0;
+
+    transform: translateY(35px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   CUSTOM LIGHTBOX
+========================================================= */
+
+.custom-lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 999999;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: rgba(0, 0, 0, 0.88);
+
+  cursor: pointer;
+
+  animation:
+    lightboxFadeIn 0.25s ease
+    forwards;
+}
+
+/* =========================================================
+   LIGHTBOX CONTENT
+========================================================= */
+
+.lightbox-content {
+  position: relative;
+
+  width: min(1100px, 90vw);
+
+  height: min(750px, 85vh);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: default;
+
+  animation:
+    lightboxZoomIn 0.3s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    )
+    forwards;
+}
+
+/* =========================================================
+   LIGHTBOX IMAGE WRAPPER
+========================================================= */
+
+.lightbox-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   LIGHTBOX IMAGE
+
+   Normal IMG is intentionally used here.
+   Browser cache makes the popup faster.
+========================================================= */
+
+.lightbox-image {
+  display: block;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  animation:
+    popupImageIn 0.3s
+    ease forwards;
+}
+
+@keyframes popupImageIn {
+  0% {
+    opacity: 0;
+
+    transform: scale(0.94);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.lightbox-close {
+  position: absolute;
+
+  top: -20px;
+  right: -20px;
+
+  z-index: 100;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: var(--theme);
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =========================================================
+   CLOSE HOVER
+========================================================= */
+
+.lightbox-close:hover {
+  background: var(--theme);
+
+  color: #ffffff;
+
+  transform:
+    rotate(90deg)
+    scale(1.08);
+}
+
+/* =========================================================
+   LIGHTBOX ANIMATION
+========================================================= */
+
+@keyframes lightboxFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightboxZoomIn {
+  from {
+    opacity: 0;
+
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 1199px) {
-  .gallery-image-wrapper {
+  .gallery-image-box {
     height: 300px;
   }
 }
 
 @media (max-width: 991px) {
-  .gallery-image-wrapper {
+  .gallery-image-box {
     height: 280px;
   }
 }
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 767px) {
-  .gallery-image-wrapper {
+  .gallery-image-box {
     height: 260px;
+  }
+
+  .gallery-plus {
+    width: 52px;
+    height: 52px;
+  }
+
+  .custom-lightbox {
+    padding: 20px;
+  }
+
+  .lightbox-content {
+    width: 95vw;
+
+    height: 80vh;
+  }
+
+  .lightbox-close {
+    top: -15px;
+
+    right: -5px;
+
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 18px;
   }
 }
 
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
 @media (max-width: 575px) {
-  .gallery-image-wrapper {
+  .gallery-image-box {
     height: 250px;
   }
 }
