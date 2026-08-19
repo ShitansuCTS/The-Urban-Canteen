@@ -11729,3 +11729,51 @@ p.sticky-label {
     height: 200px;
 }
 }
+
+.gallery-skeleton {
+  width: 100%;
+  height: 320px;
+  background: #e9e9e9;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-skeleton-shine {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 100%
+  );
+
+  animation: gallerySkeletonLoading 1.5s infinite;
+}
+
+@keyframes gallerySkeletonLoading {
+  0% {
+    left: -150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+@media (max-width: 991px) {
+  .gallery-skeleton {
+    height: 280px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery-skeleton {
+    height: 250px;
+  }
+}
