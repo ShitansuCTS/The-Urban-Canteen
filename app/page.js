@@ -78,8 +78,10 @@ const page = () => {
           </div>
         
       </section>
+       {/* Food Catagory Section Start */}
+      <FoodSlider />
       {/* Food Banner Section Start */}
-      <section className="food-banner-section section-padding fix section-bg pt-0">
+      <section className="food-banner-section section-padding fix section-bg">
         <div className="chili-shape">
           <img src="assets/img/shape/chili-shape.png" alt="shape-img" />
         </div>
@@ -145,8 +147,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      {/* Food Catagory Section Start */}
-      <FoodSlider />
+     
       
       {/* Brand Section Start */}
       <section className="brand-shape section-padding fix section-bg pt-0">
@@ -1134,7 +1135,7 @@ const page = () => {
       <GallerySlider />
 
       {/* Main Cta Banner Section Start */}
-      <section className="main-cta-banner section-padding pt-0">
+      {/* <section className="main-cta-banner section-padding pt-0">
         <div className="container">
           <div
             className="main-cta-banner-wrapper bg-cover mt-10"
@@ -1174,7 +1175,7 @@ const page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Booking Section Start */}
       <section
         className="booking-section fix section-padding bg-cover"

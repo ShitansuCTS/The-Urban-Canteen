@@ -101,12 +101,11 @@ const Header = () => {
           <div className="container">
             <div className="mega-menu-wrapper">
               <div className="header-main">
-                <div className="logo" style={{ width: "30%" }}>
+                <div className="logo">
   <Link href="/" className="header-logo">
     <img
       src="/assets/img/logo/URBAN-LOGO.png"
       alt="logo-img"
-      style={{ width: "35%" }}
     />
   </Link>
 </div>

@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const GallerySlider = () => {
   return (
-    <div className="gallery-section fix" style={{ paddingTop: "100px" }}>
+    <div className="gallery-section fix section-padding">
       <div className="container">
         <div className="array-button">
           <button className="array-prev">

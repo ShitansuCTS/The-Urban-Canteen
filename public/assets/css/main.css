@@ -7102,7 +7102,7 @@ input.main-search-input::placeholder {
 }
 @media (max-width: 767px) {
   .comboo-wrapper .comboo-image {
-    width: 770px;
+    width: 100%;
     height: 400px;
   }
 }
@@ -9744,13 +9744,21 @@ p.sticky-label {
   color: var(--text);
   position: absolute;
   top: 50%;
-  left: 8%;
+  left: 4%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-box-shadow: none;
           box-shadow: none;
   z-index: 99;
   border: 0px;
+  background: radial-gradient(#88a137, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-section .array-button .array-prev i.far.fa-long-arrow-left{
+  font-size: 20px;
+  color: var(--white);
 }
 @media (max-width: 1399px) {
   .gallery-section .array-button .array-prev, .gallery-section .array-button .array-next {
@@ -9764,11 +9772,20 @@ p.sticky-label {
 }
 .gallery-section .array-button .array-next {
   left: auto;
-  right: 5%;
+    right: 0%;
+    background: radial-gradient(#88a137, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-section .array-button .array-next i.far.fa-long-arrow-right{
+  font-size: 20px;
+  color: var(--white);
 }
 
 .gallery-image {
   position: relative;
+  height: 400px;
 }
 .gallery-image img {
   width: 100%;
@@ -9815,7 +9832,7 @@ p.sticky-label {
           transform: scale(0.5);
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #88a137d7;
   border-radius: 27px;
 }
 .gallery-image:hover .icon {
@@ -9897,7 +9914,7 @@ p.sticky-label {
 }
 
 .booking-section {
-  margin-top: -240px;
+  /* margin-top: -240px; */
   position: relative;
 }
 
@@ -10592,6 +10609,10 @@ p.sticky-label {
 
 /* Samrita */
 
+/* ================================
+   RESTAURANT HERO
+================================ */
+
 .restaurant-hero {
   position: relative;
   min-height: 100vh;
@@ -10612,6 +10633,10 @@ p.sticky-label {
   top: -160px;
   opacity: 0.7;
 }
+
+/* ================================
+   LEFT CONTENT
+================================ */
 
 .hero-content {
   position: relative;
@@ -10658,7 +10683,9 @@ p.sticky-label {
   line-height: 1.8;
 }
 
-/* Buttons */
+/* ================================
+   BUTTON
+================================ */
 
 .hero-buttons {
   display: flex;
@@ -10667,7 +10694,8 @@ p.sticky-label {
   margin-top: 25px;
 }
 
-.hero-btn {
+/* Your JSX uses home-about-btn */
+.home-about-btn {
   display: inline-flex;
   align-items: center;
   gap: 18px;
@@ -10681,7 +10709,13 @@ p.sticky-label {
   transition: 0.35s ease;
 }
 
-.hero-btn i {
+.home-about-btn:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(162, 71, 39, 0.25);
+}
+
+.home-about-btn-icon {
   width: 42px;
   height: 42px;
   display: flex;
@@ -10694,17 +10728,13 @@ p.sticky-label {
   transition: 0.35s ease;
 }
 
-.hero-btn:hover {
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(162, 71, 39, 0.25);
-}
-
-.hero-btn:hover i {
+.home-about-btn:hover .home-about-btn-icon {
   transform: rotate(45deg);
 }
 
-
+/* ================================
+   HERO INFO
+================================ */
 
 .hero-info {
   display: flex;
@@ -10741,7 +10771,9 @@ p.sticky-label {
   margin-top: 2px;
 }
 
-/* Food Area */
+/* ================================
+   FOOD AREA
+================================ */
 
 .hero-food-area {
   position: relative;
@@ -10773,12 +10805,9 @@ p.sticky-label {
   width: 500px;
   height: 500px;
   max-width: none;
-
   object-fit: cover;
   border-radius: 50%;
-
   filter: drop-shadow(0 25px 30px rgba(44, 35, 25, 0.22));
-
   animation: foodFloat 5s ease-in-out infinite;
 }
 
@@ -10793,7 +10822,9 @@ p.sticky-label {
   }
 }
 
-/* Floating badge */
+/* ================================
+   FLOATING BADGE
+================================ */
 
 .floating-text {
   position: absolute;
@@ -10819,15 +10850,17 @@ p.sticky-label {
 }
 
 .floating-text small {
-     color: #716c61;
-    font-size: 17px;
-    text-align: center;
-    max-width: 75px;
-    line-height: 1.3;
-    font-weight: 700;
+  color: #716c61;
+  font-size: 17px;
+  text-align: center;
+  max-width: 75px;
+  line-height: 1.3;
+  font-weight: 700;
 }
 
-/* Decorative elements */
+/* ================================
+   DECORATIVE ELEMENTS
+================================ */
 
 .food-leaf {
   position: absolute;
@@ -10855,7 +10888,9 @@ p.sticky-label {
   font-size: 22px;
 }
 
-/* Bottom wave */
+/* ================================
+   BOTTOM WAVE
+================================ */
 
 .hero-bottom-wave {
   position: absolute;
@@ -10869,12 +10904,15 @@ p.sticky-label {
 }
 
 
-/* Responsive */
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media (max-width: 991px) {
 
   .restaurant-hero {
     min-height: auto;
+    display: block;
   }
 
   .hero-content {
@@ -10884,6 +10922,8 @@ p.sticky-label {
 
   .hero-small-title {
     justify-content: center;
+    font-size: 13px;
+    letter-spacing: 1.5px;
   }
 
   .hero-content h1 {
@@ -10892,8 +10932,8 @@ p.sticky-label {
   }
 
   .hero-content p {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 25px auto;
+    max-width: 600px;
   }
 
   .hero-buttons {
@@ -10904,8 +10944,10 @@ p.sticky-label {
     justify-content: center;
   }
 
+  /* Food */
   .hero-food-area {
     height: 500px;
+    margin-top: 10px;
   }
 
   .food-circle {
@@ -10914,88 +10956,343 @@ p.sticky-label {
   }
 
   .hero-food {
-    width: 500px;
+    width: 430px;
+    height: 430px;
   }
 
   .floating-text {
-    left: 10%;
-    bottom: 80px;
-  }
-
-}
-
-@media (max-width: 575px) {
-
-  .hero-content {
-    padding-top: 80px;
-  }
-
-  .hero-content h1 {
-    font-size: 54px;
-    letter-spacing: -3px;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-    padding: 0 15px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .hero-info {
-    gap: 20px;
-  }
-
-  .hero-info div:not(:last-child)::after {
-    right: -10px;
-  }
-
-  .hero-info strong {
-    font-size: 20px;
-  }
-
-  .hero-info small {
-    font-size: 9px;
-  }
-
-  .hero-food-area {
-    height: 400px;
-  }
-
-  .food-circle {
-    width: 300px;
-    height: 300px;
-  }
-
-  .hero-food {
-    width: 400px;
-    max-width: 120%;
-  }
-
-  .floating-text {
-    width: 90px;
-    height: 90px;
-    left: 5%;
-    bottom: 50px;
+    left: 8%;
+    bottom: 60px;
+    width: 105px;
+    height: 105px;
   }
 
   .floating-text span {
-    font-size: 18px;
+    font-size: 22px;
+  }
+
+  .floating-text small {
+    font-size: 13px;
+  }
+
+  .leaf-one {
+    top: 70px;
+    right: 15%;
+  }
+
+  .leaf-two {
+    bottom: 50px;
+    right: 8%;
+  }
+
+  .leaf-three {
+    top: 150px;
+    left: 10%;
+  }
+
+  .hero-bottom-wave {
+    bottom: -90px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+
+  .restaurant-hero {
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
+  /* Background circle */
+  .hero-bg-shape {
+    width: 330px;
+    height: 330px;
+    right: -170px;
+    top: -120px;
+    opacity: 0.55;
+  }
+
+  /* Content */
+  .hero-content {
+    padding: 75px 15px 10px;
+    text-align: center;
+  }
+
+  .hero-small-title {
+    font-size: 11px;
+    letter-spacing: 1px;
+    gap: 5px;
+    margin-bottom: 18px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(48px, 15vw, 68px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+    max-width: 100%;
+  }
+
+  .hero-content h1 span {
+    letter-spacing: -2px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 22px auto;
+    max-width: 500px;
+    padding: 0 5px;
+  }
+
+  /* Button */
+  .hero-buttons {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .home-about-btn {
+    font-size: 15px;
+    gap: 12px;
+    padding: 7px 8px 7px 18px;
+  }
+
+  .home-about-btn-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+  /* Food area */
+  .hero-food-area {
+    height: 410px;
+    width: 100%;
+    margin-top: 10px;
+    overflow: visible;
+  }
+
+  .food-circle {
+    width: 285px;
+    height: 285px;
+  }
+
+  .food-circle::before {
+    inset: 18px;
+  }
+
+  .hero-food {
+    width: 310px;
+    height: 310px;
+    max-width: 90%;
+  }
+
+  /* Floating badge */
+  .floating-text {
+    width: 82px;
+    height: 82px;
+    left: 7%;
+    bottom: 48px;
+    transform: rotate(-8deg);
+  }
+
+  .floating-text span {
+    font-size: 16px;
+  }
+
+  .floating-text small {
+    font-size: 9px;
+    max-width: 60px;
+    line-height: 1.2;
+  }
+
+  /* Decorative stars */
+  .food-leaf {
+    font-size: 20px;
+  }
+
+  .leaf-one {
+    top: 50px;
+    right: 8%;
+  }
+
+  .leaf-two {
+    bottom: 45px;
+    right: 5%;
+    font-size: 28px;
+  }
+
+  .leaf-three {
+    top: 125px;
+    left: 7%;
+    font-size: 17px;
+  }
+
+  /* Hide info if enabled later */
+  .hero-info {
+    display: none;
+  }
+
+  /* Bottom wave */
+  .hero-bottom-wave {
+    height: 70px;
+    bottom: -35px;
+    left: -10%;
+    width: 120%;
+    transform: rotate(-2deg);
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .hero-content {
+    padding: 65px 12px 5px;
+  }
+
+  .hero-small-title {
+    font-size: 9px;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 47px;
+    line-height: 0.98;
+    letter-spacing: -2.5px;
+  }
+
+  .hero-content h1 span {
+    letter-spacing: -1.5px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 18px auto;
+    padding: 0 10px;
+  }
+
+  .home-about-btn {
+    font-size: 14px;
+    padding: 6px 7px 6px 16px;
+  }
+
+  .home-about-btn-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Food */
+  .hero-food-area {
+    height: 350px;
+    margin-top: 5px;
+  }
+
+  .food-circle {
+    width: 245px;
+    height: 245px;
+  }
+
+  .hero-food {
+    width: 270px;
+    height: 270px;
+    max-width: 88%;
+  }
+
+  .floating-text {
+    width: 72px;
+    height: 72px;
+    left: 5%;
+    bottom: 38px;
+  }
+
+  .floating-text span {
+    font-size: 14px;
   }
 
   .floating-text small {
     font-size: 8px;
+    max-width: 52px;
   }
 
-  .hero-bg-shape {
-    width: 400px;
-    height: 400px;
-    right: -200px;
+  .leaf-one {
+    top: 40px;
+    right: 5%;
+    font-size: 17px;
+  }
+
+  .leaf-two {
+    bottom: 35px;
+    right: 4%;
+    font-size: 24px;
+  }
+
+  .leaf-three {
+    top: 105px;
+    left: 5%;
+    font-size: 14px;
+  }
+
+  .hero-bottom-wave {
+    height: 55px;
+    bottom: -28px;
   }
 }
 
+
+/* =====================================================
+   EXTRA SMALL DEVICES
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .hero-content {
+    padding-top: 55px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+  }
+
+  .hero-food-area {
+    height: 320px;
+  }
+
+  .food-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-food {
+    width: 245px;
+    height: 245px;
+  }
+
+  .floating-text {
+    width: 65px;
+    height: 65px;
+    bottom: 30px;
+  }
+
+  .floating-text span {
+    font-size: 12px;
+  }
+
+  .floating-text small {
+    font-size: 7px;
+  }
+}
 /* --------------------------------
    About CONTENT
 -------------------------------- */
@@ -11235,12 +11532,20 @@ p.sticky-label {
 
 
 
+/* =========================================
+   COMBO IMAGE / VIDEO
+========================================= */
+
 .comboo-image {
   position: relative;
   overflow: hidden;
-  min-height: 600px; /* apne design ke hisab se */
+  width: 100%;
+  min-height: 600px;
+  border-radius: 0;
+  isolation: isolate;
 }
 
+/* Background Video */
 .combo-bg-video {
   position: absolute;
   top: 0;
@@ -11248,14 +11553,129 @@ p.sticky-label {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   z-index: 0;
+  display: block;
 }
 
-/* Sab content video ke upar rahe */
+/* Content should stay above video */
 .comboo-image > *:not(.combo-bg-video) {
   position: relative;
   z-index: 2;
 }
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+  .comboo-image {
+    min-height: 520px;
+  }
+
+  .combo-bg-video {
+    object-position: center center;
+  }
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 991px) {
+
+  .food-comboo-section {
+    overflow: hidden;
+  }
+
+  .comboo-wrapper {
+    width: 100%;
+  }
+
+  .comboo-image {
+    width: 100%;
+    min-height: 480px;
+    height: 480px;
+    margin-top: 35px;
+  }
+
+  .combo-bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .food-comboo-section {
+    overflow: hidden;
+  }
+
+  .comboo-image {
+    width: 100%;
+    height: 400px;
+    min-height: 400px;
+    margin-top: 25px;
+  }
+
+  .combo-bg-video {
+    width: 100%;
+    height: 100%;
+   object-fit: contain;
+    background: #000;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+
+  .comboo-image {
+    width: 100%;
+    height: 350px;
+    min-height: 350px;
+    margin-top: 20px;
+  }
+
+  .combo-bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .comboo-image {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .combo-bg-video {
+    object-position: center center;
+  }
+}
+
+
 .catagory-product-image img{
   width: 100%;
   height: 100%;
@@ -11270,4 +11690,25 @@ p.sticky-label {
 
 .dark-bg{
   background: #cbcbcb57;
+}
+
+.logo{
+  width: 35%;
+}
+.header-logo img{
+  width: 35%;
+}
+@media (max-width: 676px) {
+  .logo{
+    width: 50%
+  }
+  .header-logo img{
+  width: 50%;
+}
+.pizza-banner-items{
+  background-position: left;
+}
+.pizza-banner-items .pizza-text {
+    top: -49px;
+}
 }
