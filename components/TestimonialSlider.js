@@ -33,11 +33,11 @@ const TestimonialSlider = ({ sectionBg = true }) => {
                       <h4>Piter Bowman</h4>
                       <h5>Business CEO &amp; co founder</h5>
                     </div>
-                    <h3>
+                    <h5>
                       “Thank you for dinner last night. It was amazing!! I have
                       say it’s the best meal I have had in quite some time. will
                       definitely be seeing more eating next year.”
-                    </h3>
+                    </h5>
                     <div className="star">
                       <span className="fas fa-star" />
                       <span className="fas fa-star" />
@@ -53,11 +53,11 @@ const TestimonialSlider = ({ sectionBg = true }) => {
                       <h4>Piter Bowman</h4>
                       <h5>Business CEO &amp; co founder</h5>
                     </div>
-                    <h3>
+                    <h5>
                       “Thank you for dinner last night. It was amazing!! I have
                       say it’s the best meal I have had in quite some time. will
                       definitely be seeing more eating next year.”
-                    </h3>
+                    </h5>
                     <div className="star">
                       <span className="fas fa-star" />
                       <span className="fas fa-star" />
@@ -73,11 +73,11 @@ const TestimonialSlider = ({ sectionBg = true }) => {
                       <h4>Piter Bowman</h4>
                       <h5>Business CEO &amp; co founder</h5>
                     </div>
-                    <h3>
+                    <h5>
                       “Thank you for dinner last night. It was amazing!! I have
                       say it’s the best meal I have had in quite some time. will
                       definitely be seeing more eating next year.”
-                    </h3>
+                    </h5>
                     <div className="star">
                       <span className="fas fa-star" />
                       <span className="fas fa-star" />
@@ -93,11 +93,11 @@ const TestimonialSlider = ({ sectionBg = true }) => {
                       <h4>Piter Bowman</h4>
                       <h5>Business CEO &amp; co founder</h5>
                     </div>
-                    <h3>
+                    <h5>
                       “Thank you for dinner last night. It was amazing!! I have
                       say it’s the best meal I have had in quite some time. will
                       definitely be seeing more eating next year.”
-                    </h3>
+                    </h5>
                     <div className="star">
                       <span className="fas fa-star" />
                       <span className="fas fa-star" />
@@ -113,11 +113,11 @@ const TestimonialSlider = ({ sectionBg = true }) => {
                       <h4>Piter Bowman</h4>
                       <h5>Business CEO &amp; co founder</h5>
                     </div>
-                    <h3>
+                    <h5>
                       “Thank you for dinner last night. It was amazing!! I have
                       say it’s the best meal I have had in quite some time. will
                       definitely be seeing more eating next year.”
-                    </h3>
+                    </h5>
                     <div className="star">
                       <span className="fas fa-star" />
                       <span className="fas fa-star" />
@@ -133,11 +133,11 @@ const TestimonialSlider = ({ sectionBg = true }) => {
                       <h4>Piter Bowman</h4>
                       <h5>Business CEO &amp; co founder</h5>
                     </div>
-                    <h3>
+                    <h5>
                       “Thank you for dinner last night. It was amazing!! I have
                       say it’s the best meal I have had in quite some time. will
                       definitely be seeing more eating next year.”
-                    </h3>
+                    </h5>
                     <div className="star">
                       <span className="fas fa-star" />
                       <span className="fas fa-star" />
@@ -156,62 +156,62 @@ const TestimonialSlider = ({ sectionBg = true }) => {
               <div className="swiper-wrapper">
                 <SwiperSlide className="swiper-slide">
                   <div className="client-image-item">
-                    <div
+                    {/* <div
                       className="client-img bg-cover"
                       style={{
                         backgroundImage: 'url("assets/img/client/01.jpg")',
                       }}
-                    />
+                    /> */}
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
                   <div className="client-image-item">
-                    <div
+                    {/* <div
                       className="client-img bg-cover"
                       style={{
                         backgroundImage: 'url("assets/img/client/02.jpg")',
                       }}
-                    />
+                    /> */}
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
                   <div className="client-image-item">
-                    <div
+                    {/* <div
                       className="client-img bg-cover"
                       style={{
                         backgroundImage: 'url("assets/img/client/03.jpg")',
                       }}
-                    />
+                    /> */}
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
                   <div className="client-image-item">
-                    <div
+                    {/* <div
                       className="client-img bg-cover"
                       style={{
                         backgroundImage: 'url("assets/img/client/01.jpg")',
                       }}
-                    />
+                    /> */}
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
                   <div className="client-image-item">
-                    <div
+                    {/* <div
                       className="client-img bg-cover"
                       style={{
                         backgroundImage: 'url("assets/img/client/02.jpg")',
                       }}
-                    />
+                    /> */}
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
                   <div className="client-image-item">
-                    <div
+                    {/* <div
                       className="client-img bg-cover"
                       style={{
                         backgroundImage: 'url("assets/img/client/03.jpg")',
                       }}
-                    />
+                    /> */}
                   </div>
                 </SwiperSlide>
               </div>

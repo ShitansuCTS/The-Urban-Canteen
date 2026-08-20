@@ -6,6 +6,8 @@ import PageBanner from "@/components/PageBanner";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
 import Link from "next/link";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import ReservationForm from "@/components/ReservationForm";
 
 const page = () => {
   return (
@@ -13,22 +15,26 @@ const page = () => {
       <PageBanner pageName={"About us"} />
       {/* About Section Start */}
       <section className="about-section fix section-padding section-bg">
+
+        <div className="about-top-decoration">
+    <img
+      src="assets/img/about/mirchi.webp"
+      alt=""
+    />
+  </div>
         <div className="container">
           <div className="about-wrapper">
             <div className="row align-items-center">
               <div
                 className="col-xl-6 col-lg-6 wow fadeInUp"
                 data-wow-delay=".3s"
+                style={{ display: "flex", justifyContent: "center" }}
               >
+                
                 <div className="about-image">
-                  <img src="assets/img/about/burger.png" alt="about-img" />
-                  <div className="burger-text">
-                    <img
-                      src="assets/img/about/burger-text.png"
-                      alt="shape-img"
-                    />
-                  </div>
-                  <div className="price">
+                  <img src="assets/img/food/03.webp" alt="about-img" />
+                  
+                  {/* <div className="price">
                     <h2>
                       $<span className="count">4,99</span>
                     </h2>
@@ -40,15 +46,15 @@ const page = () => {
                     }}
                   >
                     <h3>since /1985</h3>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="col-xl-6 col-lg-6 mt-5 mt-lg-0">
                 <div className="about-content">
                   <div className="section-title">
-                    <span className="wow fadeInUp">about our food</span>
+                    <span className="wow fadeInUp about-part">About Our Food</span>
                     <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                      Where Quality Meet Excellent <span>Service.</span>
+                      Where Quality Meet Excellent <span style={{color: "Var(--theme)"}}>Service.</span>
                     </h2>
                   </div>
                   <p className="wow fadeInUp" data-wow-delay=".5s">
@@ -96,7 +102,7 @@ const page = () => {
                       className="theme-btn style-line-height wow fadeInUp"
                       data-wow-delay=".3s"
                     >
-                      more about us
+                      See Our Menu
                     </Link>
                     <div
                       className="info-content wow fadeInUp"
@@ -114,17 +120,13 @@ const page = () => {
       </section>
       {/* Main Cta Banner Section Start */}
       <section
-        className="main-cta-banner-2 section-padding bg-cover"
+        className="main-cta-banner-2 bg-cover"
         style={{
-          backgroundImage: 'url("assets/img/banner/main-cta-bg-2.jpg")',
+          backgroundImage: 'url("assets/img/banner/bg-01.webp")', padding: "140px 0"
         }}
       >
-        <div className="tomato-shape-left float-bob-y">
-          <img src="assets/img/tomato.png" alt="shape-img" />
-        </div>
-        <div className="chili-shape-right float-bob-y">
-          <img src="assets/img/chilli.png" alt="shape-img" />
-        </div>
+        <div className="cta-overlay"></div>
+        
         <div className="container">
           <div className="main-cta-banner-wrapper-2 d-flex align-items-center justify-content-between">
             <div className="section-title mb-0">
@@ -132,20 +134,20 @@ const page = () => {
                 crispy, every bite taste
               </span>
               <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
-                30 minutes fast <br />
-                <span className="theme-color-3">delivery</span> challage
+                Good <span className="theme-color-3">food</span>, great moments, <br />
+                <span className="theme-color-3"> unforgettable </span>memories.
               </h2>
             </div>
             <Link
-              href="/shop-single"
+              href="/menu"
               className="theme-btn bg-white wow fadeInUp"
               data-wow-delay=".5s"
             >
               <span className="button-content-wrapper d-flex align-items-center">
                 <span className="button-icon">
-                  <i className="flaticon-delivery" />
+                  <i className="bi bi-leaf-fill" />
                 </span>
-                <span className="button-text">order now</span>
+                <span className="button-text">See Our Menu</span>
               </span>
             </Link>
             <div className="delivery-man">
@@ -157,7 +159,7 @@ const page = () => {
       {/* About Food Section Start */}
       <AboutFoodItems />
       {/* Food Banner Section Start */}
-      <section className="food-banner-section fix section-padding section-bg pt-0">
+      {/* <section className="food-banner-section fix section-padding section-bg pt-0">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-9">
@@ -224,11 +226,11 @@ const page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Marque Section Start */}
       <Marque />
       {/* Today Nest Sale Banner Start */}
-      <section className="today-best-sale fix">
+      {/* <section className="today-best-sale fix">
         <div className="today-best-sale-wrapper">
           <div className="row g-0">
             <div className="col-xl-8 col-lg-7">
@@ -277,9 +279,9 @@ const page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Team Section Start */}
-      <section className="team-section section-padding section-bg fix">
+      {/* <section className="team-section section-padding section-bg fix">
         <div className="container">
           <div className="section-title text-center">
             <span className="wow fadeInUp">about our food</span>
@@ -388,9 +390,9 @@ const page = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Food Processing Section Start */}
-      <section
+      {/* <section
         className="food-processing-section section-padding fix bg-cover"
         style={{
           backgroundImage: 'url("assets/img/shape/about-food-bg.png")',
@@ -468,19 +470,25 @@ const page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Testimonial Section Start */}
       <TestimonialSlider />
       {/* Booking Section Start */}
       <section
-        className="booking-section mt-0 fix section-padding bg-cover"
-        style={{ backgroundImage: 'url("assets/img/banner/main-bg.jpg")' }}
+        className="booking-section fix section-padding bg-cover"
+        style={{ backgroundImage: 'url("assets/img/banner/form-bg.webp")' }}
       >
         <div className="container">
-          <div className="booking-wrapper">
+          <div className="booking-wrapper style-responsive section-padding pb-0">
             <div className="row justify-content-between align-items-center">
+              <div
+                className="col-lg-5 mt-5 mt-lg-0 wow fadeInUp"
+                data-wow-delay=".4s"
+              >
+                <ReservationForm />
+              </div>
               <div className="col-lg-6">
-                <div className="booking-content">
+                {/* <div className="booking-content">
                   <div className="section-title">
                     <span className="wow fadeInUp">
                       crispy, every bite taste
@@ -503,71 +511,19 @@ const page = () => {
                     <div className="content">
                       <h5>24/7 Support center</h5>
                       <h3>
-                        <a href="tel:+1718-904-4450">+1718-904-4450</a>
+                        <a href="tel:+91 99381 61712">+91 99381 61712</a>
                       </h3>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
-              <div
-                className="col-lg-5 mt-5 mt-lg-0 wow fadeInUp"
-                data-wow-delay=".4s"
-              >
-                <div
-                  className="booking-contact bg-cover"
-                  style={{
-                    backgroundImage:
-                      'url("assets/img/shape/booking-shape.png")',
-                  }}
-                >
-                  <h4 className="text-center text-white">
-                    create an reservation
-                  </h4>
-                  <div className="booking-items">
-                    <div className="form-clt">
-                      <div className="nice-select" tabIndex={0}>
-                        <span className="current">no of person</span>
-                        <ul className="list">
-                          <li data-value={1} className="option selected">
-                            no of person
-                          </li>
-                          <li data-value={1} className="option">
-                            no of person
-                          </li>
-                          <li data-value={1} className="option">
-                            no of person
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="form-clt">
-                      <input
-                        type="text"
-                        name="number"
-                        id="number"
-                        placeholder="phone number"
-                      />
-                      <div className="icon">
-                        <i className="fas fa-phone" />
-                      </div>
-                    </div>
-                    <div className="form-clt">
-                      <input type="date" id="calendar" name="calendar" />
-                    </div>
-                    <div className="form-clt">
-                      <Link href="/reservation" className="theme-btn bg-yellow">
-                        booking now
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
       </section>
       {/* Instagram Banner Section Start */}
-      <InstagramBannerSlider />
+      {/* <InstagramBannerSlider /> */}
     </FoodKingLayout>
   );
 };

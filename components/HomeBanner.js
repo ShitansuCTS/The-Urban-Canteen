@@ -1,15 +1,23 @@
+"use client";
+
 import React from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const RestaurantHero = () => {
   return (
     <section className="restaurant-hero">
+      {/* Existing Green Background Shape */}
       <div className="hero-bg-shape"></div>
+
+      {/* Premium Restaurant Background Image */}
+      <div className="hero-restaurant-bg"></div>
 
       <div className="container">
         <div className="row align-items-center min-vh-100">
 
-          {/* LEFT CONTENT */}
+          {/* =========================
+              LEFT CONTENT
+          ========================= */}
           <div className="col-lg-6">
             <div className="hero-content">
 
@@ -29,55 +37,40 @@ const RestaurantHero = () => {
 
               <div className="hero-buttons">
                 <a href="/menu" className="home-about-btn">
-                <span className="home-about-btn-icon">
-                  <i className="bi bi-leaf-fill"></i>
-                </span>
+                  <span className="home-about-btn-icon">
+                    <i className="bi bi-leaf-fill"></i>
+                  </span>
 
-                <span>Explore Menu</span>
-              </a>
-
-                {/* <a href="/reservation" className="reserve-btn">
-                  Book a Table
-                </a> */}
+                  <span>Explore Menu</span>
+                </a>
               </div>
-
-              {/* <div className="hero-info">
-                <div>
-                  <strong>20+</strong>
-                  <small>Signature Dishes</small>
-                </div>
-
-                <div>
-                  <strong>4.9</strong>
-                  <small>Customer Rating</small>
-                </div>
-
-                <div>
-                  <strong>10+</strong>
-                  <small>Years Experience</small>
-                </div>
-              </div> */}
 
             </div>
           </div>
 
-          {/* RIGHT FOOD IMAGE */}
+          {/* =========================
+              RIGHT FOOD IMAGE
+          ========================= */}
           <div className="col-lg-6">
             <div className="hero-food-area">
 
+              {/* Green Circle */}
               <div className="food-circle"></div>
 
+              {/* Fresh Ingredients Badge */}
               <div className="floating-text">
                 <span>100%</span>
                 <small>Fresh Ingredients</small>
               </div>
 
+              {/* Main Food Image */}
               <img
                 src="/assets/img/fresh-drink.webp"
                 alt="Delicious restaurant food"
                 className="hero-food"
               />
 
+              {/* Decorative Stars */}
               <div className="food-leaf leaf-one">✦</div>
               <div className="food-leaf leaf-two">✧</div>
               <div className="food-leaf leaf-three">✦</div>
@@ -88,10 +81,8 @@ const RestaurantHero = () => {
         </div>
       </div>
 
-      {/* BOTTOM DECORATION */}
+      {/* Bottom White Wave */}
       <div className="hero-bottom-wave"></div>
-
-      
     </section>
   );
 };
