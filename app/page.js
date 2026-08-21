@@ -62,7 +62,7 @@ const page = () => {
   experience truly special.
               </p>
 
-              <a href="/menu" className="home-about-btn">
+              <a href="/about" className="home-about-btn">
                 <span className="home-about-btn-icon">
                   <i className="bi bi-leaf-fill"></i>
                 </span>
@@ -78,8 +78,94 @@ const page = () => {
           </div>
         
       </section>
-       {/* Food Catagory Section Start */}
-      <FoodSlider />
+
+
+      {/* Main Cta Banner Section Start */}
+            <section
+  className="main-cta-banner-2 premium-cta-banner"
+  style={{
+    backgroundImage: 'url("/assets/img/restaurant/3.webp")',
+  }}
+>
+  {/* Dark Overlay */}
+  <div className="cta-overlay"></div>
+
+  {/* Decorative Border */}
+  <div className="premium-banner-frame"></div>
+
+  <div className="container">
+    <div className="premium-cta-content">
+
+      {/* Small Heading */}
+      <div
+        className="premium-eyebrow wow fadeInUp"
+        data-wow-delay=".1s"
+      >
+        <span className="eyebrow-line"></span>
+        <span>A PLACE TO SAVOR</span>
+        <span className="eyebrow-line"></span>
+      </div>
+
+      {/* Main Heading */}
+      <div className="section-title premium-section-title mb-0">
+        <h2
+          className="wow fadeInUp"
+          data-wow-delay=".2s"
+        >
+          More Than Just
+          <br />
+          <em> A Dining Experience</em>
+        </h2>
+      </div>
+
+      {/* Description */}
+      <p
+        className="premium-cta-description wow fadeInUp"
+        data-wow-delay=".3s"
+      >
+        Where beautiful interiors, warm hospitality and
+        unforgettable flavors come together.
+      </p>
+
+      {/* Decorative Divider */}
+      <div
+        className="premium-divider wow fadeInUp"
+        data-wow-delay=".35s"
+      >
+        <span></span>
+        <i className="bi bi-diamond-fill"></i>
+        <span></span>
+      </div>
+
+      {/* Button */}
+      <a href="#" class="home-about-btn">
+        <span class="home-about-btn-icon">
+          <i class="bi bi-leaf-fill"></i></span><span>See Our Menu</span></a>
+
+    </div>
+  </div>
+
+  {/* Delivery Man */}
+  <div
+    className="premium-delivery-man wow fadeInRight"
+    data-wow-delay=".3s"
+  >
+    <img
+      src="/assets/img/delivery-man-2.png"
+      alt="Delivery"
+    />
+  </div>
+
+  {/* Decorative Leaves */}
+  <div className="premium-leaf premium-leaf-left">
+    <i className="bi bi-leaf"></i>
+  </div>
+
+  <div className="premium-leaf premium-leaf-right">
+    <i className="bi bi-leaf"></i>
+  </div>
+</section>
+       
       {/* Food Banner Section Start */}
       <section className="food-banner-section section-padding fix section-bg">
         <div className="chili-shape">
@@ -150,7 +236,7 @@ const page = () => {
      
       
       {/* Brand Section Start */}
-      <section className="brand-shape section-padding fix section-bg pt-0">
+      {/* <section className="brand-shape section-padding fix section-bg pt-0">
         <div className="container">
           <div className="brand-wrapper">
             <div className="brand-title">
@@ -161,7 +247,7 @@ const page = () => {
             <BrandSlider />
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Grilled Banner Section Start */}
       {/* <section
         className="grilled-banner fix section-padding bg-cover"
@@ -1132,7 +1218,7 @@ const page = () => {
       
 
       {/* Gallery Section Start */}
-      <GallerySlider />
+      {/* <GallerySlider /> */}
 
       {/* Main Cta Banner Section Start */}
       {/* <section className="main-cta-banner section-padding pt-0">
@@ -1176,6 +1262,10 @@ const page = () => {
           </div>
         </div>
       </section> */}
+
+      {/* Food Catagory Section Start */}
+      <FoodSlider />
+
       {/* Booking Section Start */}
       <section
         className="booking-section fix section-padding bg-cover"

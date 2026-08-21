@@ -157,7 +157,10 @@ const page = () => {
         </div>
       </section>
       {/* About Food Section Start */}
-      <AboutFoodItems />
+      {/* <AboutFoodItems /> */}
+
+
+      
       {/* Food Banner Section Start */}
       {/* <section className="food-banner-section fix section-padding section-bg pt-0">
         <div className="container">
@@ -227,8 +230,7 @@ const page = () => {
           </div>
         </div>
       </section> */}
-      {/* Marque Section Start */}
-      <Marque />
+      
       {/* Today Nest Sale Banner Start */}
       {/* <section className="today-best-sale fix">
         <div className="today-best-sale-wrapper">
@@ -473,6 +475,8 @@ const page = () => {
       </section> */}
       {/* Testimonial Section Start */}
       <TestimonialSlider />
+      {/* Marque Section Start */}
+      <Marque />
       {/* Booking Section Start */}
       <section
         className="booking-section fix section-padding bg-cover"
