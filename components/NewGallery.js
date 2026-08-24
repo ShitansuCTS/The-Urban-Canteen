@@ -3,7 +3,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const galleryImages = [
+/* =========================================================
+   FOOD GALLERY
+========================================================= */
+
+const foodGalleryImages = [
   {
     src: "/assets/img/gallery/23.webp",
     col: "col-lg-8",
@@ -15,7 +19,7 @@ const galleryImages = [
     delay: "0.2s",
   },
   {
-    src: "/assets/img/gallery/08.webp",
+    src: "/assets/img/gallery/24.webp",
     col: "col-lg-4",
     delay: "0.3s",
   },
@@ -67,6 +71,58 @@ const galleryImages = [
 ];
 
 /* =========================================================
+   RESTAURANT GALLERY
+========================================================= */
+
+const restaurantGalleryImages = [
+  {
+    src: "/assets/img/restaurant/1.webp",
+    col: "col-lg-8",
+    delay: "0.1s",
+  },
+  {
+    src: "/assets/img/restaurant/2.webp",
+    col: "col-lg-4",
+    delay: "0.2s",
+  },
+  {
+    src: "/assets/img/restaurant/3.webp",
+    col: "col-lg-4",
+    delay: "0.3s",
+  },
+  {
+    src: "/assets/img/restaurant/4.webp",
+    col: "col-lg-8",
+    delay: "0.4s",
+  },
+  {
+    src: "/assets/img/restaurant/5.webp",
+    col: "col-lg-3",
+    delay: "0.1s",
+  },
+  {
+    src: "/assets/img/restaurant/6.webp",
+    col: "col-lg-3",
+    delay: "0.2s",
+  },
+  {
+    src: "/assets/img/restaurant/7.webp",
+    col: "col-lg-6",
+    delay: "0.3s",
+  },
+  {
+    src: "/assets/img/restaurant/8.webp",
+    col: "col-lg-3",
+    delay: "0.4s",
+  },
+  {
+    src: "/assets/img/restaurant/9.webp",
+    col: "col-lg-6",
+    delay: "0.1s",
+  },
+];
+
+/* =========================================================
    GALLERY ITEM
 ========================================================= */
 
@@ -88,20 +144,14 @@ const GalleryItem = ({
     >
       <div className="gallery-image-box">
 
-        {/* =========================
-            SKELETON
-        ========================= */}
-
+        {/* SKELETON */}
         {!loaded && (
           <div className="gallery-skeleton">
             <span></span>
           </div>
         )}
 
-        {/* =========================
-            GALLERY IMAGE
-        ========================= */}
-
+        {/* GALLERY IMAGE */}
         <Image
           src={src}
           alt="The Urban Canteen Gallery"
@@ -120,10 +170,7 @@ const GalleryItem = ({
           onError={() => setLoaded(true)}
         />
 
-        {/* =========================
-            HOVER OVERLAY
-        ========================= */}
-
+        {/* HOVER OVERLAY */}
         {loaded && (
           <div className="gallery-hover-overlay">
             <button
@@ -136,6 +183,7 @@ const GalleryItem = ({
             </button>
           </div>
         )}
+
       </div>
     </div>
   );
@@ -146,7 +194,29 @@ const GalleryItem = ({
 ========================================================= */
 
 const NewGallery = () => {
+
+  /* =======================================================
+     ACTIVE TAB
+
+     Restaurant Gallery will be displayed first
+  ======================================================= */
+
+  const [activeTab, setActiveTab] = useState("restaurant");
+
+  /* =======================================================
+     ACTIVE LIGHTBOX IMAGE
+  ======================================================= */
+
   const [activeImage, setActiveImage] = useState(null);
+
+  /* =======================================================
+     CURRENT GALLERY
+  ======================================================= */
+
+  const currentGallery =
+    activeTab === "restaurant"
+      ? restaurantGalleryImages
+      : foodGalleryImages;
 
   /* =======================================================
      OPEN LIGHTBOX
@@ -165,6 +235,20 @@ const NewGallery = () => {
   const closeLightbox = () => {
     setActiveImage(null);
 
+    document.body.style.overflow = "";
+  };
+
+  /* =======================================================
+     CHANGE TAB
+  ======================================================= */
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+
+    // Close lightbox when changing tab
+    setActiveImage(null);
+
+    // Restore body scrolling
     document.body.style.overflow = "";
   };
 
@@ -210,13 +294,63 @@ const NewGallery = () => {
           GALLERY SECTION
       ===================================================== */}
 
-      <section className="gallery-section fix section-bg section-padding">
+      <section className="gallery-section fix section-bg">
+
         <div className="container">
+
+          {/* =================================================
+              GALLERY TABS
+          ================================================= */}
+
+          <div className="gallery-tabs text-center mb-5">
+
+            {/* ===============================================
+                RESTAURANT TAB - FIRST
+            =============================================== */}
+
+            <button
+              type="button"
+              className={`gallery-tab ${
+                activeTab === "restaurant"
+                  ? "active"
+                  : ""
+              }`}
+              onClick={() =>
+                handleTabChange("restaurant")
+              }
+            >
+              Our Place
+            </button>
+
+            {/* ===============================================
+                FOOD TAB - SECOND
+            =============================================== */}
+
+            <button
+              type="button"
+              className={`gallery-tab ${
+                activeTab === "food"
+                  ? "active"
+                  : ""
+              }`}
+              onClick={() =>
+                handleTabChange("food")
+              }
+            >
+              Cravings
+            </button>
+
+          </div>
+
+          {/* =================================================
+              GALLERY GRID
+          ================================================= */}
+
           <div className="row g-4">
 
-            {galleryImages.map((item, index) => (
+            {currentGallery.map((item, index) => (
               <GalleryItem
-                key={`${item.src}-${index}`}
+                key={`${activeTab}-${item.src}-${index}`}
                 src={item.src}
                 col={item.col}
                 delay={item.delay}
@@ -226,7 +360,9 @@ const NewGallery = () => {
             ))}
 
           </div>
+
         </div>
+
       </section>
 
       {/* =====================================================
@@ -238,6 +374,7 @@ const NewGallery = () => {
           className="custom-lightbox"
           onClick={closeLightbox}
         >
+
           <div
             className="lightbox-content"
             onClick={(event) =>
@@ -245,9 +382,7 @@ const NewGallery = () => {
             }
           >
 
-            {/* ================================================
-                CLOSE BUTTON
-            ================================================ */}
+            {/* CLOSE BUTTON */}
 
             <button
               type="button"
@@ -258,21 +393,23 @@ const NewGallery = () => {
               <i className="fal fa-times"></i>
             </button>
 
-            {/* ================================================
-                LIGHTBOX IMAGE
-            ================================================ */}
+            {/* LIGHTBOX IMAGE */}
 
             <div className="lightbox-image-wrapper">
+
               <img
-                src={galleryImages[activeImage].src}
+                src={currentGallery[activeImage].src}
                 alt="The Urban Canteen Gallery"
                 className="lightbox-image"
               />
+
             </div>
 
           </div>
+
         </div>
       )}
+
     </>
   );
 };

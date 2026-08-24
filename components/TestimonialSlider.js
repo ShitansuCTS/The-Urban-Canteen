@@ -33,10 +33,10 @@ const TestimonialSlider = () => {
   }, []);
   return (
     <section className="testimonial-section-2">
+      <div className="cta-overlay"></div>
       <div className="container">
         <div
           className="testimonial-wrapper-2 bg-cover"
-          style={{ backgroundImage: 'url("assets/img/client/bg-shape.png")' }}
         >
           <div className="row align-items-center">
             <div className="col-xl-4 col-lg-4">

@@ -5,44 +5,65 @@ const Marque = ({ pt = 0 }) => {
         <div className="marquee-inner to-left">
           <ul className="marqee-list d-flex">
             <li className="marquee-item">
-              <span className="text-slider text-color">populer</span>
-              <span className="text-slider" />{" "}
-              <span className="text-slider text-color">dishes</span>
-              <span className="text-slider">
-                <img src="assets/img/icon/burger.png" alt="icon-img" />
-              </span>{" "}
-              <span className="text-slider" />{" "}
-              <span className="text-slider text-color-2">delicious</span>
-              <span className="text-slider text-color-2">food</span>{" "}
-              <img src="assets/img/icon/pizza.png" alt="icon-img" />{" "}
-              <span className="text-slider" />{" "}
-              <span className="text-slider text-color">populer</span>
-              <span className="text-slider text-color">dishes</span>{" "}
-              <span className="text-slider" />
-              <span className="text-slider">
-                <img src="assets/img/icon/burger.png" alt="icon-img" />
-              </span>{" "}
-              <span className="text-slider" />{" "}
-              <span className="text-slider text-color-2">delicious</span>
-              <span className="text-slider text-color">populer</span>
-              <span className="text-slider" />{" "}
-              <span className="text-slider text-color">dishes</span>
-              <span className="text-slider">
-                <img src="assets/img/icon/burger.png" alt="icon-img" />
-              </span>{" "}
-              <span className="text-slider" />{" "}
-              <span className="text-slider text-color-2">delicious</span>
-              <span className="text-slider text-color-2">food</span>{" "}
-              <img src="assets/img/icon/pizza.png" alt="icon-img" />{" "}
-              <span className="text-slider" />{" "}
-              <span className="text-slider text-color">populer</span>
-              <span className="text-slider text-color">dishes</span>{" "}
-              <span className="text-slider" />
-              <span className="text-slider">
-                <img src="assets/img/icon/burger.png" alt="icon-img" />
-              </span>{" "}
-              <span className="text-slider" />{" "}
-              <span className="text-slider text-color-2">delicious</span>
+
+              <span className="text-slider text-color">
+                GOOD FOOD
+              </span>
+
+              <span className="marquee-symbol"> ✦ </span>
+
+              <span className="text-slider text-color-2">
+                GREAT VIBES
+              </span>
+
+              <span className="marquee-symbol"> • </span>
+
+              <span className="text-slider text-color">
+                URBAN MOMENTS
+              </span>
+
+              <span className="marquee-symbol"> ✦</span>
+
+              <span className="text-slider text-color-2">
+                SIGNATURE FLAVOURS
+              </span>
+
+              <span className="marquee-symbol"> •</span>
+
+              <span className="text-slider text-color">
+                MADE TO SHARE
+              </span>
+
+              <span className="marquee-symbol"> ✦ </span>
+
+              <span className="text-slider text-color-2">
+                GOOD FOOD
+              </span>
+
+              <span className="marquee-symbol"> •</span>
+
+              <span className="text-slider text-color">
+                GREAT VIBES
+              </span>
+
+              <span className="marquee-symbol"> ✦ </span>
+
+              <span className="text-slider text-color-2">
+                URBAN MOMENTS
+              </span>
+
+              <span className="marquee-symbol"> •</span>
+
+              <span className="text-slider text-color">
+                SIGNATURE FLAVOURS
+              </span>
+
+              <span className="marquee-symbol"> ✦</span>
+
+              <span className="text-slider text-color-2">
+                MADE TO SHARE
+              </span>
+
             </li>
           </ul>
         </div>
