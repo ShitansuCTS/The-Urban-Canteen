@@ -3820,7 +3820,7 @@ input.main-search-input::placeholder {
 .about-food-wrapper .nav .nav-item .nav-link {
   border: 1px solid var(--border);
   border-radius: 40px;
-  padding: 12px 35px;
+  padding: 12px 10px;
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;

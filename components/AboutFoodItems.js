@@ -715,7 +715,7 @@ const AboutFoodItems = () => {
                     <i className="bi bi-play-circle"></i>
 
                     <span>
-                      Restaurant Videos
+                      See The Vibe
                     </span>
 
                   </Nav.Link>
@@ -729,7 +729,7 @@ const AboutFoodItems = () => {
                     <i className="bi bi-chat-quote"></i>
 
                     <span>
-                      Reviews
+                      Loved by Guests
                     </span>
 
                   </Nav.Link>
