@@ -36,7 +36,7 @@ const RestaurantHero = () => {
               </p>
 
               <div className="hero-buttons">
-                <a href="/menu" className="home-about-btn">
+                <a href="#" className="home-about-btn">
                   <span className="home-about-btn-icon">
                     <i className="bi bi-leaf-fill"></i>
                   </span>

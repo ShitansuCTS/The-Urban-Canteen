@@ -52,17 +52,14 @@ const page = () => {
               <div className="col-xl-6 col-lg-6 mt-5 mt-lg-0">
                 <div className="about-content">
                   <div className="section-title">
-                    <span className="wow fadeInUp home-about-subtitle">About Our Food</span>
+                    <span className="wow fadeInUp home-about-subtitle">About The Urban Canteen</span>
                     <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                      Where Quality Meet Excellent <span style={{color: "Var(--theme)"}}>Service.</span>
+                      WHERE GOOD FOOD MEETS  <span style={{color: "Var(--theme)"}}>GREAT VIBES.</span>
                     </h2>
                   </div>
                   <p className="wow fadeInUp" data-wow-delay=".5s">
-                    It's the perfect dining experience where every dish is
-                    crafted with fresh, high-quality Experience quick and
-                    efficient service that ensures your food is servead fresh
-                    It's the dining experience where every dish is crafted with
-                    fresh, high-quality ingredients
+                    The Urban Canteen is more than just a place to eat — it’s a space to gather, relax, and enjoy great food. From freshly prepared favourites to refreshing drinks, every 
+                    plate is crafted with quality ingredients and served with a touch of care.
                   </p>
                   <div className="icon-area">
                     <div
@@ -73,10 +70,10 @@ const page = () => {
                         <i className="flaticon-quality" />
                       </div>
                       <div className="content">
-                        <h4>super quality food</h4>
+                        <h4>FRESH & FLAVOURFUL</h4>
                         <p>
-                          A team of dreamers and doers build unique interactive
-                          music and art
+                          Every dish is prepared with fresh ingredients and 
+                          bold flavours, bringing something delicious to every table.
                         </p>
                       </div>
                     </div>
@@ -88,17 +85,17 @@ const page = () => {
                         <i className="flaticon-reputation" />
                       </div>
                       <div className="content">
-                        <h4>well reputation</h4>
+                        <h4>GOOD FOOD, GREAT MOMENTS</h4>
                         <p>
-                          A team of dreamers and doers build unique interactive
-                          music and art
+                          A relaxed atmosphere, warm hospitality, and 
+                          delicious food come together to create moments worth sharing.
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="info-area d-flex align-items-center">
                     <Link
-                      href="/about"
+                      href="#"
                       className="theme-btn style-line-height wow fadeInUp"
                       data-wow-delay=".3s"
                     >
@@ -109,7 +106,7 @@ const page = () => {
                       data-wow-delay=".5s"
                     >
                       <span>BRENDON GARREY</span>
-                      <h6>Customer's experience is our highest priority.</h6>
+                      <h6>YOUR TABLE. YOUR MOMENTS. YOUR URBAN EXPERIENCE.</h6>
                     </div>
                   </div>
                 </div>
@@ -139,7 +136,7 @@ const page = () => {
               </h2>
             </div>
             <Link
-              href="/menu"
+              href="#"
               className="theme-btn bg-white wow fadeInUp"
               data-wow-delay=".5s"
             >
