@@ -2,6 +2,7 @@
 
 import EmbedPopup from "@/components/popup/EmbedPopup";
 import ImageView from "@/components/popup/ImageView";
+import ScrollToTop from "@/components/ScrollToTop";
 import { foodkingUtility } from "@/utility";
 import { Fragment, useEffect } from "react";
 import Footer from "./Footer";
@@ -9,24 +10,15 @@ import Header from "./Header";
 
 const FoodKingLayout = ({ children, header, footer }) => {
   useEffect(() => {
-    // ============================================
-    // SMOOTH SCROLL
-    // ============================================
+    // Smooth Scroll
     foodkingUtility.smoothScroll();
 
-    // ============================================
-    // WOW.JS SCROLL ANIMATIONS
-    // ============================================
+    // Scroll Animations
     foodkingUtility.scrollAnimation();
 
-    // ============================================
-    // STICKY HEADER
-    // ============================================
+    // Sticky Header
     const cleanupStickyNav = foodkingUtility.stickyNav();
 
-    // ============================================
-    // CLEANUP
-    // ============================================
     return () => {
       if (typeof cleanupStickyNav === "function") {
         cleanupStickyNav();
@@ -38,6 +30,10 @@ const FoodKingLayout = ({ children, header, footer }) => {
 
   return (
     <Fragment>
+
+      {/* Scroll to top whenever route changes */}
+      <ScrollToTop />
+
       {/* Image Popup */}
       <ImageView />
 
@@ -52,6 +48,7 @@ const FoodKingLayout = ({ children, header, footer }) => {
 
       {/* Footer */}
       <Footer footer={footer} />
+
     </Fragment>
   );
 };
