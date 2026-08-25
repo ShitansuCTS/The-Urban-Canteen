@@ -207,7 +207,7 @@ const page = () => {
       className="video-section"
     >
       <source
-        src="/assets/videos/corn.mp4"
+        src="/assets/video/corn.mp4"
         type="video/mp4"
       />
     </video>
@@ -324,7 +324,7 @@ const page = () => {
     loop
     playsInline
   >
-    <source src="assets/videos/ice-cream.mp4" type="video/mp4" />
+    <source src="assets/video/ice-cream.mp4" type="video/mp4" />
   </video>
 
   {/* <div className="pizza-text">
