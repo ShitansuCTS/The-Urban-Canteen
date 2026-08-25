@@ -127,9 +127,7 @@ const page = () => {
         <div className="container">
           <div className="main-cta-banner-wrapper-2 d-flex align-items-center justify-content-between">
             <div className="section-title mb-0">
-              <span className="theme-color-3 wow fadeInUp">
-                crispy, every bite taste
-              </span>
+              
               <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
                 Good <span className="theme-color-3">food</span>, great moments, <br />
                 <span className="theme-color-3"> unforgettable </span>memories.

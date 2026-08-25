@@ -21,7 +21,7 @@ const RestaurantHero = () => {
           <div className="col-lg-6">
             <div className="hero-content">
 
-              <span className="hero-small-title">
+              <span className="home-about-subtitle">
                 ✦ Fresh • Delicious • Authentic
               </span>
 
