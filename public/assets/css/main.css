@@ -14347,7 +14347,7 @@ p.sticky-label {
     rotateY(-8deg);
 
   box-shadow:
-    0 11px 0 #087c4d,
+    0 11px 0 #087c4ea2,
     0 20px 35px rgba(37, 211, 102, 0.40),
     inset 0 3px 5px rgba(255, 255, 255, 0.65);
 }
@@ -14517,12 +14517,12 @@ p.sticky-label {
 
 
 .floating-back-top:hover .back-top-inner {
-  transform: translateZ(30px);
+  transform: translateY(-2px);
 
-  box-shadow:
+  /* box-shadow:
     0 11px 0 #596d1d,
     0 20px 35px rgba(139, 168, 50, 0.42),
-    inset 0 3px 6px rgba(255, 255, 255, 0.65);
+    inset 0 3px 6px rgba(255, 255, 255, 0.65); */
 
   background: linear-gradient(
     145deg,
@@ -14544,11 +14544,11 @@ p.sticky-label {
     scale(0.96);
 }
 
-.floating-whatsapp:active {
+/* .floating-whatsapp:active {
   box-shadow:
     0 3px 0 #087c4d,
     0 7px 15px rgba(0, 0, 0, 0.20);
-}
+} */
 
 .floating-back-top:active .back-top-inner {
   box-shadow:
@@ -15203,3 +15203,11 @@ p.sticky-label {
   }
 
 }
+
+
+
+
+
+
+
+

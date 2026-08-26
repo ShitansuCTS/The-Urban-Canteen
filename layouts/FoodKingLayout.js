@@ -13,9 +13,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 const FoodKingLayout = ({ children, header, footer }) => {
-
   useEffect(() => {
-
     // ============================================
     // SMOOTH SCROLL
     // ============================================
@@ -29,70 +27,64 @@ const FoodKingLayout = ({ children, header, footer }) => {
     // ============================================
     // STICKY HEADER
     // ============================================
-    const cleanupStickyNav =
-      foodkingUtility.stickyNav();
+    const cleanupStickyNav = foodkingUtility.stickyNav();
 
     // ============================================
     // CLEANUP
     // ============================================
     return () => {
-
       if (typeof cleanupStickyNav === "function") {
         cleanupStickyNav();
       }
 
       foodkingUtility.destroySmoothScroll();
     };
-
   }, []);
-
 
   return (
     <Fragment>
 
       {/* ============================================
-          SCROLL TO TOP ON ROUTE CHANGE
+          SCROLL TO TOP
       ============================================ */}
       <ScrollToTop />
-
 
       {/* ============================================
           IMAGE POPUP
       ============================================ */}
       <ImageView />
 
-
       {/* ============================================
           EMBED POPUP
       ============================================ */}
       <EmbedPopup />
-
 
       {/* ============================================
           HEADER
       ============================================ */}
       <Header header={header} />
 
-
       {/* ============================================
           PAGE CONTENT
       ============================================ */}
-      {children}
-
+      <main>
+        {children}
+      </main>
 
       {/* ============================================
           FOOTER
       ============================================ */}
       <Footer footer={footer} />
 
-{/* ============================================
-          Offer Popup
+      {/* ============================================
+          OFFER POPUP
+          OfferPopup internally checks pathname.
+          It will ONLY show on "/"
       ============================================ */}
       <OfferPopup />
 
-
       {/* ============================================
-          FLOATING WHATSAPP + BACK TO TOP
+          FLOATING BUTTONS
       ============================================ */}
       <FloatingButtons />
 

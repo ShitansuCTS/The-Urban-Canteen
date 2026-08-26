@@ -15,7 +15,7 @@ const Page = () => {
       {/* =====================================================
           ABOUT SECTION
       ===================================================== */}
-      <section className="about-section section-padding">
+      <section className="about-section section-padding pt-0">
         <div className="leaves-shape">
           <img
             src="/assets/img/shape/leaves.png"
