@@ -4,6 +4,12 @@ import Marque from "@/components/Marque";
 import ReservationForm from "@/components/ReservationForm";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
 
+export const metadata = {
+  title: "The Urban Canteen | Authentic Food & Dining Experience",
+  description:
+    "Experience delicious food, authentic flavours, refreshing drinks and great vibes at The Urban Canteen. A perfect place for dining, gatherings and memorable moments.",
+};
+
 const Page = () => {
   return (
     <FoodKingLayout>

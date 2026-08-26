@@ -1,6 +1,12 @@
 import Cta from "@/components/Cta";
 import PageBanner from "@/components/PageBanner";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
+
+export const metadata = {
+  title: "Contact Us | The Urban Canteen",
+  description:
+    "Get in touch with The Urban Canteen for reservations, enquiries and more. Visit us and enjoy great food, refreshing drinks and a vibrant dining experience.",
+};
 const page = () => {
   // const contactInfo = [
   //   {

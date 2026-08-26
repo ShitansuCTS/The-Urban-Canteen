@@ -9,6 +9,12 @@ import Link from "next/link";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import ReservationForm from "@/components/ReservationForm";
 
+export const metadata = {
+  title: "About Us | The Urban Canteen",
+  description:
+    "Discover the story behind The Urban Canteen, where delicious food, authentic flavours, warm hospitality and great vibes come together.",
+};
+
 const page = () => {
   return (
     <FoodKingLayout>
