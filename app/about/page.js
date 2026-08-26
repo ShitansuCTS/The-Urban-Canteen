@@ -94,13 +94,19 @@ const page = () => {
                     </div>
                   </div>
                   <div className="info-area d-flex align-items-center">
-                    <Link
-                      href="#"
-                      className="theme-btn style-line-height wow fadeInUp"
-                      data-wow-delay=".3s"
-                    >
-                      See Our Menu
-                    </Link>
+                    <div
+                className="hero-buttons wow fadeInUp mt-0"
+                data-wow-duration=".8s"
+                data-wow-delay=".45s"
+              >
+                <a href="/menu" className="home-about-btn">
+                  <span className="home-about-btn-icon">
+                    <i className="bi bi-leaf-fill"></i>
+                  </span>
+
+                  <span>Explore Menu</span>
+                </a>
+              </div>
                     <div
                       className="info-content wow fadeInUp"
                       data-wow-delay=".5s"
@@ -133,18 +139,19 @@ const page = () => {
                 <span className="theme-color-3"> unforgettable </span>memories.
               </h2>
             </div>
-            <Link
-              href="#"
-              className="theme-btn bg-white wow fadeInUp"
-              data-wow-delay=".5s"
-            >
-              <span className="button-content-wrapper d-flex align-items-center">
-                <span className="button-icon">
-                  <i className="bi bi-leaf-fill" />
-                </span>
-                <span className="button-text">See Our Menu</span>
-              </span>
-            </Link>
+            <div
+                className="hero-buttons wow fadeInUp mt-0"
+                data-wow-duration=".8s"
+                data-wow-delay=".45s"
+              >
+                <a href="/menu" className="home-about-btn">
+                  <span className="home-about-btn-icon">
+                    <i className="bi bi-leaf-fill"></i>
+                  </span>
+
+                  <span>Explore Menu</span>
+                </a>
+              </div>
             <div className="delivery-man">
               <img src="assets/img/delivery-man-2.png" alt="img" />
             </div>

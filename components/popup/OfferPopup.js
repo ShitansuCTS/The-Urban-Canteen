@@ -1,73 +1,95 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const OfferPopup = () => {
-  const [showPopup, setShowPopup] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
+  // =========================================
+  // OPEN POPUP ON HOME PAGE LOAD
+  // =========================================
   useEffect(() => {
-    // Popup only on homepage
-    if (window.location.pathname !== "/") {
-      return;
-    }
-
-    // Show after 1 second
     const timer = setTimeout(() => {
-      setShowPopup(true);
-    }, 1000);
+      setIsVisible(true);
+    }, 300);
 
     return () => clearTimeout(timer);
   }, []);
 
+  // =========================================
+  // PREVENT BACKGROUND SCROLLING
+  // =========================================
+  useEffect(() => {
+    if (isVisible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isVisible]);
+
+  // =========================================
+  // CLOSE POPUP
+  // =========================================
   const closePopup = () => {
-    setShowPopup(false);
+    if (isClosing) return;
+
+    setIsClosing(true);
+
+    setTimeout(() => {
+      setIsVisible(false);
+      setIsClosing(false);
+    }, 650);
   };
 
-  if (!showPopup) {
-    return null;
-  }
+  // =========================================
+  // DON'T RENDER WHEN HIDDEN
+  // =========================================
+  if (!isVisible) return null;
 
   return (
     <div
-      className="offer-popup-overlay"
+      className={`offer-popup-overlay ${
+        isClosing ? "offer-popup-closing" : ""
+      }`}
       onClick={closePopup}
     >
       <div
-        className="offer-popup-box"
-        onClick={(e) => e.stopPropagation()}
+        className={`offer-popup-box ${
+          isClosing ? "offer-popup-box-closing" : ""
+        }`}
       >
+        {/* =========================================
+            OFFER IMAGE
+        ========================================= */}
+        <div className="offer-popup-image">
+          <img
+            src="/assets/img/offer/offer.webp"
+            alt="The Urban Canteen Special Offer"
+            className="offer-popup-img"
+          />
+        </div>
 
-        {/* CLOSE BUTTON */}
+        {/* =========================================
+            CLOSE BUTTON
+        ========================================= */}
         <button
           type="button"
           className="offer-popup-close"
-          onClick={closePopup}
+          onClick={(e) => {
+            e.stopPropagation();
+            closePopup();
+          }}
           aria-label="Close offer"
         >
-          <i className="fal fa-times"></i>
+          <span className="close-icon">
+            <i className="fal fa-times"></i>
+          </span>
         </button>
-
-        {/* OFFER IMAGE */}
-        <div className="offer-popup-image">
-
-          <Image
-            src="/assets/img/offer/offer.webp"
-            alt="The Urban Canteen Special Offer"
-            width={1362}
-            height={648}
-            priority
-            className="offer-popup-img"
-            sizes="
-              (max-width: 575px) 92vw,
-              (max-width: 767px) 90vw,
-              (max-width: 1199px) 75vw,
-              700px
-            "
-          />
-
-        </div>
-
       </div>
     </div>
   );

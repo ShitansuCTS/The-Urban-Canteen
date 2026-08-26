@@ -3598,7 +3598,12 @@ input.main-search-input::placeholder {
 }
 
 .about-section {
-  position: relative;
+    position: relative;
+
+  width: 100%;
+
+  /* Prevent visual jump */
+  isolation: isolate;
 }
 .about-section .leaves-shape {
   position: absolute;
@@ -10621,12 +10626,15 @@ p.sticky-label {
 ===================================================== */
 
 .restaurant-hero {
+ 
   position: relative;
-  min-height: 100vh;
+  width: 100%;
+  min-height: 100svh;
+
   overflow: hidden;
+  isolation: isolate;
+
   background: #f5f0e6;
-  display: flex;
-  align-items: center;
 }
 
 
@@ -14688,7 +14696,13 @@ p.sticky-label {
 }
 
 /* =========================================================
-   THE URBAN CANTEEN - OFFER POPUP
+   THE URBAN CANTEEN
+   PREMIUM OFFER POPUP
+========================================================= */
+
+
+/* =========================================================
+   OVERLAY
 ========================================================= */
 
 .offer-popup-overlay {
@@ -14696,6 +14710,7 @@ p.sticky-label {
   inset: 0;
 
   width: 100%;
+  height: 100vh;
   height: 100dvh;
 
   display: flex;
@@ -14706,14 +14721,14 @@ p.sticky-label {
 
   background: rgba(8, 8, 8, 0.78);
 
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
 
   z-index: 999999;
 
-  animation: offerOverlayIn 0.4s ease forwards;
+  overflow: hidden;
 
-  overflow-y: auto;
+  animation: offerOverlayOpen 0.65s ease forwards;
 }
 
 
@@ -14726,24 +14741,27 @@ p.sticky-label {
 
   width: min(700px, 92vw);
 
-  max-height: calc(100dvh - 40px);
+  max-width: 700px;
 
   background: #111;
 
   border-radius: 18px;
 
-  overflow: hidden;
+  overflow: visible;
 
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(225, 183, 72, 0.65);
 
   box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.55),
-    0 0 0 1px rgba(190, 160, 70, 0.15);
+    0 35px 90px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(225, 183, 72, 0.08);
 
-  animation: offerPopupIn 0.6s
-    cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: center center;
 
-  transform-origin: center;
+  animation:
+    offerPopupOpen
+    0.7s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
 }
 
 
@@ -14754,101 +14772,215 @@ p.sticky-label {
 .offer-popup-image {
   width: 100%;
 
-  line-height: 0;
+  overflow: hidden;
+
+  border-radius: 18px;
 
   background: #111;
+
+  line-height: 0;
 }
 
 
 /* =========================================================
-   ACTUAL IMAGE
+   IMAGE
 ========================================================= */
 
 .offer-popup-img {
   display: block;
 
   width: 100%;
-
   height: auto;
 
   max-width: 100%;
 
   object-fit: contain;
+
+  vertical-align: middle;
 }
 
 
 /* =========================================================
    CLOSE BUTTON
+   BOTTOM CENTER
 ========================================================= */
 
 .offer-popup-close {
+
   position: absolute;
 
-  top: 12px;
-  right: 12px;
+  left: 50%;
 
-  width: 42px;
-  height: 42px;
+  bottom: -58px;
+
+  transform: translateX(-50%);
+
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(255, 255, 255, 0.35);
 
-  border-radius: 50%;
+  border: 1px solid var(--theme);
 
-  background: rgba(0, 0, 0, 0.72);
+  border-radius: 50px;
+
 
   color: #fff;
 
-  font-size: 17px;
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
 
   cursor: pointer;
 
-  z-index: 10;
+  z-index: 30;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.45),
+    0 0 15px rgba(225, 183, 72, 0.08);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
   transition:
-    background 0.3s ease,
-    transform 0.3s ease,
-    border-color 0.3s ease;
-}
-
-
-.offer-popup-close:hover {
-  background: #8ba832;
-
-  border-color: #8ba832;
-
-  transform: rotate(90deg) scale(1.05);
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s
+      cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 
 /* =========================================================
-   DESKTOP ANIMATION
+   CLOSE ICON
 ========================================================= */
 
-@keyframes offerOverlayIn {
-  from {
+.offer-popup-close .close-icon {
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid var(--theme);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+
+.offer-popup-close .close-icon i {
+
+  font-size: 15px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+
+
+
+.offer-popup-close:hover .close-icon {
+
+  background: rgba(0, 0, 0, 0.12);
+
+  border-color: rgba(0, 0, 0, 0.25);
+
+  transform: rotate(90deg);
+  color: #fff
+}
+
+
+.offer-popup-close:hover .close-icon i {
+
+  transform: scale(1.15);
+}
+
+
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.offer-popup-close:active {
+
+  transform:
+    translateX(-50%)
+    translateY(0)
+    scale(0.94);
+}
+
+
+/* =========================================================
+   OPEN OVERLAY
+========================================================= */
+
+@keyframes offerOverlayOpen {
+
+  0% {
     opacity: 0;
   }
 
-  to {
+  100% {
     opacity: 1;
   }
 }
 
 
-@keyframes offerPopupIn {
-  from {
+/* =========================================================
+   OPEN POPUP
+   BOTTOM → CENTER
+========================================================= */
+
+@keyframes offerPopupOpen {
+
+  0% {
+
     opacity: 0;
 
     transform:
-      translateY(35px)
-      scale(0.92);
+      translateY(90vh)
+      scale(0.82);
   }
 
-  to {
+  55% {
+
+    opacity: 1;
+
+    transform:
+      translateY(-8px)
+      scale(1.015);
+  }
+
+  75% {
+
+    transform:
+      translateY(3px)
+      scale(0.995);
+  }
+
+  100% {
+
     opacity: 1;
 
     transform:
@@ -14859,13 +14991,99 @@ p.sticky-label {
 
 
 /* =========================================================
+   CLOSING OVERLAY
+========================================================= */
+
+.offer-popup-closing {
+
+  animation:
+    offerOverlayClose
+    0.65s
+    ease
+    forwards;
+}
+
+
+/* =========================================================
+   CLOSING POPUP
+   CENTER → BOTTOM
+========================================================= */
+
+.offer-popup-box-closing {
+
+  animation:
+    offerPopupCloseAnimation
+    0.65s
+    cubic-bezier(0.55, 0, 1, 0.45)
+    forwards;
+}
+
+
+/* =========================================================
+   OVERLAY CLOSE
+========================================================= */
+
+@keyframes offerOverlayClose {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   POPUP CLOSE
+========================================================= */
+
+@keyframes offerPopupCloseAnimation {
+
+  0% {
+
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+  25% {
+
+    transform:
+      translateY(-5px)
+      scale(0.99);
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translateY(90vh)
+      scale(0.82);
+  }
+}
+
+
+/* =========================================================
    TABLET
 ========================================================= */
 
 @media (max-width: 991px) {
 
+  .offer-popup-overlay {
+
+    padding: 18px;
+  }
+
   .offer-popup-box {
+
     width: min(680px, 92vw);
+
+    border-radius: 16px;
   }
 
 }
@@ -14878,27 +15096,30 @@ p.sticky-label {
 @media (max-width: 767px) {
 
   .offer-popup-overlay {
+
     padding: 15px;
   }
 
   .offer-popup-box {
+
     width: 100%;
 
     max-width: 520px;
 
-    max-height: none;
+    border-radius: 14px;
+  }
+
+  .offer-popup-image {
 
     border-radius: 14px;
   }
 
-  .offer-popup-close {
-    top: 8px;
-    right: 8px;
 
-    width: 34px;
-    height: 34px;
 
-    font-size: 14px;
+  .offer-popup-close .close-icon {
+
+    width: 21px;
+    height: 21px;
   }
 
 }
@@ -14911,21 +15132,74 @@ p.sticky-label {
 @media (max-width: 480px) {
 
   .offer-popup-overlay {
+
     padding: 12px;
   }
 
   .offer-popup-box {
+
     width: 100%;
 
     border-radius: 12px;
   }
 
-  .offer-popup-close {
-    width: 32px;
-    height: 32px;
+  .offer-popup-image {
 
-    top: 7px;
-    right: 7px;
+    border-radius: 12px;
+  }
+
+  
+
+  .offer-popup-close .close-icon {
+
+    width: 20px;
+    height: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .offer-popup-overlay {
+
+    padding: 8px;
+  }
+
+  .offer-popup-box {
+
+    border-radius: 10px;
+  }
+
+  .offer-popup-image {
+
+    border-radius: 10px;
+  }
+
+ 
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .offer-popup-overlay,
+  .offer-popup-box,
+  .offer-popup-close,
+  .offer-popup-close .close-icon,
+  .offer-popup-close .close-icon i {
+
+    animation: none !important;
+
+    transition: none !important;
   }
 
 }
