@@ -53,11 +53,14 @@ const page = () => {
                   </p>
                   <div className="google-map wow fadeInUp" data-wow-delay=".7s">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                    />
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2956.7459525538347!2d85.80617339999999!3d20.342034400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190935b96ab859%3A0xa65fabb3fbe131bc!2sThe%20Urban%20Canteen!5e1!3m2!1sen!2sin!4v1787734774225!5m2!1sen!2sin"
+  width="600"
+  height="450"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="strict-origin-when-cross-origin"
+/>
                   </div>
                 </div>
               </div>
