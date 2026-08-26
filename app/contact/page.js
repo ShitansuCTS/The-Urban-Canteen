@@ -32,18 +32,18 @@ const page = () => {
       <section className="contact-section section-padding section-bg">
         <div className="container">
           <div className="contact-area">
-             <h3 className="wow fadeInUp" data-wow-delay=".3s">
+             
+            <div className="row justify-content-between">
+              <div className="col-xl-6 col-lg-6">
+                <h3 className="wow fadeInUp" data-wow-delay=".3s">
                     {" "}
                     Dine With Us - <span style={{ color: "var(--theme)" }}>Join Now</span>
                   </h3>
-            <div className="row justify-content-between">
-              <div className="col-xl-6 col-lg-6">
                 <div className="map-content-area">
                  
                   <p className="wow fadeInUp" data-wow-delay=".5s">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit
-                    mattis <br />
-                    faucibus odio feugiat arc dolor.
+                   Good food tastes even better when shared. Visit The Urban Canteen for delicious flavours, warm hospitality, and a space 
+                   made for great conversations and memorable moments.
                   </p>
                   <div className="google-map wow fadeInUp" data-wow-delay=".7s">
                     <iframe

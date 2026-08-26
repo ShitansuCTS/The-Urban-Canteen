@@ -302,7 +302,7 @@ const NewGallery = () => {
               GALLERY TABS
           ================================================= */}
 
-          <div className="gallery-tabs text-center mb-5">
+          <div className="gallery-tabs text-center mb-5" >
 
             {/* ===============================================
                 RESTAURANT TAB - FIRST

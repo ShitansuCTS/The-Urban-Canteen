@@ -3817,19 +3817,7 @@ input.main-search-input::placeholder {
     margin-top: 30px;
   }
 }
-.about-food-wrapper .nav .nav-item .nav-link {
-  border: 1px solid var(--border);
-  border-radius: 40px;
-  padding: 12px 10px;
-  font-weight: 600;
-  font-size: 18px;
-  text-transform: uppercase;
-  color: var(--header);
-}
-.about-food-wrapper .nav .nav-item .nav-link.active {
-  background-color: var(--theme3);
-  border: 1px solid var(--theme3);
-}
+
 .about-food-wrapper .about-food-items {
   margin-top: 30px;
 }
@@ -7472,6 +7460,8 @@ input.main-search-input::placeholder {
 
 .main-cta-banner-2 {
   position: relative;
+  /* Sticky / Fixed Background */
+  background-attachment: fixed;
 }
 .cta-overlay {
   position: absolute;
@@ -12778,29 +12768,12 @@ p.sticky-label {
 
 .restaurant-media-tabs .nav-link {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-
-  min-width: 150px;
-
-  padding: 13px 24px;
-
-  border: 1px solid #e2e2e2 !important;
-  border-radius: 50px;
-
+  
   background: #fff;
 
   color: #29271f;
+  border: 1px solid var(--theme);
 
-  font-size: 15px;
-  font-weight: 600;
-
-  text-transform: capitalize;
-
-  cursor: pointer;
-
-  transition: all 0.35s ease;
 }
 
 .restaurant-media-tabs .nav-link i {
@@ -12808,7 +12781,7 @@ p.sticky-label {
 }
 
 .restaurant-media-tabs .nav-link:hover {
-  color: var(--theme);
+  color: #fff;
   border-color: var(--theme) !important;
   transform: translateY(-2px);
 }
@@ -13850,7 +13823,8 @@ p.sticky-label {
   justify-content: center;
   overflow: hidden;
   isolation: isolate;
-
+/* Sticky / Fixed Background */
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14212,4 +14186,490 @@ p.sticky-label {
 
 }
 
+
+/* =========================================================
+   THE URBAN CANTEEN
+   FLOATING WHATSAPP + BACK TO TOP
+========================================================= */
+
+
+/* =========================================================
+   FLOATING BUTTON CONTAINER
+========================================================= */
+
+.floating-action-buttons {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 14px;
+
+  z-index: 99999;
+
+  perspective: 900px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   COMMON BUTTON SETTINGS
+========================================================= */
+
+.floating-whatsapp,
+.floating-back-top {
+  position: relative;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  box-sizing: border-box;
+
+  transform-style: preserve-3d;
+
+  pointer-events: auto;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
+
+.floating-whatsapp {
+  text-decoration: none;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    145deg,
+    #48ed7e 0%,
+    #25d366 45%,
+    #128c7e 100%
+  );
+
+  border: 2px solid rgba(255, 255, 255, 0.85);
+
+  box-shadow:
+    0 7px 0 #087c4dad,
+    0 14px 28px rgba(0, 0, 0, 0.25),
+    inset 0 2px 4px rgba(255, 255, 255, 0.55);
+
+  animation:
+    whatsappFloat 3s ease-in-out infinite;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   WHATSAPP INNER
+========================================================= */
+
+.whatsapp-inner {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3;
+
+  transform: translateZ(20px);
+}
+
+
+/* WhatsApp Icon */
+
+.whatsapp-inner i {
+  font-size: 26px;
+
+  line-height: 1;
+
+  color: #ffffff;
+
+  filter:
+    drop-shadow(
+      0 2px 2px rgba(0, 0, 0, 0.25)
+    );
+}
+
+
+/* =========================================================
+   WHATSAPP HOVER
+========================================================= */
+
+.floating-whatsapp:hover {
+  color: #ffffff;
+
+  transform:
+    translateY(-7px)
+    rotateX(8deg)
+    rotateY(-8deg);
+
+  box-shadow:
+    0 11px 0 #087c4d,
+    0 20px 35px rgba(37, 211, 102, 0.40),
+    inset 0 3px 5px rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   WHATSAPP PULSE RING
+========================================================= */
+
+.whatsapp-pulse {
+  position: absolute;
+
+  inset: -5px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(37, 211, 102, 0.60);
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  animation:
+    whatsappPulse 2.2s ease-out infinite;
+}
+
+
+/* =========================================================
+   BACK TO TOP BUTTON
+========================================================= */
+
+.floating-back-top {
+  padding: 0;
+
+  border: none;
+
+  cursor: pointer;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  /*
+    Initially button is ABOVE
+    its final position.
+  */
+
+  transform:
+    translateY(-90px)
+    rotateX(-25deg)
+    scale(0.70);
+
+  transition:
+    opacity 0.45s ease,
+    visibility 0.45s ease,
+    transform 0.75s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+/* =========================================================
+   BACK TO TOP - VISIBLE
+========================================================= */
+
+.floating-back-top.show {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+
+  /*
+    Comes DOWN from top
+  */
+
+  transform:
+    translateY(0)
+    rotateX(0deg)
+    scale(1);
+}
+
+
+/* =========================================================
+   BACK TO TOP INNER 3D CIRCLE
+========================================================= */
+
+.back-top-inner {
+  position: relative;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    145deg,
+    #abc93f 0%,
+    #8ba832 45%,
+    #657c22 100%
+  );
+
+  border: 2px solid rgba(255, 255, 255, 0.85);
+
+  box-shadow:
+    0 7px 0 #596d1d73,
+    0 14px 28px rgba(0, 0, 0, 0.28),
+    inset 0 2px 5px rgba(255, 255, 255, 0.55);
+
+  transform: translateZ(20px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+
+/* =========================================================
+   BACK TO TOP ARROW
+========================================================= */
+
+.back-top-inner i {
+  display: block;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  color: #ffffff;
+
+  filter:
+    drop-shadow(
+      0 2px 2px rgba(0, 0, 0, 0.30)
+    );
+
+  animation:
+    arrowMove 1.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   BACK TO TOP HOVER
+========================================================= */
+
+.floating-back-top:hover {
+  transform:
+    translateY(-6px)
+    rotateX(8deg)
+    rotateY(-8deg);
+}
+
+
+.floating-back-top:hover .back-top-inner {
+  transform: translateZ(30px);
+
+  box-shadow:
+    0 11px 0 #596d1d,
+    0 20px 35px rgba(139, 168, 50, 0.42),
+    inset 0 3px 6px rgba(255, 255, 255, 0.65);
+
+  background: linear-gradient(
+    145deg,
+    #b7d74a 0%,
+    #96b437 45%,
+    #70882a 100%
+  );
+}
+
+
+/* =========================================================
+   BUTTON PRESS EFFECT
+========================================================= */
+
+.floating-whatsapp:active,
+.floating-back-top:active {
+  transform:
+    translateY(2px)
+    scale(0.96);
+}
+
+.floating-whatsapp:active {
+  box-shadow:
+    0 3px 0 #087c4d,
+    0 7px 15px rgba(0, 0, 0, 0.20);
+}
+
+.floating-back-top:active .back-top-inner {
+  box-shadow:
+    0 3px 0 #596d1d,
+    0 7px 15px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================================
+   WHATSAPP FLOATING ANIMATION
+========================================================= */
+
+@keyframes whatsappFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+/* =========================================================
+   WHATSAPP PULSE ANIMATION
+========================================================= */
+
+@keyframes whatsappPulse {
+
+  0% {
+    transform: scale(0.90);
+    opacity: 0.80;
+  }
+
+  60% {
+    transform: scale(1.25);
+    opacity: 0.20;
+  }
+
+  100% {
+    transform: scale(1.40);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   BACK TO TOP ARROW ANIMATION
+========================================================= */
+
+@keyframes arrowMove {
+
+  0%,
+  100% {
+    transform: translateY(2px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .floating-action-buttons {
+    right: 15px;
+    bottom: 18px;
+
+    gap: 11px;
+  }
+
+
+  .floating-whatsapp,
+  .floating-back-top,
+  .back-top-inner {
+    width: 50px;
+    height: 50px;
+  }
+
+
+  .whatsapp-inner i {
+    font-size: 23px;
+  }
+
+
+  .back-top-inner i {
+    font-size: 19px;
+  }
+
+
+  .floating-whatsapp {
+    box-shadow:
+      0 6px 0 #087c4d,
+      0 10px 20px rgba(0, 0, 0, 0.22),
+      inset 0 2px 4px rgba(255, 255, 255, 0.50);
+  }
+
+
+  .back-top-inner {
+    box-shadow:
+      0 6px 0 #596d1d,
+      0 10px 20px rgba(0, 0, 0, 0.22),
+      inset 0 2px 4px rgba(255, 255, 255, 0.50);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .floating-action-buttons {
+    right: 12px;
+    bottom: 15px;
+
+    gap: 9px;
+  }
+
+
+  .floating-whatsapp,
+  .floating-back-top,
+  .back-top-inner {
+    width: 46px;
+    height: 46px;
+  }
+
+
+  .whatsapp-inner i {
+    font-size: 21px;
+  }
+
+
+  .back-top-inner i {
+    font-size: 18px;
+  }
+}
 

@@ -3,51 +3,92 @@
 import EmbedPopup from "@/components/popup/EmbedPopup";
 import ImageView from "@/components/popup/ImageView";
 import ScrollToTop from "@/components/ScrollToTop";
+import FloatingButtons from "@/components/FloatingButtons";
+
 import { foodkingUtility } from "@/utility";
 import { Fragment, useEffect } from "react";
+
 import Footer from "./Footer";
 import Header from "./Header";
 
 const FoodKingLayout = ({ children, header, footer }) => {
+
   useEffect(() => {
-    // Smooth Scroll
+
+    // ============================================
+    // SMOOTH SCROLL
+    // ============================================
     foodkingUtility.smoothScroll();
 
-    // Scroll Animations
+    // ============================================
+    // SCROLL ANIMATIONS
+    // ============================================
     foodkingUtility.scrollAnimation();
 
-    // Sticky Header
-    const cleanupStickyNav = foodkingUtility.stickyNav();
+    // ============================================
+    // STICKY HEADER
+    // ============================================
+    const cleanupStickyNav =
+      foodkingUtility.stickyNav();
 
+    // ============================================
+    // CLEANUP
+    // ============================================
     return () => {
+
       if (typeof cleanupStickyNav === "function") {
         cleanupStickyNav();
       }
 
       foodkingUtility.destroySmoothScroll();
     };
+
   }, []);
+
 
   return (
     <Fragment>
 
-      {/* Scroll to top whenever route changes */}
+      {/* ============================================
+          SCROLL TO TOP ON ROUTE CHANGE
+      ============================================ */}
       <ScrollToTop />
 
-      {/* Image Popup */}
+
+      {/* ============================================
+          IMAGE POPUP
+      ============================================ */}
       <ImageView />
 
-      {/* Embed Popup */}
+
+      {/* ============================================
+          EMBED POPUP
+      ============================================ */}
       <EmbedPopup />
 
-      {/* Header */}
+
+      {/* ============================================
+          HEADER
+      ============================================ */}
       <Header header={header} />
 
-      {/* Page Content */}
+
+      {/* ============================================
+          PAGE CONTENT
+      ============================================ */}
       {children}
 
-      {/* Footer */}
+
+      {/* ============================================
+          FOOTER
+      ============================================ */}
       <Footer footer={footer} />
+
+
+      {/* ============================================
+          FLOATING WHATSAPP + BACK TO TOP
+      ============================================ */}
+      <FloatingButtons />
 
     </Fragment>
   );
