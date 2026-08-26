@@ -710,7 +710,7 @@ const AboutFoodItems = () => {
                 {/* RESTAURANT VIDEOS */}
 
                 <Nav.Item>
-                  <Nav.Link eventKey="videos" className="theme-btn">
+                  <Nav.Link eventKey="videos" className="about-tab">
 
                     <i className="bi bi-play-circle"></i>
 
@@ -724,7 +724,7 @@ const AboutFoodItems = () => {
                 {/* REVIEWS */}
 
                 <Nav.Item>
-                  <Nav.Link eventKey="reviews" className="theme-btn">
+                  <Nav.Link eventKey="reviews" className="about-tab">
 
                     <i className="bi bi-chat-quote"></i>
 

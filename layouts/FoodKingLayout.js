@@ -1,6 +1,7 @@
 "use client";
 
 import EmbedPopup from "@/components/popup/EmbedPopup";
+import OfferPopup from "@/components/popup/OfferPopup";
 import ImageView from "@/components/popup/ImageView";
 import ScrollToTop from "@/components/ScrollToTop";
 import FloatingButtons from "@/components/FloatingButtons";
@@ -83,6 +84,11 @@ const FoodKingLayout = ({ children, header, footer }) => {
           FOOTER
       ============================================ */}
       <Footer footer={footer} />
+
+{/* ============================================
+          Offer Popup
+      ============================================ */}
+      <OfferPopup />
 
 
       {/* ============================================

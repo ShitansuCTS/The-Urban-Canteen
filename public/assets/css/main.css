@@ -12756,6 +12756,7 @@ p.sticky-label {
 
 .restaurant-media-tabs {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 45px;
@@ -12773,6 +12774,19 @@ p.sticky-label {
 
   color: #29271f;
   border: 1px solid var(--theme);
+      vertical-align: middle;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    padding: 20px 50px;
+    text-align: center;
+    gap: 10px;
+    border-radius: 9px;
+    letter-spacing: 0.8px;
+    z-index: 1;
+    transition: all 500ms ease;
+    text-transform: uppercase;
+    justify-content: center;
 
 }
 
@@ -12783,7 +12797,7 @@ p.sticky-label {
 .restaurant-media-tabs .nav-link:hover {
   color: #fff;
   border-color: var(--theme) !important;
-  transform: translateY(-2px);
+  background: var(--theme) !important;
 }
 
 .restaurant-media-tabs .nav-link.active {
@@ -14137,13 +14151,13 @@ p.sticky-label {
    GALLERY TABS
 ========================================================= */
 
-.gallery-tabs {
+/* .gallery-tabs {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
     flex-wrap: wrap;
-}
+} */
 
 .gallery-tab {
     border: 1px solid #d4a017;
@@ -14673,3 +14687,245 @@ p.sticky-label {
   }
 }
 
+/* =========================================================
+   THE URBAN CANTEEN - OFFER POPUP
+========================================================= */
+
+.offer-popup-overlay {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(8, 8, 8, 0.78);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  z-index: 999999;
+
+  animation: offerOverlayIn 0.4s ease forwards;
+
+  overflow-y: auto;
+}
+
+
+/* =========================================================
+   POPUP BOX
+========================================================= */
+
+.offer-popup-box {
+  position: relative;
+
+  width: min(700px, 92vw);
+
+  max-height: calc(100dvh - 40px);
+
+  background: #111;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(190, 160, 70, 0.15);
+
+  animation: offerPopupIn 0.6s
+    cubic-bezier(0.22, 1, 0.36, 1);
+
+  transform-origin: center;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.offer-popup-image {
+  width: 100%;
+
+  line-height: 0;
+
+  background: #111;
+}
+
+
+/* =========================================================
+   ACTUAL IMAGE
+========================================================= */
+
+.offer-popup-img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  max-width: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.offer-popup-close {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.72);
+
+  color: #fff;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.offer-popup-close:hover {
+  background: #8ba832;
+
+  border-color: #8ba832;
+
+  transform: rotate(90deg) scale(1.05);
+}
+
+
+/* =========================================================
+   DESKTOP ANIMATION
+========================================================= */
+
+@keyframes offerOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes offerPopupIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(35px)
+      scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .offer-popup-box {
+    width: min(680px, 92vw);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .offer-popup-overlay {
+    padding: 15px;
+  }
+
+  .offer-popup-box {
+    width: 100%;
+
+    max-width: 520px;
+
+    max-height: none;
+
+    border-radius: 14px;
+  }
+
+  .offer-popup-close {
+    top: 8px;
+    right: 8px;
+
+    width: 34px;
+    height: 34px;
+
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .offer-popup-overlay {
+    padding: 12px;
+  }
+
+  .offer-popup-box {
+    width: 100%;
+
+    border-radius: 12px;
+  }
+
+  .offer-popup-close {
+    width: 32px;
+    height: 32px;
+
+    top: 7px;
+    right: 7px;
+  }
+
+}

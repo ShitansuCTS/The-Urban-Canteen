@@ -302,46 +302,29 @@ const NewGallery = () => {
               GALLERY TABS
           ================================================= */}
 
-          <div className="gallery-tabs text-center mb-5" >
+          <div className="gallery-tabs restaurant-media-tabs text-center mb-5">
 
-            {/* ===============================================
-                RESTAURANT TAB - FIRST
-            =============================================== */}
+  <button
+    type="button"
+    className={`gallery-tab nav-link ${
+      activeTab === "restaurant" ? "active" : ""
+    }`}
+    onClick={() => handleTabChange("restaurant")}
+  >
+    Our Place
+  </button>
 
-            <button
-              type="button"
-              className={`gallery-tab ${
-                activeTab === "restaurant"
-                  ? "active"
-                  : ""
-              }`}
-              onClick={() =>
-                handleTabChange("restaurant")
-              }
-            >
-              Our Place
-            </button>
+  <button
+    type="button"
+    className={`gallery-tab nav-link ${
+      activeTab === "food" ? "active" : ""
+    }`}
+    onClick={() => handleTabChange("food")}
+  >
+    Cravings
+  </button>
 
-            {/* ===============================================
-                FOOD TAB - SECOND
-            =============================================== */}
-
-            <button
-              type="button"
-              className={`gallery-tab ${
-                activeTab === "food"
-                  ? "active"
-                  : ""
-              }`}
-              onClick={() =>
-                handleTabChange("food")
-              }
-            >
-              Cravings
-            </button>
-
-          </div>
-
+</div>
           {/* =================================================
               GALLERY GRID
           ================================================= */}
