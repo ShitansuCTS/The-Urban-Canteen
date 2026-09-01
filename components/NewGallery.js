@@ -151,7 +151,6 @@ const GalleryItem = ({
           </div>
         )}
 
-        {/* GALLERY IMAGE */}
         <Image
           src={src}
           alt="The Urban Canteen Gallery"
@@ -161,16 +160,16 @@ const GalleryItem = ({
             (max-width: 991px) 50vw,
             50vw
           "
-          className={`gallery-section-image ${
-            loaded
+          className={`gallery-section-image ${loaded
               ? "gallery-image-loaded"
               : "gallery-image-loading"
-          }`}
+            }`}
+          loading={index < 2 ? "eager" : "lazy"}
+          priority={index === 0}
           onLoad={() => setLoaded(true)}
           onError={() => setLoaded(true)}
         />
 
-        {/* HOVER OVERLAY */}
         {loaded && (
           <div className="gallery-hover-overlay">
             <button
@@ -188,7 +187,6 @@ const GalleryItem = ({
     </div>
   );
 };
-
 /* =========================================================
    MAIN GALLERY
 ========================================================= */
@@ -304,27 +302,25 @@ const NewGallery = () => {
 
           <div className="gallery-tabs restaurant-media-tabs text-center mb-5">
 
-  <button
-    type="button"
-    className={`gallery-tab nav-link ${
-      activeTab === "restaurant" ? "active" : ""
-    }`}
-    onClick={() => handleTabChange("restaurant")}
-  >
-    Our Place
-  </button>
+            <button
+              type="button"
+              className={`gallery-tab nav-link ${activeTab === "restaurant" ? "active" : ""
+                }`}
+              onClick={() => handleTabChange("restaurant")}
+            >
+              Our Place
+            </button>
 
-  <button
-    type="button"
-    className={`gallery-tab nav-link ${
-      activeTab === "food" ? "active" : ""
-    }`}
-    onClick={() => handleTabChange("food")}
-  >
-    Cravings
-  </button>
+            <button
+              type="button"
+              className={`gallery-tab nav-link ${activeTab === "food" ? "active" : ""
+                }`}
+              onClick={() => handleTabChange("food")}
+            >
+              Cravings
+            </button>
 
-</div>
+          </div>
           {/* =================================================
               GALLERY GRID
           ================================================= */}

@@ -12,7 +12,6 @@ const Page = () => {
   return (
     <FoodKingLayout>
       <PageBanner pageName="gallery" />
-
       <Gallery />
     </FoodKingLayout>
   );
