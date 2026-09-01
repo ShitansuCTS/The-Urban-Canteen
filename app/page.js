@@ -2,6 +2,7 @@ import FoodSlider from "@/components/FoodSlider";
 import HomeBanner from "@/components/HomeBanner";
 import Marque from "@/components/Marque";
 import ReservationForm from "@/components/ReservationForm";
+import Reviews from "@/components/Reviews";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
 export const metadata = {
   title: "The Urban Canteen | Authentic Food & Dining Experience",
@@ -199,114 +200,7 @@ const Page = () => {
         </div>
       </section>
 
-      {/* =====================================================
-          FOOD BANNER
-      ===================================================== */}
-      <section className="food-banner-section section-padding fix section-bg">
 
-        <div className="chili-shape">
-          <img
-            src="/assets/img/shape/chili-shape.png"
-            alt="Chili decoration"
-            loading="lazy"
-          />
-        </div>
-
-        <div className="fry-shape">
-          <img
-            src="/assets/img/shape/fry-shape.png"
-            alt="Food decoration"
-            loading="lazy"
-          />
-        </div>
-
-        <div className="container">
-          <div className="row">
-
-            {/* LEFT OFFER */}
-            <div
-              className="col-xl-5 wow fadeInLeft"
-              data-wow-duration="1s"
-              data-wow-delay="0.2s"
-            >
-              <div
-                className="single-offer-items bg-cover"
-                style={{
-                  backgroundImage:
-                    'url("/assets/img/banner/offer-bg.webp")',
-                }}
-              >
-
-                <div className="offer-content">
-                  <h5>crispy, every bite taste</h5>
-
-                  <h3>
-                    SUPER
-                    <br />
-                    DELICIOUS
-                  </h3>
-                </div>
-
-                <div className="burger-text">
-                  <img
-                    src="/assets/img/shape/pizza-text-2.png"
-                    alt="Food text"
-                  />
-                </div>
-
-                <div className="main-food">
-                  <img
-                    src="/assets/img/food/food-01-removebg.png"
-                    alt="Delicious food"
-                  />
-                </div>
-
-              </div>
-            </div>
-
-            {/* RIGHT VIDEO */}
-            <div
-              className="col-xl-7 mt-5 mt-xl-0 wow fadeInRight"
-              data-wow-duration="1s"
-              data-wow-delay="0.35s"
-            >
-              <div
-                className="pizza-banner-items bg-cover"
-                style={{
-                  backgroundImage:
-                    'url("/assets/img/banner/corn-bg.webp")',
-                }}
-              >
-
-                <div className="pizza-text">
-                  <img
-                    src="/assets/img/shape/corn-content.png"
-                    alt="Corn"
-                  />
-                </div>
-
-                <div className="pizza-image">
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    className="video-section"
-                  >
-                    <source
-                      src="/assets/video/corn.mp4"
-                      type="video/mp4"
-                    />
-                  </video>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
       {/* =====================================================
           FOOD COMBO
@@ -704,6 +598,8 @@ const Page = () => {
           </div>
         </div>
       </section>
+
+      <Reviews/>
 
       {/* =====================================================
           FOOD CATEGORY
