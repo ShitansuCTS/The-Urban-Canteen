@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <filter id="smoke">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" seed="8" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="28" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="black"/>
+
+  <path
+    d="M300 42
+       C350 25 388 54 425 72
+       C470 82 500 118 512 158
+       C548 188 565 225 548 266
+       C570 310 558 350 532 382
+       C548 425 520 466 480 484
+       C455 522 414 540 370 523
+       C330 548 286 536 250 526
+       C205 542 164 515 148 482
+       C108 474 78 440 86 399
+       C54 365 62 323 76 286
+       C51 244 72 204 94 174
+       C91 132 126 101 168 90
+       C202 55 250 62 300 42 Z"
+    fill="white"
+    filter="url(#smoke)"
+  />
+</svg>

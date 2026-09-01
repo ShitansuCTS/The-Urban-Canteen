@@ -1,80 +1,21 @@
-import Cta from "@/components/Cta";
 import PageBanner from "@/components/PageBanner";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
-const page = () => {
+import Gallery from "@/components/NewGallery";
+
+export const metadata = {
+  title: "Gallery | The Urban Canteen",
+  description:
+    "Explore The Urban Canteen gallery featuring delicious food, vibrant interiors, refreshing drinks and memorable dining moments.",
+};
+
+const Page = () => {
   return (
     <FoodKingLayout>
-      <PageBanner pageName={"gallery"} />
-      {/*<< Gallery Section Start >>*/}
-      <div className="gallery-section fix section-bg section-padding">
-        <div className="container">
-          <div className="row g-4">
-            <div className="col-lg-8 wow fadeInUp" data-wow-delay=".3s">
-              <div
-                className="galler-image-2 bg-cover"
-                style={{ backgroundImage: 'url("assets/img/gallery/04.jpg")' }}
-              >
-                <a href="assets/img/gallery/04.jpg" className="icon img-popup">
-                  <i className="fal fa-plus" />
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-4 wow fadeInUp" data-wow-delay=".5s">
-              <div
-                className="galler-image-2 bg-cover"
-                style={{ backgroundImage: 'url("assets/img/gallery/05.jpg")' }}
-              >
-                <a href="assets/img/gallery/05.jpg" className="icon img-popup">
-                  <i className="fal fa-plus" />
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-              <div
-                className="galler-image-2 bg-cover"
-                style={{ backgroundImage: 'url("assets/img/gallery/06.jpg")' }}
-              >
-                <a href="assets/img/gallery/06.jpg" className="icon img-popup">
-                  <i className="fal fa-plus" />
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-8 wow fadeInUp" data-wow-delay=".5s">
-              <div
-                className="galler-image-2 bg-cover"
-                style={{ backgroundImage: 'url("assets/img/gallery/07.jpg")' }}
-              >
-                <a href="assets/img/gallery/07.jpg" className="icon img-popup">
-                  <i className="fal fa-plus" />
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-9 wow fadeInUp" data-wow-delay=".3s">
-              <div
-                className="galler-image-2 bg-cover"
-                style={{ backgroundImage: 'url("assets/img/gallery/08.jpg")' }}
-              >
-                <a href="assets/img/gallery/08.jpg" className="icon img-popup">
-                  <i className="fal fa-plus" />
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-3 wow fadeInUp" data-wow-delay=".5s">
-              <div
-                className="galler-image-2 bg-cover"
-                style={{ backgroundImage: 'url("assets/img/gallery/09.jpg")' }}
-              >
-                <a href="assets/img/gallery/09.jpg" className="icon img-popup">
-                  <i className="fal fa-plus" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Booking Section Start */}
-      <Cta />
+      <PageBanner pageName="gallery" />
+
+      <Gallery />
     </FoodKingLayout>
   );
 };
-export default page;
+
+export default Page;
