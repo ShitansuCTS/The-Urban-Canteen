@@ -3,7 +3,6 @@ import HomeBanner from "@/components/HomeBanner";
 import Marque from "@/components/Marque";
 import ReservationForm from "@/components/ReservationForm";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
-
 export const metadata = {
   title: "The Urban Canteen | Authentic Food & Dining Experience",
   description:
@@ -34,7 +33,7 @@ const Page = () => {
           <div className="about-wrapper-2">
             <div className="row align-items-center">
 
-              
+
               <div className="col-xl-5 col-lg-5">
                 <div
                   className="pizza-image wow fadeInLeft"
@@ -42,7 +41,7 @@ const Page = () => {
                   data-wow-delay="0.2s"
                 >
                   <img
-                    src="/assets/img/food/meal.webp"
+                    src="/assets/img/restaurant/7.webp"
                     alt="Authentic Indian cuisine"
                   />
 
@@ -60,7 +59,7 @@ const Page = () => {
                 </div>
               </div>
 
-             
+
               <div className="col-xl-7 col-lg-7 mt-5 mt-lg-0">
                 <div className="about-content">
                   <div className="home-about-content">
@@ -754,6 +753,8 @@ const Page = () => {
           </div>
         </div>
       </section>
+
+
 
     </FoodKingLayout>
   );

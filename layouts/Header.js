@@ -28,7 +28,7 @@ const Menus = () => {
 
         return (
           <li key={item.href} className={isActive ? "has-dropdown active" : ""}>
-            <Link href={item.href}>{item.label}</Link>
+            <Link href={item.href} style={{textTransform: "Capitalize",fontWeight:"500"}}>{item.label}</Link>
           </li>
         );
       })}
@@ -83,7 +83,7 @@ const Header = () => {
         <div id="header-sticky" className="header-1">
           <div className="container">
             <div className="mega-menu-wrapper">
-              <div className="header-main">
+              <div className="header-main" >
 
                 <div className="logo">
                   <Link href="/" className="header-logo">
@@ -91,6 +91,7 @@ const Header = () => {
                       src="/assets/img/logo/URBAN-LOGO.png"
                       alt="logo-img"
                       loading="eager"
+                      style={{ height: "70px", width: "auto" }}
                     />
                   </Link>
                 </div>
@@ -336,8 +337,8 @@ const MobileMenu = () => {
                     isLast
                       ? "mean-last"
                       : isActive
-                      ? "has-dropdown active"
-                      : "has-dropdown"
+                        ? "has-dropdown active"
+                        : "has-dropdown"
                   }
                 >
                   <Link href={item.href}>{item.label}</Link>

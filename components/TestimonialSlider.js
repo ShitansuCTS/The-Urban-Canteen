@@ -41,25 +41,25 @@ const TestimonialSlider = () => {
           <div className="row align-items-center">
             <div className="col-xl-4 col-lg-4">
               <div className="testimonial-image video-wrapper">
-      <video
-        className="testimonial-video"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-      >
-        <source
-          src="/assets/videos/people.mp4"
-          type="video/mp4"
-        />
-      </video>
+                <video
+                  className="testimonial-video"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                >
+                  <source
+                    src="/assets/videos/people.mp4"
+                    type="video/mp4"
+                  />
+                </video>
 
-      <div className="feedback d-flex align-items-center">
-        <img src="/assets/img/feedback.svg" alt="Feedback" />
-        <h4>Feedback</h4>
-      </div>
-    </div>
+                <div className="feedback d-flex align-items-center">
+                  <img src="/assets/img/feedback.svg" alt="Feedback" />
+                  <h4>Feedback</h4>
+                </div>
+              </div>
             </div>
             <div className="col-xl-8 col-lg-8 mt-5 mt-lg-0">
               <Swiper

@@ -2,134 +2,74 @@
 
 import React from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "@/public/assets/custom-css/home.css";
 
 const RestaurantHero = () => {
   return (
     <section className="restaurant-hero">
+      {/* Background Video */}
+      <video
+        className="hero-video"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        poster="/assets/img/restaurant/hero-poster.webp"
+      >
+        <source
+          src="http://production-media.testctsl.in/the-urban-canteen/videos/website-home.mp4"
+          type="video/mp4"
+        />
+      </video>
 
-      {/* Background Shape */}
-      <div className="hero-bg-shape"></div>
+      {/* Dark Overlay */}
+      <div className="hero-video-overlay"></div>
 
-      {/* Restaurant Background */}
-      <div className="hero-restaurant-bg"></div>
-
-      <div className="container">
-        <div className="row align-items-center hero-row">
-
-          {/* =========================
-              LEFT CONTENT
-          ========================= */}
-          <div className="col-lg-6">
-            <div
-              className="hero-content wow fadeInLeft"
-              data-wow-duration="1s"
-              data-wow-delay=".15s"
-            >
-
-              <span
-                className="home-about-subtitle wow fadeInUp"
-                data-wow-duration=".8s"
-              >
-                ✦ Fresh • Delicious • Authentic
-              </span>
-
-              <h1
-                className="wow fadeInUp"
-                data-wow-duration=".9s"
-                data-wow-delay=".15s"
-              >
-                Taste The
-                <span> Difference</span>
-              </h1>
-
-              <p
-                className="wow fadeInUp"
-                data-wow-duration=".9s"
-                data-wow-delay=".3s"
-              >
-                Discover delicious food crafted with fresh ingredients,
-                authentic flavours and a passion for unforgettable dining.
-              </p>
-
-              <div
-                className="hero-buttons wow fadeInUp"
-                data-wow-duration=".8s"
-                data-wow-delay=".45s"
-              >
-                <a href="/menu" className="home-about-btn">
-                  <span className="home-about-btn-icon">
-                    <i className="bi bi-leaf-fill"></i>
-                  </span>
-
-                  <span>Explore Menu</span>
-                </a>
-              </div>
-
-            </div>
-          </div>
-
-          {/* =========================
-              RIGHT FOOD IMAGE
-          ========================= */}
-          <div className="col-lg-6">
-
-            <div
-              className="hero-food-area wow fadeInRight"
-              data-wow-duration="1s"
-              data-wow-delay=".25s"
-            >
-
-              {/* Green Circle */}
-              <div className="food-circle"></div>
-
-              {/* Fresh Ingredients */}
-              <div
-                className="floating-text wow zoomIn"
-                data-wow-duration=".8s"
-                data-wow-delay=".7s"
-              >
-                <span>100%</span>
-                <small>Fresh Ingredients</small>
-              </div>
-
-              {/* Food Image */}
-              <img
-                src="/assets/img/fresh-drink.webp"
-                alt="Delicious restaurant food"
-                className="hero-food"
-              />
-
-              {/* Decorative Stars */}
-              <div
-                className="food-leaf leaf-one wow fadeIn"
-                data-wow-delay=".8s"
-              >
-                ✦
-              </div>
-
-              <div
-                className="food-leaf leaf-two wow fadeIn"
-                data-wow-delay="1s"
-              >
-                ✧
-              </div>
-
-              <div
-                className="food-leaf leaf-three wow fadeIn"
-                data-wow-delay="1.2s"
-              >
-                ✦
-              </div>
-
-            </div>
-          </div>
-
+      {/* Hero Content */}
+      <div className="hero-content">
+        {/* Subtitle with Star Icons */}
+        <div className="hero-subtitle">
+          <span></span>
+          <i className="bi bi-sparkle-fill hero-star"></i>
+          <span>WELCOME TO</span>
+          <i className="bi bi-sparkle-fill hero-star"></i>
+          <span></span>
         </div>
+
+        {/* Main Heading */}
+        <h1>
+          <span className="hero-title-white">THE URBAN </span>
+          <span className="hero-title-gold">CANTEEN</span>
+        </h1>
+
+        {/* Divider */}
+        <div className="hero-divider">
+          <span></span>
+          <i className="bi bi-grid-fill hero-diamond"></i>
+          <span></span>
+        </div>
+
+        {/* Description */}
+        <p style={{ marginBottom: "20px" }}>Fresh flavours. Good food. Great moments.</p>
+
+
+        <a
+          href="/about"
+          className="home-about-btn wow fadeInUp"
+          data-wow-delay="0.5s"
+          data-wow-duration="0.8s"
+        >
+          <span className="home-about-btn-icon">
+            <i className="bi bi-leaf-fill"></i>
+          </span>
+
+          <span>Explore Menu</span>  <i className="bi bi-arrow-right"></i>
+        </a>
       </div>
 
       {/* Bottom Wave */}
       <div className="hero-bottom-wave"></div>
-
     </section>
   );
 };
