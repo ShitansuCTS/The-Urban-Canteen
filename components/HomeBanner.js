@@ -18,7 +18,7 @@ const RestaurantHero = () => {
         poster="/assets/img/restaurant/hero-poster.webp"
       >
         <source
-          src="http://production-media.testctsl.in/the-urban-canteen/videos/website-home.mp4"
+          src="https://res.cloudinary.com/dpz6btlj7/video/upload/v1788331550/website-home_oxiiha.mp4"
           type="video/mp4"
         />
       </video>

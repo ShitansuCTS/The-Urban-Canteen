@@ -361,7 +361,7 @@ const Page = () => {
                         preload="metadata"
                       >
                         <source
-                          src="/assets/video/ice-cream.mp4"
+                          src="https://res.cloudinary.com/dpz6btlj7/video/upload/v1788332038/ice-cream_hzyqgf.mp4"
                           type="video/mp4"
                         />
                       </video>
@@ -599,7 +599,7 @@ const Page = () => {
         </div>
       </section>
 
-      <Reviews/>
+      <Reviews />
 
       {/* =====================================================
           FOOD CATEGORY
