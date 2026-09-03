@@ -16,7 +16,20 @@ img.mfp-img {
   right: -24px;
 }
 
+.page-banner-overlay {
+  position: relative;
+  overflow: hidden;
+}
 
+.page-banner-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.432);
+  z-index: 1;
+}
 
-
-
+.page-banner-overlay > .container {
+  position: relative;
+  z-index: 2;
+}

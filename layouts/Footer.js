@@ -232,12 +232,12 @@ const Footer = () => {
                 <div className="list-area d-flex align-items-center">
                   <ul>
                     <li>
-                      <a href="#">
+                      <a href="https://www.facebook.com/profile.php?id=61564685393021">
                         <i className="fab fa-facebook-f" style={{ marginRight: "10px" }} />Facebook
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://www.instagram.com/theurbancanteen_/">
                         <i className="fab fa-instagram" style={{ marginRight: "10px" }} />Instagram
                       </a>
                     </li>

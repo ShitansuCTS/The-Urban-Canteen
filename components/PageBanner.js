@@ -1,26 +1,79 @@
 import Link from "next/link";
+import { Playball, Lora } from "next/font/google";
 
-const PageBanner = ({ pageName }) => {
+const playball = Playball({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const lora = Lora({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const PageBanner = ({ pageName, bannerImage }) => {
   return (
     <div
-      className="breadcrumb-wrapper bg-cover"
-      style={{ backgroundImage: 'url("assets/img/banner/breadcrumb.jpg")' }}
+      className="breadcrumb-wrapper bg-cover page-banner-overlay"
+      style={{
+        backgroundImage: `url("${bannerImage}")`,
+      }}
     >
       <div className="container">
         <div className="page-heading center">
-          <h1>{pageName}</h1>
-          <ul className="breadcrumb-items">
+          {/* Page Title */}
+          <h1
+            className={playball.className}
+            style={{ textTransform: "capitalize" }}
+          >
+            {pageName}
+          </h1>
+
+          {/* Breadcrumb */}
+          <ul
+            className={`breadcrumb-items ${lora.className}`}
+            style={{ textTransform: "capitalize" }}
+          >
             <li>
-              <Link href="/">Home Page</Link>
+              <Link
+                href="/"
+                style={{
+                  fontSize: "15px",
+                  textTransform: "capitalize",
+                  color: "white",
+                  fontWeight: "500",
+                }}
+              >
+                Home Page
+              </Link>
             </li>
+
             <li>
-              <i className="far fa-chevron-right" />
+              <i
+                className="far fa-chevron-right"
+                style={{
+                  fontSize: "15px",
+                  color: "white",
+                  fontWeight: "500",
+                }}
+              />
             </li>
-            <li>{pageName}</li>
+
+            <li
+              style={{
+                fontSize: "15px",
+                textTransform: "capitalize",
+                color: "white",
+                fontWeight: "500",
+              }}
+            >
+              {pageName}
+            </li>
           </ul>
         </div>
       </div>
     </div>
   );
 };
+
 export default PageBanner;

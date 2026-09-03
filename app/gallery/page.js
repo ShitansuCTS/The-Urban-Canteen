@@ -11,7 +11,7 @@ export const metadata = {
 const Page = () => {
   return (
     <FoodKingLayout>
-      <PageBanner pageName="gallery" />
+      <PageBanner pageName="Our gallery" bannerImage="/assets/img/gallery/21.webp" />
       <Gallery />
     </FoodKingLayout>
   );

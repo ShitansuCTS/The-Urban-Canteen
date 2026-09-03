@@ -18,7 +18,7 @@ export const metadata = {
 const page = () => {
   return (
     <FoodKingLayout>
-      <PageBanner pageName={"About us"} />
+      <PageBanner pageName={"About us"} bannerImage="/assets/img/restaurant/6.webp" />
       {/* About Section Start */}
       <section className="about-section fix section-padding section-bg">
 

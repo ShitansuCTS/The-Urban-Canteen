@@ -287,8 +287,8 @@ const Sidebar = ({ toggle, setToggle }) => {
                 </div>
 
                 <div className="social-icon d-flex align-items-center">
-                  <a href="#"><i className="fab fa-facebook-f" /></a>
-                  <a href="#"><i className="fab fa-twitter" /></a>
+                  <a href="https://www.facebook.com/profile.php?id=61564685393021"><i className="fab fa-facebook-f" /></a>
+                  <a href="https://www.instagram.com/theurbancanteen_/"><i className="fab fa-instagram" /></a>
                   <a href="#"><i className="fab fa-youtube" /></a>
                   <a href="#"><i className="fab fa-linkedin-in" /></a>
                 </div>
