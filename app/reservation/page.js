@@ -1,4 +1,4 @@
-import Cta from "@/components/Cta";
+// import Cta from "@/components/Cta";
 import Marque from "@/components/Marque";
 import NiceSelect from "@/components/NiceSelect";
 import PageBanner from "@/components/PageBanner";
@@ -148,7 +148,7 @@ const page = () => {
       {/* Marque Section Start */}
       <Marque pt={10} />
       {/* Main Cta Banner Section Start */}
-      <Cta />
+      {/* <Cta /> */}
     </FoodKingLayout>
   );
 };

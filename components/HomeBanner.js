@@ -55,7 +55,7 @@ const RestaurantHero = () => {
 
 
         <a
-          href="/about"
+          href="/menu"
           className="home-about-btn wow fadeInUp"
           data-wow-delay="0.5s"
           data-wow-duration="0.8s"

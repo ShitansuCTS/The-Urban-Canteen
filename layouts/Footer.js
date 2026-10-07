@@ -43,7 +43,7 @@ const Footer = () => {
                       <Link href="/about">About</Link>
                     </li>
                     <li>
-                      <Link href="#">Menu</Link>
+                      <Link href="/menu">Menu</Link>
                     </li>
                     <li>
                       <Link href="/gallery">Gallery</Link>
@@ -62,7 +62,7 @@ const Footer = () => {
             >
               <div className="single-footer-widget single-footer-widget-second border-right">
                 <div className="widget-head">
-                  <h4>Follow Us Now</h4>
+                  <h4>Follow Us</h4>
                 </div>
                 <div className="list-area d-flex align-items-center">
                   <ul>

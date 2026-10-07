@@ -1,4 +1,4 @@
-import Cta from "@/components/Cta";
+// import Cta from "@/components/Cta";
 import PageBanner from "@/components/PageBanner";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
 const page = () => {
@@ -133,7 +133,7 @@ const page = () => {
         </div>
       </section>
       {/* Main Cta Banner Section Start */}
-      <Cta />
+      {/* <Cta /> */}
     </FoodKingLayout>
   );
 };

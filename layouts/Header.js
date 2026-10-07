@@ -9,7 +9,7 @@ import { Fragment, useEffect, useRef, useState } from "react";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Menu", href: "#" },
+  { label: "Menu", href: "/menu" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
@@ -91,7 +91,7 @@ const Header = () => {
                       src="/assets/img/logo/URBAN-LOGO.png"
                       alt="logo-img"
                       loading="eager"
-                      style={{ height: "70px", width: "auto" }}
+                      style={{ height: "80px", width: "auto" }}
                     />
                   </Link>
                 </div>

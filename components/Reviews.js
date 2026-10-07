@@ -29,7 +29,7 @@ const RestaurantVideos = () => {
   };
 
   return (
-    <section className="section-padding fix">
+    <section className="section-padding fix dark-bg">
       <div className="container">
 
         {/* TITLE */}

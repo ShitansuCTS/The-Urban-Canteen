@@ -12,22 +12,33 @@ export default function SmoothScroll() {
     const lenis = new Lenis({
       duration: 1.2,
       smoothWheel: true,
-      wheelMultiplier: 0.9,
+      wheelMultiplier: 0.8,
       touchMultiplier: 1.5,
+      syncTouch: true,
     });
-
-    lenis.on("scroll", ScrollTrigger.update);
 
     const update = (time) => {
       lenis.raf(time * 1000);
     };
 
+    const handleScroll = () => {
+      ScrollTrigger.update();
+    };
+
+    lenis.on("scroll", handleScroll);
+
     gsap.ticker.add(update);
-    gsap.ticker.lagSmoothing(0);
+
+    // Give ScrollTrigger time to calculate the page
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
 
     return () => {
+      lenis.off("scroll", handleScroll);
       gsap.ticker.remove(update);
       lenis.destroy();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 

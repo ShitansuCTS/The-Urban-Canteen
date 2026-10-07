@@ -22,7 +22,7 @@ const OfferPopup = () => {
 
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 300);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [pathname]);

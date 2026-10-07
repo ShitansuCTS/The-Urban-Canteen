@@ -1,6 +1,6 @@
 import PageBanner from "@/components/PageBanner";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
-import Gallery from "@/components/NewGallery";
+import Gallery from "@/components/Gallery";
 
 export const metadata = {
   title: "Gallery | The Urban Canteen",

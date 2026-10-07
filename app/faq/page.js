@@ -1,5 +1,5 @@
 "use client";
-import Cta from "@/components/Cta";
+// import Cta from "@/components/Cta";
 import PageBanner from "@/components/PageBanner";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
 import { useState } from "react";
@@ -99,7 +99,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <Cta />
+      {/* <Cta /> */}
     </FoodKingLayout>
   );
 };

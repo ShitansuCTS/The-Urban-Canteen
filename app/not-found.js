@@ -1,4 +1,3 @@
-import Cta from "@/components/Cta";
 import PageBanner from "@/components/PageBanner";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
 import Link from "next/link";
@@ -25,8 +24,6 @@ const notFound = () => {
           </div>
         </div>
       </section>
-
-      <Cta />
     </FoodKingLayout>
   );
 };

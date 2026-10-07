@@ -1,4 +1,4 @@
-import Cta from "@/components/Cta";
+// import Cta from "@/components/Cta";
 import PageBanner from "@/components/PageBanner";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
 

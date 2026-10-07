@@ -1,9 +1,5 @@
 import AboutFoodItems from "@/components/AboutFoodItems";
-import InstagramBannerSlider from "@/components/InstagramBannerSlider";
 import Marque from "@/components/Marque";
-import { NextSaleBanner2 } from "@/components/NextSaleBanner";
-import PageBanner from "@/components/PageBanner";
-import TestimonialSlider from "@/components/TestimonialSlider";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
 import Link from "next/link";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -18,7 +14,9 @@ export const metadata = {
 const page = () => {
   return (
     <FoodKingLayout>
+
       <PageBanner pageName={"About us"} bannerImage="/assets/img/restaurant/6.webp" />
+
       {/* About Section Start */}
       <section className="about-section fix section-padding section-bg">
 
@@ -113,13 +111,7 @@ const page = () => {
                         <span>Explore Menu</span>
                       </a>
                     </div>
-                    <div
-                      className="info-content wow fadeInUp"
-                      data-wow-delay=".5s"
-                    >
-                      <span>BRENDON GARREY</span>
-                      <h6>YOUR TABLE. YOUR MOMENTS. YOUR URBAN EXPERIENCE.</h6>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -158,9 +150,7 @@ const page = () => {
                 <span>Explore Menu</span>
               </a>
             </div>
-            <div className="delivery-man">
-              <img src="assets/img/delivery-man-2.png" alt="img" />
-            </div>
+            
           </div>
         </div>
       </section>

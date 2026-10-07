@@ -52,9 +52,9 @@ const Page = () => {
                     data-wow-delay="0.6s"
                   >
                     <h3>
-                      MADE WITH LOVE,
+                      Made with <span className="highlights-word" style={{ color: "#e2bd68", fontSize: "30px" }}>Love</span>,
                       <br />
-                      SERVED WITH PASSION
+                      <span className="highlights-word" style={{ color: "#e2bd68", fontSize: "30px" }}>Served</span> with Passion
                     </h3>
                   </div>
                 </div>
@@ -77,7 +77,8 @@ const Page = () => {
                       data-wow-delay="0.15s"
                       data-wow-duration="0.9s"
                     >
-                      AUTHENTIC INDIAN <span>CUISINE</span>
+                      Authentic Indian <span>Cuisine</span>
+
                     </h2>
 
                     <div
@@ -156,9 +157,8 @@ const Page = () => {
                 data-wow-delay="0.15s"
                 data-wow-duration="1s"
               >
-                More Than Just
-                <br />
-                <em>A Dining Experience</em>
+                
+                <em>Where Flavor Meets <span style={{ color: "var(--theme)"}}>Elegance</span>.</em>
               </h2>
 
             </div>
@@ -244,12 +244,11 @@ const Page = () => {
                       className="wow fadeInUp"
                       data-wow-delay="0.15s"
                     >
-                      GOOD FOOD. GREAT VIBES.
-                      <br />
+                      Good Food. Great Vibes. <br />
 
-                      <span style={{ color: "var(--theme)" }}>
-                        URBAN MOMENTS.
-                      </span>
+<span style={{ color: "var(--theme)" }}>
+Urban Moments. </span>
+
                     </h2>
 
                   </div>
@@ -271,7 +270,7 @@ const Page = () => {
 
                     {/* TAB 1 */}
                     <button
-                      className="nav-link active wow fadeInUp"
+                      className="nav-link no-pointer active wow fadeInUp"
                       data-wow-delay="0.4s"
                       id="nav-home-tab"
                       data-bs-toggle="tab"
@@ -291,7 +290,7 @@ const Page = () => {
 
                     {/* TAB 2 */}
                     <button
-                      className="nav-link wow fadeInUp"
+                      className="nav-link no-pointer wow fadeInUp"
                       data-wow-delay="0.5s"
                       id="nav-profile-tab"
                       data-bs-toggle="tab"
@@ -311,7 +310,7 @@ const Page = () => {
 
                     {/* TAB 3 */}
                     <button
-                      className="nav-link wow fadeInUp"
+                      className="nav-link no-pointer wow fadeInUp"
                       data-wow-delay="0.6s"
                       id="nav-contact-tab"
                       data-bs-toggle="tab"
@@ -605,11 +604,12 @@ const Page = () => {
           FOOD CATEGORY
       ===================================================== */}
       <section
-        className="food-slider-wrapper wow fadeInUp"
-        data-wow-duration="1s"
+        className="food-slider-wrapper"
       >
         <FoodSlider />
       </section>
+
+      
 
       {/* =====================================================
           RESERVATION
@@ -649,7 +649,6 @@ const Page = () => {
           </div>
         </div>
       </section>
-
 
 
     </FoodKingLayout>

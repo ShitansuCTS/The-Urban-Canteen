@@ -7,20 +7,11 @@ const ScrollToTop = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Browser automatic scroll restoration disable
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-
-    // Wait for new page to render
-    const timer = setTimeout(() => {
-      window.scrollTo(0, 0);
-
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    }, 100);
-
-    return () => clearTimeout(timer);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
   }, [pathname]);
 
   return null;
