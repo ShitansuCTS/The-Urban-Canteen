@@ -207,9 +207,6 @@ const Page = () => {
       ===================================================== */}
       <section
         className="food-comboo-section fix bg-cover section-padding"
-        style={{
-          backgroundImage: 'url("/assets/img/bg-image/bg.jpg")',
-        }}
       >
 
         <div className="drinks-shape">

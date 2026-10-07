@@ -216,251 +216,233 @@ export default function Menu() {
 
   return (
     <FoodKingLayout>
-      <div
-      className="breadcrumb-wrapper bg-cover"
-      style={{ backgroundImage: 'url("/assets/img/banner/menu-banner.webp")' }}
-    >
-      <div className="container">
-        <div className="page-heading center">
-          <h1>Our Menu</h1>
-          <ul className="breadcrumb-items">
-            <li>
-              <Link href="/">Home Page</Link>
-            </li>
-            <li>
-              <i className="far fa-chevron-right" />
-            </li>
-            <li>Menu</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-       <main className="tuc-menu-page">
+      <PageBanner pageName="Our Menu" bannerImage="/assets/img/banner/menu-banner.webp" />
+      <main className="tuc-menu-page">
 
-      {/* =====================================================
+        {/* =====================================================
           INTRO
       ====================================================== */}
-      <section className="section-padding">
+        <section className="section-padding">
 
-        <div className="menu-container">
-          
+          <div className="menu-container">
 
-          <div className="menu-intro-grid">
 
-            <div className="menu-intro-small">
-              <span>THE URBAN CANTEEN</span>
-              <div className="intro-number">01</div>
+            <div className="menu-intro-grid">
+
+              <div className="menu-intro-small">
+                <span>THE URBAN CANTEEN</span>
+                <div className="intro-number">01</div>
+              </div>
+
+              <div className="menu-intro-main">
+
+                <span className="home-about-subtitle wow fadeInUp"
+                  data-wow-duration="0.8s">
+                  TASTE THE EXPERIENCE
+                </span>
+
+                <h2 className="wow fadeInUp"
+                  data-wow-delay="0.15s">
+                  Made for cravings,
+                  <br />
+                  <em>made to share.</em>
+                </h2>
+
+                <p>
+                  From comforting Indian classics to bold Asian flavours,
+                  handcrafted pizzas, indulgent desserts and refreshing
+                  drinks — every plate at The Urban Canteen is created
+                  for good food and great moments.
+                </p>
+
+              </div>
+
+              <div className="menu-intro-side">
+                <span className="wow fadeInUp"
+                  data-wow-delay="0.4s"
+                  id="nav-home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-home"
+                  aria-selected="true">FRESH</span>
+                <span className="wow fadeInUp"
+                  data-wow-delay="0.5s"
+                  id="nav-profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-profile"
+                  aria-selected="false">ORIGINAL</span>
+                <span className="wow fadeInUp"
+                  data-wow-delay="0.6s"
+                  id="nav-contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-contact"
+                  aria-selected="false">MEMORABLE</span>
+              </div>
+
             </div>
 
-            <div className="menu-intro-main">
+          </div>
 
-              <span className="home-about-subtitle wow fadeInUp"
-                      data-wow-duration="0.8s">
-                TASTE THE EXPERIENCE
-              </span>
+        </section>
 
-              <h2  className="wow fadeInUp"
-                      data-wow-delay="0.15s">
-                Made for cravings,
-                <br />
-                <em>made to share.</em>
-              </h2>
 
-              <p>
-                From comforting Indian classics to bold Asian flavours,
-                handcrafted pizzas, indulgent desserts and refreshing
-                drinks — every plate at The Urban Canteen is created
-                for good food and great moments.
+        {/* =====================================================
+          CATEGORY NAVIGATION
+      ====================================================== */}
+        <section className="section-padding dark-bg">
+
+          <div className="menu-container">
+
+            <div className="menu-heading">
+
+              <div>
+                <span className="home-about-subtitle wow fadeInUp"
+                  data-wow-duration="0.8s">
+                  EXPLORE OUR MENU
+                </span>
+
+                <h2>
+                  Something for
+                  <br />
+                  <em>every craving.</em>
+                </h2>
+              </div>
+
+              <p className="menu-heading-text">
+                Take your time, explore the flavours and find
+                something that makes your moment a little better.
               </p>
 
             </div>
 
-            <div className="menu-intro-side">
-              <span className="wow fadeInUp"
-                      data-wow-delay="0.4s"
-                      id="nav-home-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#nav-home"
-                      type="button"
-                      role="tab"
-                      aria-controls="nav-home"
-                      aria-selected="true">FRESH</span>
-              <span  className="wow fadeInUp"
-                      data-wow-delay="0.5s"
-                      id="nav-profile-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#nav-profile"
-                      type="button"
-                      role="tab"
-                      aria-controls="nav-profile"
-                      aria-selected="false">ORIGINAL</span>
-              <span className="wow fadeInUp"
-                      data-wow-delay="0.6s"
-                      id="nav-contact-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#nav-contact"
-                      type="button"
-                      role="tab"
-                      aria-controls="nav-contact"
-                      aria-selected="false">MEMORABLE</span>
+
+            {/* FILTERS */}
+            <div className="menu-filters">
+
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  type="button"
+                  className={
+                    activeCategory === category
+                      ? "menu-filter active"
+                      : "menu-filter"
+                  }
+                  onClick={() => setActiveCategory(category)}
+                >
+                  {category}
+                </button>
+              ))}
+
             </div>
 
-          </div>
 
-        </div>
+            {/* MENU GRID */}
+            <div className="menu-grid">
 
-      </section>
+              {filteredItems.map((item, index) => (
 
+                <article
+                  className="menu-item"
+                  key={item.id}
+                  style={{
+                    "--item-delay": `${index * 70}ms`,
+                  }}
+                >
 
-      {/* =====================================================
-          CATEGORY NAVIGATION
-      ====================================================== */}
-      <section className="section-padding dark-bg">
+                  {/* IMAGE */}
+                  <div className="menu-item-image">
 
-        <div className="menu-container">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      sizes="(max-width: 767px) 100vw, 50vw"
+                      className="menu-image"
+                    />
 
-          <div className="menu-heading">
-
-            <div>
-              <span className="home-about-subtitle wow fadeInUp"
-                      data-wow-duration="0.8s">
-                EXPLORE OUR MENU
-              </span>
-
-              <h2>
-                Something for
-                <br />
-                <em>every craving.</em>
-              </h2>
-            </div>
-
-            <p className="menu-heading-text">
-              Take your time, explore the flavours and find
-              something that makes your moment a little better.
-            </p>
-
-          </div>
+                    <div className="menu-image-overlay">
 
 
-          {/* FILTERS */}
-          <div className="menu-filters">
-
-            {categories.map((category) => (
-              <button
-                key={category}
-                type="button"
-                className={
-                  activeCategory === category
-                    ? "menu-filter active"
-                    : "menu-filter"
-                }
-                onClick={() => setActiveCategory(category)}
-              >
-                {category}
-              </button>
-            ))}
-
-          </div>
-
-
-          {/* MENU GRID */}
-          <div className="menu-grid">
-
-            {filteredItems.map((item, index) => (
-
-              <article
-                className="menu-item"
-                key={item.id}
-                style={{
-                  "--item-delay": `${index * 70}ms`,
-                }}
-              >
-
-                {/* IMAGE */}
-                <div className="menu-item-image">
-
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    fill
-                    sizes="(max-width: 767px) 100vw, 50vw"
-                    className="menu-image"
-                  />
-
-                  <div className="menu-image-overlay">
-
-                   
-
-                  </div>
-
-                  {item.tag && (
-                    <span className="menu-tag">
-                      {item.tag}
-                    </span>
-                  )}
-
-                </div>
-
-
-                {/* CONTENT */}
-                <div className="menu-item-content">
-
-                  <div className="menu-item-top">
-
-                    <div>
-
-                      <span className="menu-item-category">
-                        {item.category}
-                      </span>
-
-                      <h3>
-                        {item.name}
-                      </h3>
 
                     </div>
 
-                    <span className="menu-price">
-                      {item.price}
-                    </span>
+                    {item.tag && (
+                      <span className="menu-tag">
+                        {item.tag}
+                      </span>
+                    )}
 
                   </div>
 
-                  <p>
-                    {item.description}
-                  </p>
+
+                  {/* CONTENT */}
+                  <div className="menu-item-content">
+
+                    <div className="menu-item-top">
+
+                      <div>
+
+                        <span className="menu-item-category">
+                          {item.category}
+                        </span>
+
+                        <h3>
+                          {item.name}
+                        </h3>
+
+                      </div>
+
+                      <span className="menu-price">
+                        {item.price}
+                      </span>
+
+                    </div>
+
+                    <p>
+                      {item.description}
+                    </p>
 
 
-                </div>
+                  </div>
 
-              </article>
+                </article>
 
-            ))}
+              ))}
+
+            </div>
 
           </div>
 
-        </div>
-
-      </section>
+        </section>
 
 
-    {/* Marque Section Start */}
-      <Marque />
-      {/* Booking Section Start */}
-      <section
-        className="booking-section fix section-padding bg-cover"
-        style={{ backgroundImage: 'url("assets/img/banner/form-bg.webp")' }}
-      >
-        <div className="container">
-          <div className="booking-wrapper style-responsive section-padding pb-0">
-            <div className="row justify-content-between align-items-center">
-              <div
-                className="col-lg-5 mt-5 mt-lg-0 wow fadeInUp"
-                data-wow-delay=".4s"
-              >
-                <ReservationForm />
-              </div>
-              <div className="col-lg-6">
-                {/* <div className="booking-content">
+        {/* Marque Section Start */}
+        <Marque />
+        {/* Booking Section Start */}
+        <section
+          className="booking-section fix section-padding bg-cover"
+          style={{ backgroundImage: 'url("assets/img/banner/form-bg.webp")' }}
+        >
+          <div className="container">
+            <div className="booking-wrapper style-responsive section-padding pb-0">
+              <div className="row justify-content-between align-items-center">
+                <div
+                  className="col-lg-5 mt-5 mt-lg-0 wow fadeInUp"
+                  data-wow-delay=".4s"
+                >
+                  <ReservationForm />
+                </div>
+                <div className="col-lg-6">
+                  {/* <div className="booking-content">
                   <div className="section-title">
                     <span className="wow fadeInUp">
                       crispy, every bite taste
@@ -488,14 +470,14 @@ export default function Menu() {
                     </div>
                   </div>
                 </div> */}
-              </div>
+                </div>
 
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
     </FoodKingLayout>
-   
+
   );
 }
