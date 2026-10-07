@@ -1,5 +1,6 @@
 import AboutFoodItems from "@/components/AboutFoodItems";
 import Marque from "@/components/Marque";
+import PageBanner from "@/components/PageBanner";
 import FoodKingLayout from "@/layouts/FoodKingLayout";
 import Link from "next/link";
 import "bootstrap-icons/font/bootstrap-icons.css";
