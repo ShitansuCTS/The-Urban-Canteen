@@ -30,6 +30,24 @@ const FloatingButtons = () => {
   };
 
   return (
+
+    <>
+    <div className="floating-action-buttons floating-action-buttons-whatsapp">
+      {/* WHATSAPP */}
+      <a
+        href="https://wa.me/9938161712"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="floating-whatsapp"
+        aria-label="Chat with us on WhatsApp"
+      >
+        <span className="whatsapp-inner">
+          <i className="bi bi-whatsapp"></i>
+        </span>
+
+        <span className="whatsapp-pulse"></span>
+      </a>
+    </div>
     <div className="floating-action-buttons">
 
       {/* BACK TO TOP */}
@@ -46,22 +64,9 @@ const FloatingButtons = () => {
         </span>
       </button>
 
-      {/* WHATSAPP */}
-      <a
-        href="https://wa.me/9938161712"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="floating-whatsapp"
-        aria-label="Chat with us on WhatsApp"
-      >
-        <span className="whatsapp-inner">
-          <i className="bi bi-whatsapp"></i>
-        </span>
-
-        <span className="whatsapp-pulse"></span>
-      </a>
 
     </div>
+    </>
   );
 };
 

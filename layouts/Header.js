@@ -261,7 +261,7 @@ const Sidebar = ({ toggle, setToggle }) => {
                       <i className="fal fa-envelope" />
                     </div>
                     <div className="offcanvas__contact-text">
-                      <a href="mailto:info@foodking.com">info@foodking.com</a>
+                      <a href="mailto:info@foodking.com">info@example.com</a>
                     </div>
                   </li>
 

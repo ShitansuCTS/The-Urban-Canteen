@@ -487,15 +487,20 @@ const handleTabChange = (key) => {
               className="wow fadeInUp"
               data-wow-delay=".3s"
             >
-              More Than Food,
-              <br />
-
-              <span
+              More Than <span
                 style={{
                   color: "var(--theme)",
                 }}
               >
-                It's an Experience
+                Food
+              </span>,
+
+              It's an <span
+                style={{
+                  color: "var(--theme)",
+                }}
+              >
+                Experience
               </span>
             </h2>
 

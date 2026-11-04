@@ -35,17 +35,7 @@ const PageBanner = ({ pageName, bannerImage }) => {
             style={{ textTransform: "capitalize" }}
           >
             <li>
-              <Link
-                href="/"
-                style={{
-                  fontSize: "15px",
-                  textTransform: "capitalize",
-                  color: "white",
-                  fontWeight: "500",
-                }}
-              >
-                Home Page
-              </Link>
+              <Link href="/" style={{fontSize: "15px", textTransform: "capitalize"}}>Home</Link>
             </li>
 
             <li>

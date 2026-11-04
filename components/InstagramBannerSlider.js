@@ -10,15 +10,15 @@ const InstagramBannerSlider = () => {
   const nextRef = useRef(null);
 
   const images = [
-    "03.webp",
-    "02.webp",
+    "14-restro.webp",
+    "16-restro.webp",
     "01.webp",
-    "04.webp",
-    "05.webp",
+    "17-restro.webp",
+    "21-restro.webp",
     "03.webp",
-    "02.webp",
-    "03.webp",
+    "22-restro.webp",
     "04.webp",
+    "20-restro.webp",
     "05.webp",
   ];
 

@@ -393,12 +393,12 @@ Urban Moments. </span>
                         />
                       </div>
 
-                      <div className="offer-shape">
+                      {/* <div className="offer-shape">
                         <img
                           src="/assets/img/offer/50percent-off-2.png"
                           alt="Offer"
                         />
-                      </div>
+                      </div> */}
 
                       <div className="vegetable-shape">
                         <img
@@ -439,12 +439,12 @@ Urban Moments. </span>
                         />
                       </div>
 
-                      <div className="offer-shape">
+                      {/* <div className="offer-shape">
                         <img
                           src="/assets/img/offer/50percent-off-2.png"
                           alt="Offer"
                         />
-                      </div>
+                      </div> */}
 
                       <div className="vegetable-shape">
                         <img

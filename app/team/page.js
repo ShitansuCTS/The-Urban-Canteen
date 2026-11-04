@@ -359,6 +359,18 @@ const page = () => {
                           <li data-value={1} className="option">
                             3 People
                           </li>
+                          <li data-value={1} className="option">
+                            4 People
+                          </li>
+                          <li data-value={1} className="option">
+                            5 People
+                          </li>
+                          <li data-value={1} className="option">
+                            6 People
+                          </li>
+                          <li data-value={1} className="option">
+                            More Than 6 People
+                          </li>
                         </ul>
                       </div>
                     </div>

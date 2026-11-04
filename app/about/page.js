@@ -16,17 +16,19 @@ const page = () => {
   return (
     <FoodKingLayout>
 
+
       <PageBanner pageName={"About us"} bannerImage="/assets/img/restaurant/6.webp" />
+
 
       {/* About Section Start */}
       <section className="about-section fix section-padding section-bg">
 
-        <div className="about-top-decoration">
+        {/* <div className="about-top-decoration">
           <img
             src="assets/img/about/mirchi.webp"
             alt=""
           />
-        </div>
+        </div> */}
         <div className="container">
           <div className="about-wrapper">
             <div className="row align-items-center">
@@ -37,7 +39,7 @@ const page = () => {
               >
 
                 <div className="about-image">
-                  <img src="assets/img/food/03.webp" alt="about-img" />
+                  <img src="/assets/img/restaurant/11.webp" alt="about-img" />
 
                   {/* <div className="price">
                     <h2>

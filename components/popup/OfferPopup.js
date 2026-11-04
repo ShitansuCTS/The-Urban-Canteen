@@ -10,18 +10,30 @@ const OfferPopup = () => {
   const [isClosing, setIsClosing] = useState(false);
 
   // =========================================
-  // SHOW ONLY ON HOME PAGE
+  // SHOW ONLY ON HOME PAGE - ONLY ONCE
   // =========================================
   useEffect(() => {
-    // Agar Home page nahi hai
+    // Only run on home page
     if (pathname !== "/") {
       setIsVisible(false);
       setIsClosing(false);
       return;
     }
 
+    // Check if popup has already been shown
+    const popupShown = localStorage.getItem("urbanCanteenOfferShown");
+
+    // If already shown, don't show again
+    if (popupShown === "true") {
+      return;
+    }
+
+    // Show popup after 3 seconds
     const timer = setTimeout(() => {
       setIsVisible(true);
+
+      // Save that popup has been shown
+      localStorage.setItem("urbanCanteenOfferShown", "true");
     }, 3000);
 
     return () => clearTimeout(timer);
@@ -76,7 +88,6 @@ const OfferPopup = () => {
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-
         {/* OFFER IMAGE */}
         <div className="offer-popup-image">
           <img
@@ -97,7 +108,6 @@ const OfferPopup = () => {
             <i className="fal fa-times"></i>
           </span>
         </button>
-
       </div>
     </div>
   );

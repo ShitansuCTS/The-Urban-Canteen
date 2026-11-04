@@ -31,25 +31,37 @@ const RestaurantVideos = () => {
   return (
     <section className="section-padding fix dark-bg">
       <div className="container">
-
         {/* TITLE */}
         <div className="text-center mb-5">
-          <h2>Experience The Urban Canteen</h2>
+          <div
+            class="premium-eyebrow wow fadeInUp"
+            data-wow-duration="0.8s"
+            style={{ visibility: "visible", animationDuration: "0.8s"}}
+          >
+            <span class="eyebrow-line"></span>
+            <span
+              class="home-about-subtitle wow fadeInUp"
+            >
+              Words We Cherish
+            </span>
+            <span class="eyebrow-line"></span>
+          </div>
+
+          <h2 className="wow fadeInUp" data-wow-delay="0.15s">
+            Smiles Behind Every{" "}
+            <span style={{ color: "var(--theme)" }}> Review </span>
+          </h2>
 
           <p>
-            Fresh flavours, vibrant moments and great food come together
-            at The Urban Canteen.
+            Fresh flavours, vibrant moments and great food come together at The
+            Urban Canteen.
           </p>
         </div>
 
         {/* VIDEOS */}
         <div className="row g-4">
-
           {videos.map((video, index) => (
-            <div
-              className="col-12 col-sm-6 col-lg-3"
-              key={index}
-            >
+            <div className="col-12 col-sm-6 col-lg-3" key={index}>
               <div
                 style={{
                   position: "relative",
@@ -60,7 +72,6 @@ const RestaurantVideos = () => {
                   background: "#000",
                 }}
               >
-
                 <video
                   ref={(el) => {
                     videoRefs.current[index] = el;
@@ -86,9 +97,7 @@ const RestaurantVideos = () => {
                   type="button"
                   onClick={() => toggleSound(index)}
                   aria-label={
-                    unmutedVideo === index
-                      ? "Mute video"
-                      : "Unmute video"
+                    unmutedVideo === index ? "Mute video" : "Unmute video"
                   }
                   style={{
                     position: "absolute",
@@ -114,13 +123,10 @@ const RestaurantVideos = () => {
                     <VolumeX size={20} />
                   )}
                 </button>
-
               </div>
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

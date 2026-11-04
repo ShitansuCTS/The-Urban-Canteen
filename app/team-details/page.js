@@ -230,6 +230,10 @@ const page = () => {
                             { id: 1, name: "1 People", value: "1-people" },
                             { id: 2, name: "2 People", value: "2-people" },
                             { id: 3, name: "3 People", value: "3-people" },
+                            { id: 4, name: "4 People", value: "4-people" },
+                            { id: 5, name: "5 People", value: "5-people" },
+                            { id: 6, name: "6 People", value: "6-people" },
+                            { id: 7, name: "More Than 6 People", value: "More-people" },
                           ]}
                           className="no-of-person"
                         />
@@ -358,12 +362,12 @@ const page = () => {
                   backgroundImage: 'url("assets/img/banner/banner-bg.png")',
                 }}
               >
-                <div className="offer-image-2">
+                {/* <div className="offer-image-2">
                   <img
                     src="assets/img/offer/50percent-off-2.png"
                     alt="offer-img"
                   />
-                </div>
+                </div> */}
                 <div className="french-content">
                   <h4>
                     <span>Todays</span>Delicious

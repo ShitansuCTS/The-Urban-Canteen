@@ -64,6 +64,10 @@ const page = () => {
                               { id: 1, name: "1 People", value: "1-people" },
                               { id: 2, name: "2 People", value: "2-people" },
                               { id: 3, name: "3 People", value: "3-people" },
+                              { id: 4, name: "4 People", value: "4-people" },
+                              { id: 5, name: "5 People", value: "5-people" },
+                              { id: 6, name: "6 People", value: "6-people" },
+                              { id: 7, name: "More Than 6 People", value: "7-people" },
                             ]}
                             className="no-of-person"
                           />

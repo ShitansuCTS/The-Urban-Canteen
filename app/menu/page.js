@@ -10,8 +10,10 @@ import Marque from "@/components/Marque";
 import ReservationForm from "@/components/ReservationForm";
 const categories = [
   "All",
-  "Starters",
-  "Mains",
+  "Breakfast",
+  "Soup & Salad",
+  "Small Plates",
+  "Mains for one",
   "Pizza & Pasta",
   "Asian",
   "Desserts",
@@ -21,183 +23,170 @@ const categories = [
 const menuItems = [
   {
     id: 1,
-    category: "Starters",
-    name: "Crispy Corn",
-    description:
-      "Crispy golden corn tossed with herbs, spices and a touch of our signature seasoning.",
-    price: "₹220",
+    category: "Breakfast",
+    name: "Smashed HAS Avo",
+    description: "With Marinated Tomatoes",
+    price: "₹265",
     image: "/assets/img/gallery/01.webp",
     tag: "Popular",
   },
   {
     id: 2,
-    category: "Starters",
-    name: "Paneer Tikka",
-    description:
-      "Char-grilled cottage cheese marinated with aromatic spices, peppers and onions.",
-    price: "₹280",
+    category: "Breakfast",
+    name: "Cheese Fondue and Chicken Ham Omlette",
+    description: "Diced Ham and Lots of Chili Cheese",
+    price: "₹265",
     image: "/assets/img/gallery/02.webp",
     tag: "Chef's Pick",
   },
   {
     id: 3,
-    category: "Starters",
-    name: "Chicken Tikka",
-    description:
-      "Tender chicken pieces marinated in aromatic spices and grilled to perfection.",
-    price: "₹320",
+    category: "Soup & Salad",
+    name: "North Eastern Noodle Thukpa",
+    description: "Noodles, Flavourful Broth, Vegetables and Crispy Chili Oil",
+    price: "₹175",
     image: "/assets/img/gallery/03.webp",
     tag: "",
   },
   {
     id: 4,
-    category: "Mains",
-    name: "Butter Chicken",
+    category: "Soup & Salad",
+    name: "Mumbai Pani Poori ",
     description:
-      "Tender chicken simmered in a rich tomato gravy finished with butter and cream.",
-    price: "₹390",
+      "With Aloo ka Filling and Boondi, Teekha Pudina Paani and Meetha Imly Paani",
+    price: "₹150",
     image: "/assets/img/gallery/04.webp",
     tag: "Signature",
   },
   {
     id: 5,
-    category: "Mains",
-    name: "Paneer Butter Masala",
+    category: "Small Plates",
+    name: "Lotus Stem Chili Plum",
     description:
-      "Soft paneer cooked in a creamy tomato gravy with subtle Indian spices.",
-    price: "₹340",
+      "Fried Crisp. Wok Tossed with Spicy Green Chili and Plum Sauce",
+    price: "₹275",
     image: "/assets/img/gallery/05.webp",
     tag: "",
   },
   {
     id: 6,
-    category: "Mains",
-    name: "Dal Makhani",
-    description:
-      "Slow-cooked black lentils finished with butter and cream for a rich flavour.",
-    price: "₹280",
+    category: "Small Plates",
+    name: "Urban KFC Popcorn",
+    description: "Kerala Fried Chicken popcorn",
+    price: "₹295",
     image: "/assets/img/gallery/06.webp",
     tag: "Classic",
   },
   {
     id: 7,
-    category: "Pizza & Pasta",
-    name: "Urban Margherita",
+    category: "Mains for one",
+    name: "Jolokia Crunch Wrap",
     description:
-      "Classic tomato, mozzarella and basil with our signature hand-finished crust.",
-    price: "₹360",
+      "Refried Beans, Cheese Sauce, Pico de Gallo, Chipotle, Lettuce and Nachos",
+    price: "₹245",
     image: "/assets/img/gallery/07.webp",
     tag: "Popular",
   },
   {
     id: 8,
-    category: "Pizza & Pasta",
-    name: "Farmhouse Pizza",
-    description:
-      "Fresh vegetables, mozzarella, herbs and a generous layer of melted cheese.",
-    price: "₹420",
+    category: "Mains for one",
+    name: "UK's Fish and Chips",
+    description: "Crumb Fried Fish, French Fries and Tartar Sauce",
+    price: "₹375",
     image: "/assets/img/gallery/08.webp",
     tag: "",
   },
   {
     id: 9,
     category: "Pizza & Pasta",
-    name: "Creamy Alfredo Pasta",
+    name: "Veggie Overload Pizza ",
     description:
-      "Silky creamy sauce tossed with pasta, herbs and freshly grated parmesan.",
-    price: "₹380",
+      "For the Vegetable Lovers. Artichoke, Brocolli, American Corn, Peppers, Tomato, Onion, Olives, Jalapeno",
+    price: "₹335",
     image: "/assets/img/gallery/09.webp",
     tag: "",
   },
   {
     id: 10,
-    category: "Asian",
-    name: "Veg Hakka Noodles",
+    category: "Pizza & Pasta",
+    name: "Butter Chicken Pizza",
     description:
-      "Wok-tossed noodles with crisp vegetables, herbs and our house seasoning.",
-    price: "₹280",
+      "Creamy Pulled Chicken, Makhani Sauce, Coriander, Jalapeno, Onion, Chaat Masala",
+    price: "₹355",
     image: "/assets/img/gallery/10.webp",
     tag: "",
   },
   {
     id: 11,
-    category: "Asian",
-    name: "Chilli Paneer",
-    description:
-      "Crispy paneer tossed in a spicy Indo-Chinese sauce with peppers and onions.",
-    price: "₹320",
+    category: "Pizza & Pasta",
+    name: "Shroomy Penne",
+    description: "Creamy Mushroom, Parmesan, Nutmeg, Garlic",
+    price: "₹355",
     image: "/assets/img/gallery/11.webp",
     tag: "Popular",
   },
   {
     id: 12,
-    category: "Asian",
-    name: "Chicken Chilli",
+    category: "Pizza & Pasta",
+    name: "Mac & Cheese Casserol",
     description:
-      "Juicy chicken tossed with peppers, onions and a bold chilli-soy glaze.",
-    price: "₹360",
+      "Macaroni and Cheese Sauce, Topped with Chili Cheese mix, Baked",
+    price: "₹375",
     image: "/assets/img/gallery/12.webp",
     tag: "",
   },
   {
     id: 13,
-    category: "Desserts",
-    name: "Chocolate Brownie",
-    description:
-      "Warm, fudgy chocolate brownie served with a decadent chocolate finish.",
-    price: "₹220",
+    category: "Asian",
+    name: "Hakka Noodles",
+    description: "(Veg / Egg / Chicken)",
+    price: "₹265 / ₹295 / ₹325",
     image: "/assets/img/gallery/13.webp",
     tag: "Must Try",
   },
   {
     id: 14,
-    category: "Desserts",
-    name: "Classic Cheesecake",
-    description:
-      "Smooth and creamy cheesecake with a delicate biscuit base.",
-    price: "₹260",
+    category: "Asian",
+    name: "Sczhewan Rice",
+    description: "(Vegetable Dumplings / Chicken)",
+    price: "₹295 / ₹385",
     image: "/assets/img/gallery/14.webp",
     tag: "",
   },
   {
     id: 15,
     category: "Desserts",
-    name: "Ice Cream",
+    name: "Whipped Blackforest Chocolate Mousse Jar",
     description:
-      "Creamy scoops served chilled with your choice of classic flavours.",
-    price: "₹180",
+      "Milk Chocolate and Whipped Cream Cheese, Zesty Cherry Sauce, Chocolate Sponge",
+    price: "₹255",
     image: "/assets/img/gallery/15.webp",
-    tag: "",
+    tag: "Popular",
   },
   {
     id: 16,
-    category: "Drinks",
-    name: "Classic Cold Coffee",
-    description:
-      "Smooth chilled coffee blended with milk and a touch of sweetness.",
-    price: "₹180",
+    category: "Desserts",
+    name: "Blueberry Cheesecake Jar",
+    description: "Cream Cheese Mousse, Blueberry Compote",
+    price: "₹255",
     image: "/assets/img/gallery/16.webp",
-    tag: "Popular",
+    tag: "",
   },
   {
     id: 17,
     category: "Drinks",
-    name: "Fresh Lime Cooler",
-    description:
-      "Refreshing lime, mint and chilled soda for the perfect cool-down.",
-    price: "₹150",
+    name: "Urban Sunshine",
+    price: "₹265",
     image: "/assets/img/gallery/17.webp",
     tag: "",
   },
   {
     id: 18,
     category: "Drinks",
-    name: "Mango Smoothie",
-    description:
-      "Thick and creamy mango smoothie made with fresh seasonal mangoes.",
-    price: "₹220",
+    name: "Death By Chocolate Shake",
+    price: "₹255",
     image: "/assets/img/gallery/18.webp",
-    tag: "Seasonal",
+    tag: "",
   },
 ];
 
@@ -209,56 +198,56 @@ export default function Menu() {
       return menuItems;
     }
 
-    return menuItems.filter(
-      (item) => item.category === activeCategory
-    );
+    return menuItems.filter((item) => item.category === activeCategory);
   }, [activeCategory]);
 
   return (
     <FoodKingLayout>
-      <PageBanner pageName="Our Menu" bannerImage="/assets/img/banner/menu-banner.webp" />
-      <main className="tuc-menu-page">
+      <PageBanner
+        pageName={"Our Menu"}
+        bannerImage="/assets/img/banner/menu-banner.webp"
+      />
 
+      <main className="tuc-menu-page">
         {/* =====================================================
           INTRO
       ====================================================== */}
         <section className="section-padding">
-
           <div className="menu-container">
-
-
             <div className="menu-intro-grid">
-
               <div className="menu-intro-small">
                 <span>THE URBAN CANTEEN</span>
                 <div className="intro-number">01</div>
               </div>
 
               <div className="menu-intro-main">
-
-                <span className="home-about-subtitle wow fadeInUp"
-                  data-wow-duration="0.8s">
-                  TASTE THE EXPERIENCE
+                <span
+                  class="home-about-subtitle wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  style={{ visibility: "visible", animationDuration: "0.8s" }}
+                >
+                   A Feeling To Remember
                 </span>
+                
 
-                <h2 className="wow fadeInUp"
-                  data-wow-delay="0.15s">
-                  Made for cravings,
+                <h2 className="wow fadeInUp" data-wow-delay="0.15s">
+                  Designed For Moments,
                   <br />
                   <em>made to share.</em>
                 </h2>
 
                 <p>
-                  From comforting Indian classics to bold Asian flavours,
-                  handcrafted pizzas, indulgent desserts and refreshing
-                  drinks — every plate at The Urban Canteen is created
-                  for good food and great moments.
+                  From inviting interiors and warm lighting to delightful
+                  flavours and thoughtfully crafted spaces, every corner sets
+                  the mood for something special. At The Urban Canteen, great
+                  food meets a beautiful ambience, creating the perfect setting
+                  to connect, unwind and savour every moment.
                 </p>
-
               </div>
 
               <div className="menu-intro-side">
-                <span className="wow fadeInUp"
+                <span
+                  className="wow fadeInUp"
                   data-wow-delay="0.4s"
                   id="nav-home-tab"
                   data-bs-toggle="tab"
@@ -266,8 +255,12 @@ export default function Menu() {
                   type="button"
                   role="tab"
                   aria-controls="nav-home"
-                  aria-selected="true">FRESH</span>
-                <span className="wow fadeInUp"
+                  aria-selected="true"
+                >
+                  FRESH FLAVOURS
+                </span>
+                <span
+                  className="wow fadeInUp"
                   data-wow-delay="0.5s"
                   id="nav-profile-tab"
                   data-bs-toggle="tab"
@@ -275,8 +268,12 @@ export default function Menu() {
                   type="button"
                   role="tab"
                   aria-controls="nav-profile"
-                  aria-selected="false">ORIGINAL</span>
-                <span className="wow fadeInUp"
+                  aria-selected="false"
+                >
+                  WARM AMBIENCE
+                </span>
+                <span
+                  className="wow fadeInUp"
                   data-wow-delay="0.6s"
                   id="nav-contact-tab"
                   data-bs-toggle="tab"
@@ -284,29 +281,28 @@ export default function Menu() {
                   type="button"
                   role="tab"
                   aria-controls="nav-contact"
-                  aria-selected="false">MEMORABLE</span>
+                  aria-selected="false"
+                >
+                  MEMORABLE
+                </span>
               </div>
-
             </div>
-
           </div>
-
         </section>
-
 
         {/* =====================================================
           CATEGORY NAVIGATION
       ====================================================== */}
         <section className="section-padding dark-bg">
-
           <div className="menu-container">
-
             <div className="menu-heading">
-
               <div>
-                <span className="home-about-subtitle wow fadeInUp"
-                  data-wow-duration="0.8s">
-                  EXPLORE OUR MENU
+                <span
+                  class="home-about-subtitle wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  style={{ visibility: "visible", animationDuration: "0.8s" }}
+                >
+                   Explore Our Menu
                 </span>
 
                 <h2>
@@ -317,16 +313,13 @@ export default function Menu() {
               </div>
 
               <p className="menu-heading-text">
-                Take your time, explore the flavours and find
-                something that makes your moment a little better.
+                Take your time, explore the flavours and find something that
+                makes your moment a little better.
               </p>
-
             </div>
-
 
             {/* FILTERS */}
             <div className="menu-filters">
-
               {categories.map((category) => (
                 <button
                   key={category}
@@ -341,15 +334,11 @@ export default function Menu() {
                   {category}
                 </button>
               ))}
-
             </div>
-
 
             {/* MENU GRID */}
             <div className="menu-grid">
-
               {filteredItems.map((item, index) => (
-
                 <article
                   className="menu-item"
                   key={item.id}
@@ -357,10 +346,8 @@ export default function Menu() {
                     "--item-delay": `${index * 70}ms`,
                   }}
                 >
-
                   {/* IMAGE */}
                   <div className="menu-item-image">
-
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -369,61 +356,32 @@ export default function Menu() {
                       className="menu-image"
                     />
 
-                    <div className="menu-image-overlay">
+                    <div className="menu-image-overlay"></div>
 
-
-
-                    </div>
-
-                    {item.tag && (
-                      <span className="menu-tag">
-                        {item.tag}
-                      </span>
-                    )}
-
+                    {item.tag && <span className="menu-tag">{item.tag}</span>}
                   </div>
-
 
                   {/* CONTENT */}
                   <div className="menu-item-content">
-
                     <div className="menu-item-top">
-
                       <div>
-
                         <span className="menu-item-category">
                           {item.category}
                         </span>
 
-                        <h3>
-                          {item.name}
-                        </h3>
-
+                        <h3>{item.name}</h3>
                       </div>
 
-                      <span className="menu-price">
-                        {item.price}
-                      </span>
-
+                      <span className="menu-price">{item.price}</span>
                     </div>
 
-                    <p>
-                      {item.description}
-                    </p>
-
-
+                    <p>{item.description}</p>
                   </div>
-
                 </article>
-
               ))}
-
             </div>
-
           </div>
-
         </section>
-
 
         {/* Marque Section Start */}
         <Marque />
@@ -471,13 +429,11 @@ export default function Menu() {
                   </div>
                 </div> */}
                 </div>
-
               </div>
             </div>
           </div>
         </section>
       </main>
     </FoodKingLayout>
-
   );
 }
