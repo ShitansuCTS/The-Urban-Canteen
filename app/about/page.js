@@ -61,7 +61,7 @@ const page = () => {
                   <div className="section-title">
                     <span className="wow fadeInUp home-about-subtitle">About The Urban Canteen</span>
                     <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                      WHERE GOOD FOOD MEETS  <span style={{ color: "Var(--theme)" }}>GREAT VIBES.</span>
+                      Where Good Food Meets  <span style={{ color: "Var(--theme)" }}>Great Vibes.</span>
                     </h2>
                   </div>
                   <p className="wow fadeInUp" data-wow-delay=".5s">

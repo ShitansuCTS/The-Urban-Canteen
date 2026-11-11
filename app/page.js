@@ -33,8 +33,6 @@ const Page = () => {
         <div className="container">
           <div className="about-wrapper-2">
             <div className="row align-items-center">
-
-
               <div className="col-xl-5 col-lg-5">
                 <div
                   className="pizza-image wow fadeInLeft"
@@ -52,24 +50,35 @@ const Page = () => {
                     data-wow-delay="0.6s"
                   >
                     <h3>
-                      Made with <span className="highlights-word" style={{ color: "#e2bd68", fontSize: "30px" }}>Love</span>,
+                      Made with{" "}
+                      <span
+                        className="highlights-word"
+                        style={{ color: "#e2bd68", fontSize: "30px" }}
+                      >
+                        Love
+                      </span>
+                      ,
                       <br />
-                      <span className="highlights-word" style={{ color: "#e2bd68", fontSize: "30px" }}>Served</span> with Passion
+                      <span
+                        className="highlights-word"
+                        style={{ color: "#e2bd68", fontSize: "30px" }}
+                      >
+                        Served
+                      </span>{" "}
+                      with Passion
                     </h3>
                   </div>
                 </div>
               </div>
 
-
               <div className="col-xl-7 col-lg-7 mt-5 mt-lg-0">
                 <div className="about-content">
                   <div className="home-about-content">
-
                     <span
                       className="home-about-subtitle wow fadeInUp"
                       data-wow-duration="0.8s"
                     >
-                      Taste The Tradition
+                     Your Space, Your Vibe
                     </span>
 
                     <h2
@@ -77,8 +86,7 @@ const Page = () => {
                       data-wow-delay="0.15s"
                       data-wow-duration="0.9s"
                     >
-                      Authentic Indian <span>Cuisine</span>
-
+                      A Chic Cafe for Every <br/><span>Mood & Moment</span>
                     </h2>
 
                     <div
@@ -93,12 +101,14 @@ const Page = () => {
                       data-wow-delay="0.35s"
                       data-wow-duration="0.9s"
                     >
-                      Experience the rich and authentic flavours of India,
-                      freshly prepared with aromatic spices, traditional
-                      recipes and the finest ingredients. From delicious
-                      curries and crispy naan to flavourful rice and
-                      mouth-watering starters, every dish is crafted to make
-                      your dining experience truly special.
+                      Step into The Urban Canteen, where modern cafe aesthetics
+                      meet a warm and welcoming atmosphere. Enjoy thoughtfully
+                      designed interiors, soothing music, cozy corners, and the
+                      perfect setting to relax, connect, or simply take a break
+                      from your everyday routine. Whether it's a casual catch-up
+                      with friends, a peaceful coffee moment, or a memorable
+                      evening out, there's always a reason to make yourself at
+                      home.
                     </p>
 
                     <a
@@ -113,11 +123,9 @@ const Page = () => {
 
                       <span>About Us</span>
                     </a>
-
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -138,7 +146,6 @@ const Page = () => {
 
         <div className="container">
           <div className="premium-cta-content">
-
             <div
               className="premium-eyebrow wow fadeInUp"
               data-wow-duration="0.8s"
@@ -151,16 +158,16 @@ const Page = () => {
             </div>
 
             <div className="section-title premium-section-title mb-0">
-
               <h2
                 className="wow fadeInUp"
                 data-wow-delay="0.15s"
                 data-wow-duration="1s"
               >
-                
-                <em>Where Flavor Meets <span style={{ color: "var(--theme)"}}>Elegance</span>.</em>
+                <em>
+                  Where Flavor Meets{" "}
+                  <span style={{ color: "var(--theme)" }}>Elegance</span>.
+                </em>
               </h2>
-
             </div>
 
             <p
@@ -172,10 +179,7 @@ const Page = () => {
               flavors come together.
             </p>
 
-            <div
-              className="premium-divider wow fadeInUp"
-              data-wow-delay="0.4s"
-            >
+            <div className="premium-divider wow fadeInUp" data-wow-delay="0.4s">
               <span></span>
 
               <i className="bi bi-diamond-fill"></i>
@@ -195,20 +199,14 @@ const Page = () => {
 
               <span>See Our Menu</span>
             </a>
-
           </div>
         </div>
       </section>
 
-
-
       {/* =====================================================
           FOOD COMBO
       ===================================================== */}
-      <section
-        className="food-comboo-section fix bg-cover section-padding"
-      >
-
+      <section className="food-comboo-section fix bg-cover section-padding">
         <div className="drinks-shape">
           <img
             src="/assets/img/shape/drinks.png"
@@ -218,18 +216,12 @@ const Page = () => {
         </div>
 
         <div className="container">
-
           <div className="comboo-wrapper">
-
             <div className="row align-items-center">
-
               {/* CONTENT */}
               <div className="col-xl-6">
-
                 <div className="food-comboo-content">
-
                   <div className="section-title">
-
                     <span
                       className="home-about-subtitle wow fadeInUp"
                       data-wow-duration="0.8s"
@@ -237,34 +229,21 @@ const Page = () => {
                       A Taste Worth Coming Back For
                     </span>
 
-                    <h2
-                      className="wow fadeInUp"
-                      data-wow-delay="0.15s"
-                    >
+                    <h2 className="wow fadeInUp" data-wow-delay="0.15s">
                       Good Food. Great Vibes. <br />
-
-<span style={{ color: "var(--theme)" }}>
-Urban Moments. </span>
-
+                      <span style={{ color: "var(--theme)" }}>
+                        Urban Moments.{" "}
+                      </span>
                     </h2>
-
                   </div>
 
-                  <p
-                    className="wow fadeInUp"
-                    data-wow-delay="0.3s"
-                  >
+                  <p className="wow fadeInUp" data-wow-delay="0.3s">
                     From comforting classics to bold new flavours, The Urban
                     Canteen brings together delicious food, refreshing drinks,
                     and a vibrant atmosphere made for every kind of gathering.
                   </p>
 
-                  <div
-                    className="nav nav-tabs"
-                    id="nav-tab"
-                    role="tablist"
-                  >
-
+                  <div className="nav nav-tabs" id="nav-tab" role="tablist">
                     {/* TAB 1 */}
                     <button
                       className="nav-link no-pointer active wow fadeInUp"
@@ -319,24 +298,18 @@ Urban Moments. </span>
                     >
                       <span className="food-comboo-list">
                         <span className="comboo-title">
-                          Perfect for casual hangouts, celebrations, dates,
-                          and everything in between.
+                          Perfect for casual hangouts, celebrations, dates, and
+                          everything in between.
                         </span>
                       </span>
                     </button>
-
                   </div>
                 </div>
               </div>
 
               {/* IMAGE / VIDEO */}
               <div className="col-xl-6">
-
-                <div
-                  className="tab-content"
-                  id="nav-tab-Content"
-                >
-
+                <div className="tab-content" id="nav-tab-Content">
                   {/* TAB 1 */}
                   <div
                     className="tab-pane fade show active"
@@ -378,7 +351,6 @@ Urban Moments. </span>
                           'url("/assets/img/banner/comboo-bg.jpg")',
                       }}
                     >
-
                       <div className="pizza-text">
                         <img
                           src="/assets/img/shape/combo-pizza-text.png"
@@ -387,10 +359,7 @@ Urban Moments. </span>
                       </div>
 
                       <div className="pizza-image">
-                        <img
-                          src="/assets/img/food/big-pizza.png"
-                          alt="Pizza"
-                        />
+                        <img src="/assets/img/food/big-pizza.png" alt="Pizza" />
                       </div>
 
                       {/* <div className="offer-shape">
@@ -406,7 +375,6 @@ Urban Moments. </span>
                           alt="Vegetables"
                         />
                       </div>
-
                     </div>
                   </div>
 
@@ -424,7 +392,6 @@ Urban Moments. </span>
                           'url("/assets/img/banner/comboo-bg.jpg")',
                       }}
                     >
-
                       <div className="pizza-text">
                         <img
                           src="/assets/img/shape/combo-pizza-text.png"
@@ -433,10 +400,7 @@ Urban Moments. </span>
                       </div>
 
                       <div className="pizza-image">
-                        <img
-                          src="/assets/img/food/big-pizza.png"
-                          alt="Pizza"
-                        />
+                        <img src="/assets/img/food/big-pizza.png" alt="Pizza" />
                       </div>
 
                       {/* <div className="offer-shape">
@@ -452,13 +416,10 @@ Urban Moments. </span>
                           alt="Vegetables"
                         />
                       </div>
-
                     </div>
                   </div>
-
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -467,10 +428,7 @@ Urban Moments. </span>
       {/* =====================================================
           MARQUE
       ===================================================== */}
-      <section
-        className="wow fadeIn"
-        data-wow-duration="1s"
-      >
+      <section className="wow fadeIn" data-wow-duration="1s">
         <Marque />
       </section>
 
@@ -481,19 +439,14 @@ Urban Moments. </span>
         className="choose-us fix section-padding pt-0 section-bg"
         style={{ paddingBottom: "50px" }}
       >
-
         <div className="container">
-
           <div
             className="food-icon-wrapper bg-cover"
             style={{
-              backgroundImage:
-                'url("/assets/img/shape/food-shape-2.png")',
+              backgroundImage: 'url("/assets/img/shape/food-shape-2.png")',
             }}
           >
-
             <div className="row g-4">
-
               {/* CARD 1 */}
               <div
                 className="col-lg-3 col-md-6 wow fadeInUp"
@@ -501,7 +454,6 @@ Urban Moments. </span>
                 data-wow-duration="0.8s"
               >
                 <div className="single-food-icon">
-
                   <div className="icon">
                     <i className="flaticon-quality"></i>
                   </div>
@@ -514,7 +466,6 @@ Urban Moments. </span>
                       made to leave a lasting impression.
                     </p>
                   </div>
-
                 </div>
               </div>
 
@@ -525,7 +476,6 @@ Urban Moments. </span>
                 data-wow-duration="0.8s"
               >
                 <div className="single-food-icon">
-
                   <div className="icon">
                     <i className="flaticon-cooking"></i>
                   </div>
@@ -538,7 +488,6 @@ Urban Moments. </span>
                       favourites and exciting new tastes.
                     </p>
                   </div>
-
                 </div>
               </div>
 
@@ -549,7 +498,6 @@ Urban Moments. </span>
                 data-wow-duration="0.8s"
               >
                 <div className="single-food-icon">
-
                   <div className="icon">
                     <i className="bi bi-fork-knife"></i>
                   </div>
@@ -562,7 +510,6 @@ Urban Moments. </span>
                       conversations, and memorable moments.
                     </p>
                   </div>
-
                 </div>
               </div>
 
@@ -573,7 +520,6 @@ Urban Moments. </span>
                 data-wow-duration="0.8s"
               >
                 <div className="single-food-icon">
-
                   <div className="icon">
                     <i className="flaticon-heart"></i>
                   </div>
@@ -586,10 +532,8 @@ Urban Moments. </span>
                       Canteen is made for good times.
                     </p>
                   </div>
-
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -600,13 +544,9 @@ Urban Moments. </span>
       {/* =====================================================
           FOOD CATEGORY
       ===================================================== */}
-      <section
-        className="food-slider-wrapper"
-      >
+      <section className="food-slider-wrapper">
         <FoodSlider />
       </section>
-
-      
 
       {/* =====================================================
           RESERVATION
@@ -614,17 +554,12 @@ Urban Moments. </span>
       <section
         className="booking-section fix section-padding bg-cover"
         style={{
-          backgroundImage:
-            'url("/assets/img/banner/form-bg.webp")',
+          backgroundImage: 'url("/assets/img/banner/form-bg.webp")',
         }}
       >
-
         <div className="container">
-
           <div className="booking-wrapper style-responsive section-padding pb-0">
-
             <div className="row justify-content-between align-items-center">
-
               <div
                 className="col-lg-5 mt-5 mt-lg-0 wow fadeInLeft"
                 data-wow-duration="1s"
@@ -640,14 +575,10 @@ Urban Moments. </span>
               >
                 {/* Future booking content */}
               </div>
-
             </div>
-
           </div>
         </div>
       </section>
-
-
     </FoodKingLayout>
   );
 };
