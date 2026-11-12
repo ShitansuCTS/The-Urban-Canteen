@@ -212,10 +212,7 @@ const Sidebar = ({ toggle, setToggle }) => {
               </div>
 
               <p className="text d-none d-lg-block">
-                This involves interactions between a business and its
-                customers. It's about meeting customers' needs and
-                resolving their problems. Effective customer service
-                is crucial.
+                Step into a charming cafe experience where inviting ambience, soulful music, and a thoughtfully curated menu make every moment special.
               </p>
 
               <div className="offcanvas-gallery-area d-none d-lg-block">
