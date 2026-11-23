@@ -15,17 +15,25 @@ const FoodSlider = () => {
         <img src="assets/img/shape/burger-shape-2.png" alt="shape-img" />
       </div>
       <div className="container">
-        <div className="row">
-          <div className="col-md-7 col-9">
-            <div className="section-title">
-              <span className="home-about-subtitle ">Crispy, Every Bite a Taste</span>
+        <div className="section-title" style={{ textAlign: "center" }}>
+          <div
+            class="premium-eyebrow wow fadeInUp"
+            data-wow-duration="0.8s"
+            style={{ visibility: "visible", animationDuration: "0.8s"}}
+          >
+            <span class="eyebrow-line"></span>
+            <span
+              class="home-about-subtitle wow fadeInUp"
+            >
+              Taste Meets Vibe
+            </span>
+            <span class="eyebrow-line"></span>
+          </div>
+              
               <h2>
-                Popular Food Items
+                Savour the <span style={{ color: "var(--theme)" }}> Flavours</span>,<br /> Feel the <span style={{ color: "var(--theme)" }}> Vibe </span>
               </h2>
             </div>
-          </div>
-          
-        </div>
         <InstagramBannerSlider />
 
       </div>
