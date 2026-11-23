@@ -81,7 +81,7 @@ const FoodKingLayout = ({ children, header, footer }) => {
           OfferPopup internally checks pathname.
           It will ONLY show on "/"
       ============================================ */}
-      <OfferPopup />
+      {/* <OfferPopup /> */}
 
       {/* ============================================
           FLOATING BUTTONS

@@ -103,14 +103,15 @@ const Footer = () => {
                   </div>
                 </div>
                 <div className="footer-content">
-                  <p><i className="fas fa-map-marker-alt" style={{ marginRight: "10px" }} />
+                  <p><a href="https://maps.app.goo.gl/joTiBSRbfipHgPhQA" className="link" target="_blank" rel="noopener noreferrer" style={{ marginTop: "0" }}>
+                    <i className="fas fa-map-marker-alt" style={{ marginRight: "10px" }} />
                     Ground Floor, Infocity Ave, Chandaka Industrial Estate, I.E, Chandrasekharpur, <br />Bhubaneswar, Odisha 751021
-                  </p>
-                  <p><a href="mailto:info@example.com" className="link"><i className="fal fa-envelope" style={{ marginRight: "10px" }} />
-                    info@example.com
                   </a></p>
-                  <p><a href="tel:+91 99381 61712" className="number"><i className="fal fa-phone" style={{ marginRight: "10px" }} />
-                    +91 99381 61712
+                  <p><a href="mailto:theurbancanteen@gmail.com" className="link"><i className="fal fa-envelope" style={{ marginRight: "10px" }} />
+                    theurbancanteen@gmail.com
+                  </a></p>
+                  <p><a href="tel:+91 9938161712" className="number"><i className="fal fa-phone" style={{ marginRight: "10px" }} />
+                    +91 9938161712
                   </a></p>
                 </div>
               </div>

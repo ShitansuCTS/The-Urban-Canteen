@@ -42,6 +42,9 @@ const RestaurantHero = () => {
           <span className="hero-title-white">THE URBAN </span>
           <span className="hero-title-gold">CANTEEN</span>
         </h1>
+        <h4 className="home-about-subtitle wow fadeInUp" style={{ color: "var(--theme)" }}>
+          Chic Cafe & Restaurant
+        </h4>
 
         {/* Divider */}
         <div className="hero-divider">
