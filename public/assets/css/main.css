@@ -3686,8 +3686,8 @@ input.main-search-input::placeholder {
 
 .about-wrapper .about-image {
   position: relative;
-  animation: rotate 15s linear infinite;
-  width: 85%;
+  /* animation: rotate 15s linear infinite; */
+  width: 100%;
 }
 .about-wrapper .about-image img {
   width: 100%;

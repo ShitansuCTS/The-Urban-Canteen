@@ -16,17 +16,19 @@ const page = () => {
   return (
     <FoodKingLayout>
 
+
       <PageBanner pageName={"About us"} bannerImage="/assets/img/restaurant/6.webp" />
+
 
       {/* About Section Start */}
       <section className="about-section fix section-padding section-bg">
 
-        <div className="about-top-decoration">
+        {/* <div className="about-top-decoration">
           <img
             src="assets/img/about/mirchi.webp"
             alt=""
           />
-        </div>
+        </div> */}
         <div className="container">
           <div className="about-wrapper">
             <div className="row align-items-center">
@@ -37,7 +39,7 @@ const page = () => {
               >
 
                 <div className="about-image">
-                  <img src="assets/img/food/03.webp" alt="about-img" />
+                  <img src="/assets/img/restaurant/11.webp" alt="about-img" />
 
                   {/* <div className="price">
                     <h2>
@@ -59,7 +61,7 @@ const page = () => {
                   <div className="section-title">
                     <span className="wow fadeInUp home-about-subtitle">About The Urban Canteen</span>
                     <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                      WHERE GOOD FOOD MEETS  <span style={{ color: "Var(--theme)" }}>GREAT VIBES.</span>
+                      Where Good Food Meets  <span style={{ color: "Var(--theme)" }}>Great Vibes.</span>
                     </h2>
                   </div>
                   <p className="wow fadeInUp" data-wow-delay=".5s">
