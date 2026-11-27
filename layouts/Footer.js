@@ -124,7 +124,7 @@ const Footer = () => {
           <div className="footer-bottom-wrapper d-flex align-items-center justify-content-between">
             <p className="wow fadeInLeft" data-wow-delay=".3s">
               © Copyright <span className="theme-color-3">2026</span>{" "}
-              <Link href="/">The Urban Canteen </Link>. All Rights Reserved By <span className="theme-color-3"><Link href="https://crushaderstech.com/" className="theme-color-3">Crushaders Tech</Link></span>
+              <Link href="/">The Urban Canteen </Link> | A unit of Singh Motors. All Rights Reserved By <span className="theme-color-3"><Link href="https://crushaderstech.com/" className="theme-color-3">Crushaders Tech</Link></span>
             </p>
           </div>
         </div>

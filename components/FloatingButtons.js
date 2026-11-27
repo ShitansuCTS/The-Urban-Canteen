@@ -47,19 +47,20 @@ const FloatingButtons = () => {
       </button>
 
       {/* WHATSAPP */}
-      <a
-        href="https://wa.me/9938161712"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="floating-whatsapp"
-        aria-label="Chat with us on WhatsApp"
-      >
-        <span className="whatsapp-inner">
-          <i className="bi bi-whatsapp"></i>
-        </span>
+      {/* WHATSAPP */}
+<a
+  href="https://wa.me/919938161712"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="floating-whatsapp"
+  aria-label="Chat with us on WhatsApp"
+>
+  <span className="whatsapp-inner">
+    <i className="bi bi-whatsapp"></i>
+  </span>
 
-        <span className="whatsapp-pulse"></span>
-      </a>
+  <span className="whatsapp-pulse"></span>
+</a>
 
     </div>
   );
